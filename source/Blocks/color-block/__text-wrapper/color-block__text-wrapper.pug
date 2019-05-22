@@ -1,0 +1,6 @@
+include ../__color-description/color-block__color-description.pug
+include ../__color-name/color-block__color-name.pug
+mixin color-block__text-wrapper(textModifier=' color-block__text-wrapper_text-decoration ')
+  .color-block__text-wrapper(class=textModifier)&attributes(attributes)
+    +color-block__color-name()
+    +color-block__color-description()
