@@ -1,7 +1,7 @@
 include __text-wrapper/color-block__text-wrapper.pug
 include __color-square/color-block__color-square.pug
 //-Очень важно чтобы в названиях класса в конце были пробелы, чтобы при конкатенации различных классов браузер видя между названиями классов растояни смог отличить один от другого
-mixin color-block(squareShape=' color-block__color-square_shape_rounded-colors ' , squareBkgColor='color-block__color-square_bkg-color_dark-shade-100 ')
+mixin color-block(squareShape, squareBkgColor, colorName, colorDescription)
   .color-block&attributes(attributes)
-    +color-block__color-square()(class=squareShape + squareBkgColor)
-    +color-block__text-wrapper()
+    +color-block__color-square(squareShape, squareBkgColor)
+    +color-block__text-wrapper(textDecoration,colorName, colorDescription)

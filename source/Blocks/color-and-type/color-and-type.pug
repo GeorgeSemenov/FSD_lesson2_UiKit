@@ -1,5 +1,6 @@
-include ../color-block/color-block.pug
+include __column-of-color-blocks/color-and-type__column-of-color-blocks.pug
+include __column-of-color-blocks/color-and-type__column-of-color-blocks.pug
 mixin color-and-type(modifier)
   //-Похоже при передаче аргумента нет смысла указывать его имя переменной в миксине, как это можно было сделать в scss или less зато можно передать не определённу переменную и тогда возьмётся значение по умолчанию, пусть такой переменной всегда будет u
   .color-and-type&attributes(attributes)
-    +color-block(squareShape , squareBkgColor, headerText)
+    +color-and-type__column-of-color-blocks()

@@ -1,0 +1,37 @@
+include ../../color-block/color-block.pug
+mixin color-and-type__column-of-color-blocks(modifier)
+  .color-and-type__column-of-color-blocks&attributes(attributes)
+      - var firstHalfValueSquareBkgColor='color-block__color-square_bkg-color_dark-shade-'
+      - var secondHalfValueSquareBkgColor='100 ', firstHalfColorNameText='Dark Shade ',secondHalfColorNameText='100%',colorDescriptionText='#1F2041'
+
+      - for (var i = 0; i < 7; i++)
+        case i
+          when 1
+            - secondHalfValueSquareBkgColor='75 '
+            - secondHalfColorNameText ='75%'
+          when 2
+            - secondHalfValueSquareBkgColor='50 '
+            - secondHalfColorNameText ='50%'
+          when 3
+            - secondHalfValueSquareBkgColor='25 '
+            - secondHalfColorNameText ='25%'
+          when 4
+            - secondHalfValueSquareBkgColor='5 '
+            - secondHalfColorNameText ='5%'
+          when 5
+            - secondHalfValueSquareBkgColor=''
+            - secondHalfValueSquareBkgColor=' color-block__color-square_bkg-color_purple '
+            - firstHalfColorNameText =''
+            - secondHalfColorNameText ='Purple'
+            - colorDescriptionText = '#BC9CFF'
+          when 6
+            - secondHalfValueSquareBkgColor=''
+            - secondHalfValueSquareBkgColor=' color-block__color-square_bkg-color_green '
+            - firstHalfColorNameText =''
+            - secondHalfColorNameText ='Green'
+            - colorDescriptionText = '#6FCF97'
+        +color-block(
+        squareShape,
+        squareBkgColor=firstHalfValueSquareBkgColor + secondHalfValueSquareBkgColor, 
+        colorName=firstHalfColorNameText + secondHalfColorNameText, 
+        colorDescription=colorDescriptionText)(class=' color-and-type__color-block ')
