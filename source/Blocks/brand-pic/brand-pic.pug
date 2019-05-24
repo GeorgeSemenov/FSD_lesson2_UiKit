@@ -1,4 +1,6 @@
 mixin brand-pic(modifier)
   svg.brand-pic()&attributes(attributes)
-    g
+    g(fill="none" stroke-width='3' stroke-linecap='round')
       circle(r="22.5" cx="24" cy="24" stroke="rgba(31,32,65,0.25)" stroke-width="2.5" fill="none")
+      path( stroke="rgba(31,32,65,0.25)" d="M 12.8,19.8 C 19,20 25,25 24,31")
+      circle(cx=10 cy='10' r=3 fill='red')
