@@ -3,5 +3,10 @@
   width: 336px;
   display: inline-block;
   text-align: left;
+
+  @include media-breakpoint-down(sm) {
+    width: auto;
+  }
 }
 @import '_font-style-bold/tag-block__tag-description_font-style-bold';
+@import '_small-width/tag-block__tag-description_small-width';

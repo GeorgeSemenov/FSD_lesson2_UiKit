@@ -1,1 +1,8 @@
-.color-and-type__column-of-color-blocks {}
+.color-and-type__column-of-color-blocks {
+  padding-left: 165px;
+
+  @include media-breakpoint-down(md) {
+    padding-left:25px;
+    padding-right: 25px;
+  }
+}
