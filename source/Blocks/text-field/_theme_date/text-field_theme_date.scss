@@ -1,0 +1,9 @@
+.text-field_theme_date {
+  .text-field__input{
+    color: rgba(31,32,65, 0.25);
+    text-transform: uppercase;
+
+    &::-webkit-inner-spin-button ,
+    &::-webkit-clear-button{display: none;}
+  }
+}

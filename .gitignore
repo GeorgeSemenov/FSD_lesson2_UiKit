@@ -4,4 +4,5 @@ commit.sh
 create_block.bat
 create_elemeficator.bat
 create_modificator.bat
+create_page.bat
 prototype

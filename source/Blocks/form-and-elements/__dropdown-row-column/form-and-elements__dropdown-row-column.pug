@@ -1,0 +1,26 @@
+mixin form-and-elements__dropdown-row-column(modifier)
+  .form-and-elements__dropdown-row-column&attributes(attributes)
+    +dropdown-with-math-field("DROPDOWN",
+      "DEFAULT",
+      "2 спальни, 2 кровати...",
+      [
+        {text:"СПАЛЬНИ", count:2},
+        {text:"КРОВАТИ", count:2},
+        {text:"ВАННЫЕ КОМАНТЫ", count:0},
+      ],
+      false,
+      false,
+      false
+      )(class="dropdown-with-math-field_size_two-thirds")
+    +dropdown-with-math-field("DROPDOWN",
+      "EXPANDED",
+      "2 спальни, 2 кровати...",
+      [
+        {text:"СПАЛЬНИ", count:2},
+        {text:"КРОВАТИ", count:2},
+        {text:"ВАННЫЕ КОМАНТЫ", count:0},
+      ],
+      true,
+      false,
+      false
+      )(class="dropdown-with-math-field_size_two-thirds")
