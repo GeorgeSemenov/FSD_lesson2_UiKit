@@ -1,0 +1,25 @@
+mixin form-and-elements__text-fields-column(modifier)
+  .form-and-elements__text-fields-column&attributes(attributes)
+    +text-field(undefined, "DEFAULT")(class=' form-and-elements__text-field text-field_size_normal ')
+    +text-field(u, "HOVER / FOCUS", "This is pretty awesome")(class=' form-and-elements__text-field text-field_size_normal ')
+    +dropdown-with-math-field("DROPDOWN",
+      "DEFAULT",
+      "Сколько гостей",
+      [
+        {text:"СПАЛЬНИ", count:2},
+        {text:"КРОВАТИ", count:2},
+        {text:"ВАННЫЕ КОМАНТЫ", count:0},
+      ],
+      false,
+      false,
+      false
+      )(class="dropdown-with-math-field_size_normal dropdown-with-math-field_numbers-only")
+    +text-field("MASKED TEXT FIELD",
+      "DEFAULT", 
+      "",
+      "date")(class=' form-and-elements__text-field text-field_size_normal text-field_theme_date')
+    +text-field("SUBSCRIPTION TEXT FIELD",
+      U, 
+      "Email",
+      "email",
+      true)(class=' form-and-elements__text-field text-field_size_two-thirds')

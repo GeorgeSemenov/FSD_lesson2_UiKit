@@ -1,0 +1,7 @@
+mixin text-field__input-wrapper(placeholder, inputType, isNeededArrow=true)
+  .text-field__input-wrapper&attributes(attributes)
+    - var additionalClass = ""
+    if (isNeededArrow || inputType=="date")
+      +text-field__toggler()
+      - additionalClass = " datepicker-here"
+    +text-field__input(placeholder=placeholder class=additionalClass)

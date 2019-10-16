@@ -1,0 +1,23 @@
+include __item-button-container/dropdown-with-math-field__item-button-container.pug
+include __button-clear/dropdown-with-math-field__button-clear.pug
+include __button-apply/dropdown-with-math-field__button-apply.pug
+include __total-result-and-toggler-wrapper/dropdown-with-math-field__total-result-and-toggler-wrapper.pug
+include __total-result-field/dropdown-with-math-field__total-result-field.pug
+include __math-result/dropdown-with-math-field__math-result.pug
+include __item-math-field/dropdown-with-math-field__item-math-field.pug
+include __item-text/dropdown-with-math-field__item-text.pug
+//- Сдеалaно по принципу https://codepen.io/Goshanbo/pen/ydEdNb
+include __item/dropdown-with-math-field__item.pug
+include __math-symbol/dropdown-with-math-field__math-symbol.pug
+include __math-operation/dropdown-with-math-field__math-operation.pug
+include __dropdown-menu-and-toggler-wrapper/dropdown-with-math-field__dropdown-menu-and-toggler-wrapper.pug
+include __arrow-down/dropdown-with-math-field__arrow-down.pug
+include __menu/dropdown-with-math-field__menu.pug
+include __toggler/dropdown-with-math-field__toggler.pug
+include __desc/dropdown-with-math-field__desc.pug
+include __title/dropdown-with-math-field__title.pug
+include ../optional-inp-drop-title-and-desc-wrapper/optional-inp-drop-title-and-desc-wrapper.pug
+mixin dropdown-with-math-field(title,desc,totalResultName="2 спальни, 2 кровати...",menuItemsObjArray=[{text:"спальни",count:2},{text:"кровати",count:2},{text:"ванные комнаты",count:0}], isMenuShown, isThereApplyButton, isThereClearButton)
+  .dropdown-with-math-field&attributes(attributes)
+    +optional-inp-drop-title-and-desc-wrapper(title,desc)(class="dropdown-with-math-field__optional-inp-drop-title-and-desc-wrapper")
+    +dropdown-with-math-field__dropdown-menu-and-toggler-wrapper(totalResultName,menuItemsObjArray, isMenuShown, isThereApplyButton, isThereClearButton)

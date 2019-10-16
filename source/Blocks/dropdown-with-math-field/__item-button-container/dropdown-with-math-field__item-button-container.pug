@@ -1,0 +1,6 @@
+mixin dropdown-with-math-field__item-button-container(isThereApplyButton, isThereClearButton)
+  .dropdown-with-math-field__item-button-container&attributes(attributes)
+    if isThereApplyButton
+      +dropdown-with-math-field__button-apply()
+    if isThereClearButton
+      +dropdown-with-math-field__button-clear()

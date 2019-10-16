@@ -1,0 +1,11 @@
+.form-and-elements__dropdown-row-subrow {
+  display: flex;
+  justify-content: space-between;
+
+  @include media-breakpoint-up(lg){
+    width: 713px; 
+  }
+  @include media-breakpoint-down(md){
+    flex-direction: column;
+  }
+}

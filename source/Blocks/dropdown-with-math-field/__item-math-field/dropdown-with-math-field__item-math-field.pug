@@ -1,0 +1,5 @@
+mixin dropdown-with-math-field__item-math-field(itemCount)
+  .dropdown-with-math-field__item-math-field&attributes(attributes)
+    +dropdown-with-math-field__math-operation()(class="dropdown-with-math-field__math-operation_minus")
+    +dropdown-with-math-field__math-result(itemCount)
+    +dropdown-with-math-field__math-operation()(class="dropdown-with-math-field__math-operation_plus")
