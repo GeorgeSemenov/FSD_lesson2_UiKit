@@ -4,7 +4,7 @@ include __property/text-field__property.pug
 include __header/text-field__header.pug
 include __input-wrapper/text-field__input-wrapper.pug
 include ../optional-inp-drop-title-and-desc-wrapper/optional-inp-drop-title-and-desc-wrapper.pug
-mixin text-field(header="TEXT FIELD", property, placeholder="Email",inputType="text",isNeededArrow=false)
+mixin text-field(modifier={title:"TEXT FIELD", property, placeholder:"Email",inputType:"text",isNeededArrow:false})
   .text-field&attributes(attributes)
-    +optional-inp-drop-title-and-desc-wrapper(header,property)(class= "text-field__optional-inp-drop-title-and-desc-wrapper")
-    +text-field__input-wrapper(placeholder, inputType,isNeededArrow)
+    +optional-inp-drop-title-and-desc-wrapper(modifier)(class= "text-field__optional-inp-drop-title-and-desc-wrapper")
+    //- +text-field__input-wrapper(placeholder, inputType,modifier)
