@@ -6,5 +6,5 @@ mixin optional-inp-drop-title-and-desc-wrapper(modifier)
       - modifier.defaultStyles = "optional-inp-drop-title-and-desc-wrapper_common-properties";
     
     +optional-inp-drop-title-and-desc-wrapper__title(modifier)
-    if(description !=undefined)
+    if(modifier.description !=undefined)
       +optional-inp-drop-title-and-desc-wrapper__desc(modifier)(class="optional-inp-drop-title-and-desc-wrapper__desc_color_white-gray")
