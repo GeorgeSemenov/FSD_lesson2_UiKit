@@ -12,18 +12,19 @@ mixin form-and-elements__text-fields-column(modifier)
       inputPlaceholder: "This is pretty awesome"
       } 
       )(class=' form-and-elements__text-field text-field_size_normal ')
-    +dropdown-with-math-field("DROPDOWN",
-      "DEFAULT",
-      "Сколько гостей",
-      [
+    +dropdown-with-math-field({
+      title: "DROPDOWN",
+      description: "DEFAULT",
+      totalResultName:"Сколько гостей",
+      menuItemsObjArray: [
         {text:"СПАЛЬНИ", count:2},
         {text:"КРОВАТИ", count:2},
         {text:"ВАННЫЕ КОМАНТЫ", count:0},
       ],
-      false,
-      false,
-      false
-      )(class="form-and-elements__dropdown-with-math-field dropdown-with-math-field_size_normal dropdown-with-math-field_numbers-only")
+      isMenuShown:false,
+      isThereApplyButton:false,
+      isThereClearButton:false
+      })(class="form-and-elements__dropdown-with-math-field dropdown-with-math-field_size_normal dropdown-with-math-field_numbers-only")
     +text-field({
       title: "MASKED TEXT FIELD", 
       description: "DEFAULT",

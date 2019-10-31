@@ -1,10 +1,7 @@
 include __desc/optional-inp-drop-title-and-desc-wrapper__desc.pug
 include __title/optional-inp-drop-title-and-desc-wrapper__title.pug
-mixin optional-inp-drop-title-and-desc-wrapper(modifier)
-  .optional-inp-drop-title-and-desc-wrapper&attributes(attributes)(class=modifier.defaultStyles)
-    if modifier.defaultStyles == undefined
-      - modifier.defaultStyles = "optional-inp-drop-title-and-desc-wrapper_common-properties";
-    
+mixin optional-inp-drop-title-and-desc-wrapper(modifier,defaultStyles= "optional-inp-drop-title-and-desc-wrapper_common-properties")
+  .optional-inp-drop-title-and-desc-wrapper&attributes(attributes)(class=defaultStyles)    
     +optional-inp-drop-title-and-desc-wrapper__title(modifier)
     if(modifier.description !=undefined)
       +optional-inp-drop-title-and-desc-wrapper__desc(modifier)(class="optional-inp-drop-title-and-desc-wrapper__desc_color_white-gray")

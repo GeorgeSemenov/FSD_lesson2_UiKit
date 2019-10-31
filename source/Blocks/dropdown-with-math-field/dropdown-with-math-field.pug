@@ -17,7 +17,18 @@ include __toggler/dropdown-with-math-field__toggler.pug
 include __desc/dropdown-with-math-field__desc.pug
 include __title/dropdown-with-math-field__title.pug
 include ../optional-inp-drop-title-and-desc-wrapper/optional-inp-drop-title-and-desc-wrapper.pug
-mixin dropdown-with-math-field(title,desc,totalResultName="2 спальни, 2 кровати...",menuItemsObjArray=[{text:"спальни",count:2},{text:"кровати",count:2},{text:"ванные комнаты",count:0}], isMenuShown, isThereApplyButton, isThereClearButton)
+mixin dropdown-with-math-field(modifier={title,description,totalResultName,menuItemsObjArray,isMenuShown, isThereApplyButton, isThereClearButton, stylesForTitleAndDescWrapper})
   .dropdown-with-math-field&attributes(attributes)
-    +optional-inp-drop-title-and-desc-wrapper(title,desc)(class="dropdown-with-math-field__optional-inp-drop-title-and-desc-wrapper")
-    +dropdown-with-math-field__dropdown-menu-and-toggler-wrapper(totalResultName,menuItemsObjArray, isMenuShown, isThereApplyButton, isThereClearButton)
+    if modifier == undefined
+      - modifier = {};
+    if modifier.totalResultName == undefined
+      - modifier.totalResultName = "2 спальни, 2 кровати ...";
+    if modifier.menuItemsObjArray == undefined
+      - modifier.menuItemsObjArray = [{text:"спальни",count:2},{text:"кровати",count:2},{text:"ванные комнаты",count:0}];
+    if modifier.title == undefined
+      - modifier.title = defaultDropdoenTitle;
+    if modifier.description == undefined
+      - modifier.description = "defaultDropdownDesc";
+    
+    +optional-inp-drop-title-and-desc-wrapper(modifier)(class="dropdown-with-math-field__optional-inp-drop-title-and-desc-wrapper")
+    +dropdown-with-math-field__dropdown-menu-and-toggler-wrapper(modifier)

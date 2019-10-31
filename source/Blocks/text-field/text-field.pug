@@ -14,6 +14,6 @@ mixin text-field(modifier={title, description, inputPlaceholder,isNeededArrow,in
       - modifier.isNeededArrow = false;
     if modifier.inputType == undefined
       - modifier.inputType = "text";
-    
+
     +optional-inp-drop-title-and-desc-wrapper(modifier)(class= "text-field__optional-inp-drop-title-and-desc-wrapper")
     +text-field__input-wrapper(modifier)
