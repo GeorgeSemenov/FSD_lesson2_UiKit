@@ -1,26 +1,24 @@
 mixin form-and-elements__dropdown-row-subrow(modifier)
   .form-and-elements__dropdown-row-subrow&attributes(attributes)
-    +dropdown-with-math-field("DROPDOWN",
-      u,
-      "Сколько гостей",
-      [
+    +dropdown-with-math-field({title:"DROPDOWN",
+      totalResultName:"Сколько гостей",
+      menuItemsObjArray:[
         {text:"ВЗРОСЛЫЕ", count:0},
         {text:"ДЕТИ", count:0},
         {text:"МЛАДЕНЦЫ", count:0},
       ],
-      true,
-      true,
-      false
-      )(class="dropdown-with-math-field_size_normal dropdown-with-math-field_numbers-only")
-    +dropdown-with-math-field("DROPDOWN",
-      u,
-      "3 гостя",
-      [
+      isMenuShown: true,
+      isThereApplyButton: true,
+      isThereClearButton: false
+      })(class="dropdown-with-math-field_size_normal dropdown-with-math-field_numbers-only")
+    +dropdown-with-math-field({title:"DROPDOWN",
+      totalResultName:"3 гостя",
+      menuItemsObjArray:[
         {text:"ВЗРОСЛЫЕ", count:2},
         {text:"ДЕТИ", count:1},
         {text:"МЛАДЕНЦЫ", count:0},
       ],
-      true,
-      true,
-      true
-      )(class="dropdown-with-math-field_size_normal dropdown-with-math-field_numbers-only")
+      isMenuShown: true,
+      isThereApplyButton: true,
+      isThereClearButton: true
+      })(class="dropdown-with-math-field_size_normal dropdown-with-math-field_numbers-only")
