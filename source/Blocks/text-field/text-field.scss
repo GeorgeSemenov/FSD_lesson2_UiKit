@@ -1,6 +1,7 @@
 .text-field {
   font-family: "Montserrat";
 }
+@import '__arrow/text-field__arrow';
 @import '__input-wrapper/text-field__input-wrapper';
 @import '__header/text-field__header';
 @import '__property/text-field__property';
@@ -12,3 +13,5 @@
 @import '__toggler/text-field__toggler';
 @import '../../../node_modules/air-datepicker/dist/css/datepicker.min.css';
 @import '_size_half/text-field_size_half';
+@import '_text_lower-case/text-field_text_lower-case';
+@import '_placeholder-color_dark/text-field_placeholder-color_dark';

@@ -4,16 +4,15 @@ include __property/text-field__property.pug
 include __header/text-field__header.pug
 include __input-wrapper/text-field__input-wrapper.pug
 include ../optional-inp-drop-title-and-desc-wrapper/optional-inp-drop-title-and-desc-wrapper.pug
-mixin text-field(modifier={title, description, inputPlaceholder,isNeededArrow,inputType})
+include __arrow/text-field__arrow.pug
+mixin text-field(modifier={title, description, inputPlaceholder,isNeededArrow,isNeededToggler,inputType})
   .text-field&attributes(attributes)
     if modifier.title == undefined
       - modifier.title = "defaultTitle";
     if modifier.inputPlaceholder == undefined
       - modifier.inputPlaceholder = "defaultPlaceholder";
-    if modifier.isNeededArrow == undefined
-      - modifier.isNeededArrow = false;
     if modifier.inputType == undefined
       - modifier.inputType = "text";
-
+      
     +optional-inp-drop-title-and-desc-wrapper(modifier)(class= "text-field__optional-inp-drop-title-and-desc-wrapper")
     +text-field__input-wrapper(modifier)

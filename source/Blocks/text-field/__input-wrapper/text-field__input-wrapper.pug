@@ -1,7 +1,16 @@
 mixin text-field__input-wrapper(modifier)
   .text-field__input-wrapper&attributes(attributes)
     - var additionalClass = "";
-    if (modifier.isNeededArrow || modifier.inputType=="date")
+    - additionalClass += modifier.inputType.slice(0,4)=="date" ?" datepicker-here": "";
+    - additionalClass += modifier.inputType=="date-range" ?" text-field_text_lower-case": "";
+    if (modifier.isNeededArrow)  
+      +text-field__arrow()
+    if (modifier.isNeededToggler)  
       +text-field__toggler()
-      - additionalClass = " datepicker-here"
-    +text-field__input(modifier)(class=additionalClass)
+    //- Не смог найти способ передать данные внутри элемента # и {} не помогают
+    if(modifier.inputType == "date" )
+      +text-field__input(modifier)(class=additionalClass readonly)
+    else if (modifier.inputType == "date-range")
+      +text-field__input(modifier)(class=additionalClass readonly data-range="true" data-multiple-dates-separator=" - " data-view="days" data-date-format="dd M")
+    else
+      +text-field__input(modifier)(class=additionalClass)

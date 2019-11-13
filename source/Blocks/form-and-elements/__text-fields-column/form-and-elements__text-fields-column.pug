@@ -31,5 +31,17 @@ mixin form-and-elements__text-fields-column(modifier)
       inputPlaceholder: "ДД.ММ.ГГГГ",
       inputType: "date"
       } 
-      )(class=' form-and-elements__text-field text-field_size_normal text-field_theme_date')
+      )(class=' form-and-elements__text-field text-field_size_normal')
     +form-and-elements__text-fields-column-sub-row()
+    +text-field({
+      title:"FILTER DATE DROPDOWN", 
+      inputPlaceholder: "19 авг - 23 авг",
+      isNeededToggler: true,
+      inputType:"date-range"
+    })(class="form-and-elements__text-field_margin-top_37px text-field_size_two-thirds")
+    +text-field({
+      title:"SUBSCRIPTION TEXT FIELD",
+      inputPlaceholder: "Email",
+      isNeededArrow: true,
+      additionalClasses: " text-field_arrow_velvet-horisontal"
+    })(class="form-and-elements__text-field_margin-top_37px text-field_size_two-thirds")
