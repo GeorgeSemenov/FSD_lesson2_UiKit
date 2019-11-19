@@ -1,14 +1,26 @@
 .form-and-elements__dropdown-row {
   display: flex;
-  justify-content: space-between;
   margin-top: 250px;
+  flex-wrap: wrap;
 
-  @include media-breakpoint-down(md){
-    height: 310px;
+  @include media-breakpoint-up(xs){
+    justify-content: space-between;
   }
 
-  @include media-breakpoint-up(lg){
-    height: 150px;
+  @include media-breakpoint-down(lg){
+    justify-content: space-around;
   }
 
+  // @include media-breakpoint-down(md){
+  //   height: 310px;
+  // }
+
+  // @include media-breakpoint-up(lg){
+  //   height: 150px;
+  // }
+
+  // @include media-breakpoint-down(sm){
+  //   flex-direction: column;
+  //   align-items: center;
+  // }
 }

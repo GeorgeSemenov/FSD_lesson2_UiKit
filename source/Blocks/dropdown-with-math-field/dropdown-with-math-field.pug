@@ -27,8 +27,6 @@ mixin dropdown-with-math-field(modifier={title,description,totalResultName,menuI
       - modifier.menuItemsObjArray = [{text:"спальни",count:2},{text:"кровати",count:2},{text:"ванные комнаты",count:0}];
     if modifier.title == undefined
       - modifier.title = defaultDropdoenTitle;
-    if modifier.description == undefined
-      - modifier.description = "defaultDropdownDesc";
     
     +optional-inp-drop-title-and-desc-wrapper(modifier)(class="dropdown-with-math-field__optional-inp-drop-title-and-desc-wrapper")
     +dropdown-with-math-field__dropdown-menu-and-toggler-wrapper(modifier)

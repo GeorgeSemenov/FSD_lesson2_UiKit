@@ -1,4 +1,9 @@
 .form-and-elements__text-fields-column-sub-row {
   display: flex;
   justify-content: space-between;
+
+  @include media-breakpoint-down(sm){
+    flex-direction: column;
+    align-items:center
+  }
 }
