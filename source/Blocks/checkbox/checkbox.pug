@@ -1,0 +1,12 @@
+include __input/checkbox__input.pug
+include __inner-space/checkbox__inner-space.pug
+mixin checkbox(modifier)
+  .checkbox.checkbox_size_normal.checkbox_general-settings.checkbox_unchecked&attributes(attributes)
+    if modifier == undefined
+      - modifier = {};
+    
+    if modifier.checkboxId == undefined
+      - modifier.checkboxId = "checkboxIdByDefault";
+    
+    +checkbox__input(modifier)
+    +checkbox__inner-space(modifier)

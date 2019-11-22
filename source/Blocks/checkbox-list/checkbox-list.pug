@@ -1,0 +1,13 @@
+include __checkbox-container/checkbox-list__checkbox-container.pug
+include __item-wrapper/checkbox-list__item-wrapper.pug
+include __label/checkbox-list__label.pug
+include __label-wrapper/checkbox-list__label-wrapper.pug
+include __item/checkbox-list__item.pug
+include __menu/checkbox-list__menu.pug
+include __header/checkbox-list__header.pug
+include __header-wrapper/checkbox-list__header-wrapper.pug
+include ../../Blocks/checkbox/checkbox.pug
+mixin checkbox-list(modifier)
+  .checkbox-list&attributes(attributes)
+    +checkbox-list__header-wrapper(modifier)
+    +checkbox-list__menu(modifier)
