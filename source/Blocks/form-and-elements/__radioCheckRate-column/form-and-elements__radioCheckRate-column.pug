@@ -1,3 +1,9 @@
 mixin form-and-elements__radioCheckRate-column(modifier)
   .form-and-elements__radioCheckRate-column&attributes(attributes)
-    +checkbox-list()
+    +checkbox-list({header: "CHECKBOX BUTTONS", 
+    menuItemsArray: [
+        {text:"Можно курить"},
+        {text:"Можно с питомцами"},
+        {text:"Можно пригласить гостей (до 10 человек)"}
+      ]
+    })

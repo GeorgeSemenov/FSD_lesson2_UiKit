@@ -1,3 +1,8 @@
 mixin checkbox-list__menu(modifier)
   .checkbox-list__menu&attributes(attributes)
-    +checkbox-list__item-wrapper(modifier)
+    - for (var i=0; i< modifier.menuItemsArray.length; i++)
+      +checkbox-list__item-wrapper(
+        Object.assign({},
+          modifier.menuItemsArray[i],
+          {checkboxId:`${modifier.checkboxListId}_item_#${i+1}`}
+          ))
