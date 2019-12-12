@@ -3,6 +3,8 @@ $(document).ready(function(){
   checkboxArr.each(function(){
     if ($(this).children("input").prop('checked')){
       $(this).toggleClass("checkbox_checked");
+    }else{
+      $(this).toggleClass("checkbox_unchecked");
     }
   })
   $(".checkbox__inner-space").click(function(){

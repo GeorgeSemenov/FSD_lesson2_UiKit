@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack --env production",
     "watch": "webpack --watch",
-    "start": "webpack-dev-server --open --env development",
+    "start": "webpack-dev-server --env development",
     "serv": "static build"
   },
   "keywords": [],

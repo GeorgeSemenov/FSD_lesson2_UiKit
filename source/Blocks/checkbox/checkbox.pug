@@ -1,7 +1,7 @@
 include __input/checkbox__input.pug
 include __inner-space/checkbox__inner-space.pug
 mixin checkbox(modifier={checkboxId, isChecked})
-  .checkbox.checkbox_size_normal.checkbox_general-settings.checkbox_unchecked&attributes(attributes)
+  .checkbox.checkbox_size_normal.checkbox_general-settings&attributes(attributes)
     
     +checkbox__input(modifier)
     +checkbox__inner-space(modifier)
