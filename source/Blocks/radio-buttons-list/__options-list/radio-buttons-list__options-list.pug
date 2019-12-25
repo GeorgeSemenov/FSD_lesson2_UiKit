@@ -1,0 +1,8 @@
+mixin radio-buttons-list__options-list(modifier)
+  .radio-buttons-list__options-list&attributes(attributes)
+    each item, index in modifier.itemsArray
+      +radio-buttons-list__option-item-wrapper(
+        Object.assign({groupName : modifier.radioListID},
+          modifier.itemsArray[index],
+          {optionId:`${modifier.radioListID}_option_#${index+1}`}
+          ))

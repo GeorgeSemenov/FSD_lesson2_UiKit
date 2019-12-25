@@ -13,3 +13,11 @@ mixin form-and-elements__radioCheckRate-column(modifier)
         }
       ]
     })
+    +radio-buttons-list({
+      header: "RADIO BUTTONS",
+      itemsArray: [
+        {label : "Мужчина",  isChecked : true},
+        {label : "Женщина" , isChecked : false}
+      ],
+      radioListID: "FirstRadioList"
+    })
