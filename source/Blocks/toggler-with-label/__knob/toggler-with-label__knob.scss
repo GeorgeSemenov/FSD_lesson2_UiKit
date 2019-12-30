@@ -1,0 +1,20 @@
+.toggler-with-label__knob {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+
+  &:before{
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 12px;
+    height: 12px;
+    background: rgba(31,32,65, 0.25);
+    border-radius: 10px;
+    transition: 0.3s ease all;
+  }
+}

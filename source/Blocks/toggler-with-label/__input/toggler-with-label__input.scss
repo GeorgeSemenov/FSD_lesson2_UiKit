@@ -1,0 +1,18 @@
+.toggler-with-label__input {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  position: relative;
+  z-index: 3;
+
+  &:checked + .toggler-with-label__knob:before{
+    content: '';
+    left: 24px;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  }
+
+  &:checked ~ .toggler-with-label__knob-line{
+    border: 1px solid #bc9cff;
+  }
+}
