@@ -9,3 +9,7 @@
   background-color: #fff;
   border: 1px solid rgba(31,32,65, 0.25);
 }
+
+.toggler-with-label__input:checked ~ .toggler-with-label__knob-line{
+  border: 1px solid #bc9cff;
+}

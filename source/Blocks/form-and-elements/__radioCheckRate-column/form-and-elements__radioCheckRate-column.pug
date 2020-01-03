@@ -21,7 +21,17 @@ mixin form-and-elements__radioCheckRate-column(modifier)
       ],
       radioListID: "FirstRadioList"
     })
-    +toggler-with-label({
-      label: "Получать спецпредложения",
-      isChecked: "true"
+    +togglers-list({
+      header: "TOGGLE",
+      togglersArray: [
+        {
+          label: "Получать спецпредложения",
+          isChecked: true
+        },
+        {
+          label: "Получать спецпредложения",
+          isChecked: false
+        }
+      ]
     })
+    +like-button(modifier)

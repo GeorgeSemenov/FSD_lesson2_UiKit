@@ -1,0 +1,8 @@
+include __content-wrapper/like-button__content-wrapper.pug
+include __image/like-button__image.pug
+include __image-wrapper/like-button__image-wrapper.pug
+include '__count-wrapper/like-button__count-wrapper';
+include '__count/like-button__count';
+mixin like-button(modifier)
+  .like-button&attributes(attributes)
+    +like-button__content-wrapper(modifier)

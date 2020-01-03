@@ -72,3 +72,36 @@
       color: red;
     }
 }
+
+
+/*---------------------------------------------*/
+/*#############################################*/
+/*---------------------------------------------*/
+
+
+@mixin headerStyle{
+  color: #1F2041;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: bold;
+  font-style: normal;
+  font-family: Montserrat;
+}
+
+@mixin usualFontStyle{
+  font-family: Montserrat;
+  font-size: 14px;
+  line-height: 24px;
+  position: relative;
+  bottom: 3px;
+  color: rgba(31,32,65,0.75);
+}
+
+@mixin fadedFontStyle{
+  font-family: Montserrat;
+  font-size: 14px;
+  line-height: 24px;
+  position: relative;
+  bottom: 3px;
+  color: rgba(31,32,65,0.5);
+}

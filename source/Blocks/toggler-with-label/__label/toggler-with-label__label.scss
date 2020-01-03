@@ -1,1 +1,3 @@
-.toggler-with-label__label {}
+.toggler-with-label__label {
+  @include usualFontStyle;
+}
