@@ -1,1 +1,17 @@
-.like-button__content-wrapper {}
+@import '../../fonts/empty_heart/style';
+.like-button__content-wrapper {
+  font-family: Montserat;
+  font-size: 10px;
+  line-height: 12px;
+  color: rgba(31,32,65,0.25);
+
+  &:before{
+    line-height: 9px;
+    font-family: 'empty_heart';
+    content:"\e900";
+    position: absolute;
+
+    right: 14px;
+    top: 15px;
+  }
+}

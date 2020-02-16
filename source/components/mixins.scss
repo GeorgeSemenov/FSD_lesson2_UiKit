@@ -78,30 +78,48 @@
 /*#############################################*/
 /*---------------------------------------------*/
 
-
-@mixin headerStyle{
-  color: #1F2041;
+@mixin commonHeaderStyle{
   font-size: 12px;
   line-height: 15px;
-  font-weight: bold;
   font-style: normal;
   font-family: Montserrat;
 }
 
-@mixin usualFontStyle{
+@mixin headerStyle{
+  @include commonHeaderStyle;
+  color: #1F2041;
+  font-weight: bold;
+}
+
+@mixin slightfadedHeaderStyle{
+  @include commonHeaderStyle;
+  color: rgba(31,32,65,0.5);
+  font-weight: normal;
+}
+
+@mixin commonFontStyle{
   font-family: Montserrat;
   font-size: 14px;
   line-height: 24px;
+}
+
+@mixin regularFontStyle{
+  @include commonFontStyle;
   position: relative;
   bottom: 3px;
   color: rgba(31,32,65,0.75);
 }
 
-@mixin fadedFontStyle{
-  font-family: Montserrat;
-  font-size: 14px;
-  line-height: 24px;
+@mixin slightfadedFontStyle{
+  @include commonFontStyle;
   position: relative;
   bottom: 3px;
   color: rgba(31,32,65,0.5);
+}
+
+@mixin fadedFontStyle{
+  @include commonFontStyle;
+  position: relative;
+  bottom: 3px;
+  color: rgba(31,32,65,0.25);
 }

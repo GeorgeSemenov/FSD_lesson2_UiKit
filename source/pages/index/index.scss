@@ -4,14 +4,8 @@
 @import "~bootstrap/scss/bootstrap";
 
 /*Блоки*/
-@import '../../Blocks/color-and-type/color-and-type';
-@import '../../Blocks/color-block/color-block';
-@import '../../Blocks/brand-pic/brand-pic';
-@import '../../Blocks/tag-block/tag-block';
-@import '../../Blocks/form-and-elements/form-and-elements';
-@import '../../Blocks/text-field/text-field';
-@import '../../Blocks/arrow/arrow';
-@import '../../Blocks/dropdown-with-math-field/dropdown-with-math-field';
+@import "../../components/allBlocksStyles";
+
 
 /*Шрифты*/
 @import '../../fonts/Quicksand/Quicksand';
