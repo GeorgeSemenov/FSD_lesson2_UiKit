@@ -1,0 +1,17 @@
+.button_transparent {
+  .button__background{
+    border-image:$buttonBorderColor_transparent;
+  }
+
+  .button__text{
+    color: $buttonTextColor_transparent;
+  }
+
+  // &:hover{
+  //   opacity: 0.75;
+  // }
+
+  // &:active{
+  //   opacity: 0.5;
+  // }
+}
