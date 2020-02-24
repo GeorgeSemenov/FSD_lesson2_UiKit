@@ -1,0 +1,7 @@
+.button {
+  position: absolute;
+  @include centeredX;
+  top: 0px;
+}
+@import '__background/button__background';
+@import '__text/button__text';

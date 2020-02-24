@@ -1,0 +1,13 @@
+/*no sense variables*/
+$white: #fff;
+
+$gray: rgba(31,32,65,0.5);
+$gray-lighter: rgba(31,32,65,0.25);
+
+$gradient-green:linear-gradient(180deg,#6FCF97 0%, #66D2EA 100%);
+
+/*variables with sense*/
+$rangeSliderDisplayedNumbersColor: $gray;
+$rangeSliderBorderColor: $gray-lighter;
+$rangeSliderKnobBackground:$gradient-green;
+$rangeSliderKnobBorder: $white;

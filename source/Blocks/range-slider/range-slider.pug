@@ -1,0 +1,10 @@
+include __slider/range-slider__slider.pug
+include __text-wrapper/range-slider__text-wrapper.pug
+include __numbers-display-field/range-slider__numbers-display-field.pug
+include __header/range-slider__header.pug
+mixin range-slider(modifier)
+  if modifier == undefined
+    - modifier ={header: "RANGE SLIDER",rangeMin: 0,rangeMax: 20000,defaultValueMin:5000,defaultValueMax:10000,identificator};
+  .range-slider(id=modifier.identificator, data-identificator=modifier.identificator, data-range-min=modifier.rangeMin, data-range-max=modifier.rangeMax,data-default-value-min=modifier.defaultValueMin,data-default-value-max=modifier.defaultValueMax)&attributes(attributes)
+    +range-slider__text-wrapper(modifier)
+    +range-slider__slider(modifier)
