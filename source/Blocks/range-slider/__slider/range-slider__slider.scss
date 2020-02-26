@@ -1,21 +1,24 @@
+$slider-line-border-width:1px;
+$slider-line-height:6px;
 .range-slider__slider {
   background-color: transparent;
-  height: 4px;/*Высота полоски слайдера*/
+  height: $slider-line-height;/*Высота полоски слайдера*/
   position: relative;/*Для того чтобы бегунки и полоска были на месте (они позиционированны абсолютно)*/
-  border: 1px solid $rangeSliderBorderColor;
+  border: $slider-line-border-width solid $rangeSliderBorderColor;
   border-radius: 3px;
   width: 266px;
 
   .ui-widget-header {/*цветная линия между бегунками*/
     background-color: #214472 !important;/*цвет полоски между бегунками полагаю important можно убрать*/
     position: absolute;
-    height: 100%;/*высота такая же как и у самой полоски*/
+    height: $slider-line-height;/*высота такая же как и у самой полоски*/
+    top: -1px;
   }
 
   .ui-slider-handle {/*Стили бегунков*/
-    top: -8px !important;/*Отвечает за расположение бегунков, на такой высоте они ровно по середине линии rangeslider*/
-    height: 12px;/*Высота и ширина бегунков*/
-    width: 12px;
+    top: -6px !important;/*Отвечает за расположение бегунков, на такой высоте они ровно по середине линии rangeslider*/
+    height: 16px;/*Высота и ширина бегунков*/
+    width: 16px;
     background-image: $rangeSliderKnobBackground !important;
     border-radius: 10px;
     border: 2px solid $rangeSliderKnobBorder !important;
