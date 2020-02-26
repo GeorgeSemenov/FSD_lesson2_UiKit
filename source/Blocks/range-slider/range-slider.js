@@ -36,7 +36,6 @@ function separateThousandsBySpace(numb){
   let k = Math.trunc(strNumb.length / 4);
   let n = 0;
   for (let i =(strNumb.length-1); i>=0; i--){
-    //console.log(i);
     n++;
     if( n % 4 == 0){
       console.log("hello");
