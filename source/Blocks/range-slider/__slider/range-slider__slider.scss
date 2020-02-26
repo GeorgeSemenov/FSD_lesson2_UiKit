@@ -9,6 +9,7 @@ $slider-line-height:6px;
   width: 266px;
 
   .ui-widget-header {/*цветная линия между бегунками*/
+    transform: translateX(6px);
     background-color: #214472 !important;/*цвет полоски между бегунками полагаю important можно убрать*/
     position: absolute;
     height: $slider-line-height;/*высота такая же как и у самой полоски*/
