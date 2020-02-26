@@ -17,22 +17,35 @@ let rubl = "₽" ;
         RSParent.data("defaultValueMax") ],
         slide: function( event, ui ) {
           numbersDisplayField.val(
-            separtaeThousandsBySpace(ui.values[ 0 ])
+            separateThousandsBySpace(ui.values[ 0 ])
             + rubl + " - " + 
-            separtaeThousandsBySpace(ui.values[ 1 ] ) 
+            separateThousandsBySpace(ui.values[ 1 ] ) 
             + rubl);
         }
       });
       numbersDisplayField.val( 
-        separtaeThousandsBySpace(rSlider.slider( "values", 0))
+        separateThousandsBySpace(rSlider.slider( "values", 0))
         + rubl + " - " + 
-        separtaeThousandsBySpace(rSlider.slider( "values", 1)) 
+        separateThousandsBySpace(rSlider.slider( "values", 1)) 
         + rubl );
     } );
 
-function separtaeThousandsBySpace(numb){
-  let thousands= Math.floor(numb/1000);
-  let notThousands= numb - thousands*1000;
-  let additionalZeros = (thousands==0 || notThousands!=0) ? '':'00';
-  return `${thousands==0 ? '':thousands} ${notThousands}${additionalZeros}`;
+function separateThousandsBySpace(numb){
+  let strNumb = String(numb);
+  let resultStr = [];
+  let k = Math.trunc(strNumb.length / 4);
+  let n = 0;
+  for (let i =(strNumb.length-1); i>=0; i--){
+    //console.log(i);
+    n++;
+    if( n % 4 == 0){
+      console.log("hello");
+      resultStr[i+k]=' ';
+      k--;
+    }
+    resultStr[i + k]= strNumb[i];
+    console.log("[" + ((+i) + (+k)) + "] = " + resultStr[i+k]);
+  }
+  console.log("str = " + resultStr.join(''));
+  return resultStr.join('');
 }
