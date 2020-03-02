@@ -1,8 +1,2 @@
 .button__text {
-  @include boldCommonHeaderStyle;
-  position: absolute;
-  @include centeredY;
-  width: 100%;
-  text-align: center;
-  @include unselectable;  
 }

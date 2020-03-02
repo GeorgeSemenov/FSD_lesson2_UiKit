@@ -1,4 +1,5 @@
 mixin form-and-elements__pagination-slide-button-column(modifier)
   .form-and-elements__pagination-slide-button-column&attributes(attributes)
     +range-slider(modifier)
-    +button({text: "CLICK ME"})(class="button_size_normal button_transparent")
+    +link({text: "click me"})
+    +button({text: "перейти к оплате"})(class="button_colored_purple button_size_long")

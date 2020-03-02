@@ -1,10 +1,23 @@
+$normal-size-width: 99px;
+$normal-size-height: 44px;
+$border-radius: 22px;
+$border-width_transparent: 2px;
 .button {
-  position: absolute;
-  @include centeredX;
-  top: 0px;
+	position: absolute;
+	top: 0;
+	left: 50%;
+
+  /*стили текста*/
+  @include boldCommonHeaderStyle;
+  text-align: center;
+  @include unselectable;
+
+  /*стили формы*/
+  border-radius: 22px;
+  cursor: pointer;
 }
-@import '__background/button__background';
-@import '__text/button__text';
 @import '_size_normal/button_size_normal';
 @import '_colored_purple/button_colored_purple';
 @import '_transparent/button_transparent';
+@import '__text/button__text';
+@import '_size_long/button_size_long';

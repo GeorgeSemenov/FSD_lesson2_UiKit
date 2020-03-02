@@ -1,17 +1,25 @@
 .button_transparent {
-  .button__background{
-    border-image:$buttonBorderColor_transparent;
-  }
+  background-image: $buttonBorderColor_transparent;
+  color: $buttonTextColor_transparent;
+  padding-left: $border-width_transparent/2;
+
 
   .button__text{
-    color: $buttonTextColor_transparent;
+    width: $normal-size-width - $border-width_transparent;
+    height: $normal-size-height - $border-width_transparent;
+    display: flex;
+    border-radius: $border-radius;
+    background-color: $buttonBackgroundColor_transparent;
+    justify-content: center;
+    align-items: center;
+
   }
 
-  // &:hover{
-  //   opacity: 0.75;
-  // }
+  &:hover{
+    opacity: 0.75;
+  }
 
-  // &:active{
-  //   opacity: 0.5;
-  // }
+  &:active{
+    opacity: 0.5;
+  }
 }

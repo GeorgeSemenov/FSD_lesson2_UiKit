@@ -1,0 +1,21 @@
+.link{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+
+	@include boldCommonHeaderStyle;
+	color: $linkColor;
+
+	&:visited{
+		color: $linkColor-active;
+	}
+
+	&:active, 
+	&:hover{
+		color:$linkColor;
+	}
+
+	&:active, /* активная/посещенная ссылка */
+	&:hover,  /* при наведении */
+	& {text-decoration: none;}
+}
