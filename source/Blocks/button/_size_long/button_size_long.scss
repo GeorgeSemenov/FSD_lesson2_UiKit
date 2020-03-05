@@ -1,5 +1,6 @@
 .button_size_long {
   width: 320px;
-  height: $normal-size-height;
+  padding-top: $normal-size-vertical-padding;
+  padding-bottom: $normal-size-vertical-padding;
   border-radius: $border-radius;
 }

@@ -1,11 +1,8 @@
 $normal-size-width: 99px;
-$normal-size-height: 44px;
+$normal-size-vertical-padding: 14.5px;
 $border-radius: 22px;
 $border-width_transparent: 2px;
 .button {
-	position: absolute;
-	top: 130px;
-	left: 40%;
 
   /*стили текста*/
   @include boldCommonHeaderStyle;

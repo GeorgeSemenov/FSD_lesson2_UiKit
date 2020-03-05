@@ -1,7 +1,4 @@
 .link{
-	position: absolute;
-	top: 50%;
-	left: 50%;
 
 	@include boldCommonHeaderStyle;
 	color: $linkColor;
@@ -10,9 +7,11 @@
 		color: $linkColor-active;
 	}
 
-	&:active, 
+	&:active{
+		opacity: 0.5;
+	}
 	&:hover{
-		color:$linkColor;
+		opacity: 0.75;
 	}
 
 	&:active, /* активная/посещенная ссылка */
