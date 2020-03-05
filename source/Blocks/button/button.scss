@@ -4,8 +4,8 @@ $border-radius: 22px;
 $border-width_transparent: 2px;
 .button {
 	position: absolute;
-	top: 0;
-	left: 50%;
+	top: 130px;
+	left: 40%;
 
   /*стили текста*/
   @include boldCommonHeaderStyle;
@@ -24,3 +24,4 @@ $border-width_transparent: 2px;
 @import '_has-arrow/button_has-arrow';
 
 @import '__arrow/button__arrow';
+@import '_arrow-position_right/button_arrow-position_right';

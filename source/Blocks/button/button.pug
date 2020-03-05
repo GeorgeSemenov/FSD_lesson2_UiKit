@@ -3,5 +3,5 @@ include __text/button__text.pug
 mixin button(modifier)
   button.button(type="button")&attributes(attributes)
     +button__text(modifier)
-    span!= JSON.stringify(attributes.class).indexOf("button_has-arrow")
-      //-+button__arro(modifier)
+    if( JSON.stringify(attributes.class).indexOf("button_has-arrow") > 0 )
+      +button__arrow(modifier)
