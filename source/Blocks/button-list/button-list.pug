@@ -4,7 +4,8 @@ include __row/button-list__row.pug
 mixin button-list(modifier)
   .button-list&attributes(attributes)
     +button-list__header(modifier)
-    +button-list__row(modifier.elementsClassArr[1])
-    +button-list__row(modifier.elementsClassArr[2])
-    +button-list__row(modifier.elementsClassArr[3])
-    +button-list__row(modifier.elementsClassArr[4])
+    span!=modifier.elementsArr[1].additionalClasses
+    // +button-list__row(modifier.elementsArr[1])
+    // +button-list__row(modifier.elementsArr[2])
+    // +button-list__row(modifier.elementsArr[3])
+    // +button-list__row(modifier.elementsArr[4])
