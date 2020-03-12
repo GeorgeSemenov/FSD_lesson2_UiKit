@@ -1,7 +1,4 @@
-include __arrow/button__arrow.pug
 include __text/button__text.pug
 mixin button(modifier)
   button.button(type="button")&attributes(attributes)
     +button__text(modifier)
-    if( JSON.stringify(attributes.class).indexOf("button_has-arrow") > 0 )
-      +button__arrow(modifier)
