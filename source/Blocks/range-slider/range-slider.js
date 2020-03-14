@@ -1,6 +1,4 @@
-// alert("defaultValueMin = " + rSlider.data("defaultValueMin"));
-// rangeSliderArray = [];
-
+import '../../../node_modules/jquery/dist/jquery.min.js';
 let rangeSliderArray= $(".range-slider__slider");
 let rSlider = $(".range-slider__slider");
 let rubl = "₽" ;
@@ -38,13 +36,17 @@ function separateThousandsBySpace(numb){
   for (let i =(strNumb.length-1); i>=0; i--){
     n++;
     if( n % 4 == 0){
-      console.log("hello");
       resultStr[i+k]=' ';
       k--;
     }
     resultStr[i + k]= strNumb[i];
-    console.log("[" + ((+i) + (+k)) + "] = " + resultStr[i+k]);
   }
-  console.log("str = " + resultStr.join(''));
   return resultStr.join('');
 }
+$(document).ready(function(){
+  if(window.jQuery){
+    console.log("jQuery loaded")
+  }else{
+    console.log("jQuery not loaded")
+  }
+})

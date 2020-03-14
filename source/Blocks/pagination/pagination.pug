@@ -1,0 +1,6 @@
+include __content/pagination__content.pug
+include __header/pagination__header.pug
+mixin pagination(modifier)
+  .pagination&attributes(attributes)
+    +pagination__header(modifier)
+    +pagination__content(modifier)

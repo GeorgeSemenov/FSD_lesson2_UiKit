@@ -1,10 +1,7 @@
 .range-slider {
-  position: absolute;
-  top: 50px;
-  right: 50%;
-  width: 275px;
 }
 @import '__header/range-slider__header';
 @import '__numbers-display-field/range-slider__numbers-display-field';
 @import '__text-wrapper/range-slider__text-wrapper';
 @import '__slider/range-slider__slider';
+@import '_size_normal/range-slider_size_normal';
