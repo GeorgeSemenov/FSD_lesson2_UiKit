@@ -2,6 +2,9 @@
   position: absolute;
   top: 0;
   left: 50%;
+  & + & {
+    top: 50px;
+  }
 }
 @import '__header/pagination__header';
 @import '__content/pagination__content';
