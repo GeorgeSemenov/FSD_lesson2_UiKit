@@ -2,7 +2,8 @@ import '../../JScomponents/simplePagination/simplePagination.js';
 var pagination = $('.pagination__content');
 /*Функция призыва пагинации*/
 $(function(){
-  // pagination.parent().append("<span>")
+  // pagination.children().css({"border":"solid 10px red"});
+  console.log("it's working");
   pagination.pagination({
     pages: 20,
     cssStyle: 'light-theme',
@@ -21,16 +22,17 @@ $(function(){
   })
 })
 
-// $(document).ready(function(){
-//   $('.page-link')
-//   .click(function(){
-//     let href = this.attributes[0].value;
-//     // console.log(href);
-//     // console.log(href.length);
-//     console.log(href[href.length - 1]);
-//   })
+$(document).ready(function(){
+  $('.page-link')
+  .click(function(){
+    console.log('Page-link is pressed');
+    let href = this.attributes[0].value;
+    // console.log(href);
+    // console.log(href.length);
+    console.log(href[href.length - 1]);
+  })
 
-// })
+})
 
 
 

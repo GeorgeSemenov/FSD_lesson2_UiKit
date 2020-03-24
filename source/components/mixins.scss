@@ -111,8 +111,8 @@
 
 @mixin regularFontStyle{
   @include commonFontStyle;
-  position: relative;
-  bottom: 3px;
+ // position: relative;
+ // bottom: 3px;
   color: rgba(31,32,65,0.75);
 }
 
