@@ -1,2 +1,7 @@
 mixin pagination__content(modifier)
   .pagination__content&attributes(attributes)
+    - var number = 15
+    while +number > 0
+      span!="number = " + number
+      // +pagination__pagination-item(modifier.numberOfItems - number)
+      number= +number - 1

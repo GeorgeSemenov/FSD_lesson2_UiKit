@@ -10,5 +10,8 @@ mixin form-and-elements__pagination-slide-button-column(modifier)
         {additionalClasses: "button_colored_purple button_size_long button_arrow-position_right button_has-arrow", text:"ПЕРЕЙТИ К ОПЛАТЕ"}
       ]
     })
-    +pagination({header:"PAGINATION"})
+    +pagination({
+      header:"PAGINATION",
+      numberOfItems:15
+    })
     +pagination({header:"PAGINATION"})
