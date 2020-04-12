@@ -1,1 +1,31 @@
-.pagination__pagination-item {}
+.pagination__pagination-item {
+  text-decoration: none;
+  text-transform: uppercase;
+  height: 38px;/*Высота и ширина пагинации*/
+	min-width: 38px;
+	border-radius: 38px;
+	border: 2px solid #fff;
+	line-height: 38px;
+	padding: 0;
+	color: #fff;
+	font-weight: 700;
+	letter-spacing: .03em;
+	display: none;
+
+	&:first-child,
+    &:last-child {
+      padding: 0 16px;
+      margin: 0 12px 6px;
+    }
+
+    &:last-child,/*без этого не работает nex и prev*/
+    &:nth-child(2),
+    &:nth-last-child(2) {
+      display: inline-block;
+    }
+    
+    &:hover {
+    background-color: #000;
+    color: #fff;
+  }
+}

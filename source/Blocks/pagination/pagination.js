@@ -1,6 +1,6 @@
 window.onload = function(){
-  var paginationPage = parseInt($('.cdp').attr('actpage'), 10);
-  $('.cdp_i').on('click', function(){
+  var paginationPage = parseInt($('.pagination__content').attr('actpage'), 10);
+  $('.pagination__pagination-item').on('click', function(){
     var go = $(this).attr('href').replace('#!', '');
     if (go === '+1') {
       paginationPage++;
@@ -9,6 +9,6 @@ window.onload = function(){
     }else{
       paginationPage = parseInt(go, 10);
     }
-    $('.cdp').attr('actpage', paginationPage);
+    $('.pagination__content').attr('actpage', paginationPage);
   });
 };

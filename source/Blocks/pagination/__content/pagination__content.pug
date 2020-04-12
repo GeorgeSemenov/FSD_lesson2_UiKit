@@ -1,7 +1,7 @@
 mixin pagination__content(modifier)
   .pagination__content&attributes(attributes)
-    - var number = 15
-    while +number > 0
-      span!="number = " + number
-      // +pagination__pagination-item(modifier.numberOfItems - number)
-      number= +number - 1
+    +pagination__pagination-item({currentPaginationItemNumber: -1})
+    - for (var i = 1; i <= (modifier.numberOfItems); ++i)
+      +pagination__pagination-item({currentPaginationItemNumber: i})
+      - currentNumber = i;
+    +pagination__pagination-item({currentPaginationItemNumber: "+1"})

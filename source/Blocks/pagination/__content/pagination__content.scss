@@ -1,1 +1,9 @@
-.pagination__content {}
+.pagination__content {
+  background-color: black;
+  position: relative;
+  text-align: center;
+
+  &:not([actpage="1"]) .pagination__pagination-item:nth-child(1) {
+    display: inline-block;
+  }
+}

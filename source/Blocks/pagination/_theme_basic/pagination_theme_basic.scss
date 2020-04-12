@@ -1,0 +1,61 @@
+.pagination_theme_basic {
+	@for $i from 1 through 80 {
+  .pagination__content[actpage="#{$i}"] {
+    // 3 before
+    .pagination__pagination-item:nth-child(#{$i - 2}):not(:first-child):not(:nth-child(2)) {
+      display: inline-block;
+      pointer-events: none;
+      color: transparent;
+      border-color: transparent;
+      width: 50px;
+      &:after {
+        content: '...';
+        color: #fff;
+        font-size: 32px;
+        margin-left: -6px;
+      }
+    }
+    // 2 before
+    .pagination__pagination-item:nth-child(#{$i - 1}):not(:first-child) {
+      display: inline-block;
+    }
+    // before
+    .pagination__pagination-item:nth-child(#{$i}):not(:first-child) {
+      display: inline-block;
+    }
+    // active
+    .pagination__pagination-item:nth-child(#{$i + 1}) {
+      background-color: #000;
+      color: #fff;
+      display: inline-block;
+
+      +.pagination__pagination-item:last-child {
+        display: none !important;
+      }
+    }
+    // next
+    .pagination__pagination-item:nth-child(#{$i + 2}):not(:last-child) {
+      display: inline-block;
+    }
+    // 2 next
+    .pagination__pagination-item:nth-child(#{$i + 3}):not(:last-child) {
+      display: inline-block;
+    }
+    // 3 next
+    .pagination__pagination-item:nth-child(#{$i + 4}):not(:last-child):not(:nth-last-child(2)) {
+      display: inline-block;
+      pointer-events: none;
+      color: transparent;
+      border-color: transparent;
+      width: 50px;
+      &:after {
+        content: '...';
+        color: #fff;
+        font-size: 32px;
+        margin-left: -6px;
+      }
+    }
+  }
+}
+
+}
