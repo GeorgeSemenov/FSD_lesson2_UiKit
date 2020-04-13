@@ -1,3 +1,7 @@
 .button_size_normal {
-  @include button_size_normal($normal-size-width,$border-radius, ".button__text", $normal-size-vertical-padding)
+  @include button_size_normal(
+    $normal-size-width,
+    $border-radius, 
+    ".button__text", 
+    $normal-size-vertical-padding)
 }

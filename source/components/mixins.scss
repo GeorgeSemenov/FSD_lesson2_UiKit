@@ -141,9 +141,26 @@
   font-weight: bold;
 }
 
+@mixin lesserCommonFontStyle{
+  font-family: Montserrat;
+  font-style:normal;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+@mixin smallCommonFontStyle{
+  font-family: Montserrat;
+  font-style:normal;
+  font-size: 10px;
+  line-height: 12px;
+}
 /*mixins for buttons with gradient borders(with rounded shape) you can see example in like-button*/
 	/*this mixin make*/
-	@mixin button_size_normal($normal-size-width,$border-radius, $child-name, $normal-size-vertical-padding) {
+	@mixin button_size_normal(
+      $normal-size-width,
+      $border-radius, 
+      $child-name, 
+      $normal-size-vertical-padding) {
 		width: $normal-size-width;
 		border-radius: $border-radius;
 		

@@ -1,0 +1,11 @@
+.like-button_transparent_with-border {
+  @include button_transparent_with-border(
+    $likeButtonBackgroundColor_transparent, 
+    $likeButtonTextColor_transparent, 
+    $likeButtonBorderWidth_transparent_withBorder, 
+    ".button__text",
+    $likeButtonNormalSizeWidth,
+    $likeButtonNormalSizeVerticalPadding,
+    $likeButtonBorderRadius,
+    $likeButtonBackgroundColor_transparent);
+}

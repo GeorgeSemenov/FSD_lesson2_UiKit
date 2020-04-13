@@ -1,5 +1,16 @@
-.like-button {}
+$likeButtonNormalSizeWidth: 40px;
+$likeButtonNormalSizeVerticalPadding: 10.5px;
+$likeButtonBorderRadius: 10px;
+$likeButtonBorderWidth_transparent_withBorder: 2px;
+.like-button {
+  /*text styles*/
+  @include smallCommonFontStyle;
+  @include unselectable;
+
+  /*block style*/
+  cursor: pointer;
+}
 @import '__count/like-button__count';
 @import '_pressed/like-button_pressed';
 @import '__image/like-button__image';
-@import '_size_normal/like-button_size_normal';
+@import '_size_normal/like-button_size_normal';@import '_transparent_with-border/like-button_transparent_with-border';
