@@ -153,14 +153,15 @@
 			padding-bottom: $normal-size-vertical-padding;
 		}
 	}
-	@mixin button_transparent_with-border ($gradient-color: $buttonBorderColor_transparent, 
-										   $gradient-text: $buttonTextColor_transparent, 
-										   $border-width:$border-width_transparent, 
-										   $child-name: "button__text",
-										   $normal-width: $normal-size-width,
-										   $vertical-padding: $normal-size-vertical-padding,
-										   $bradius:$border-radius,
-										   $transparent-color: $buttonBackgroundColor_transparent){
+	@mixin button_transparent_with-border (
+      $gradient-color: $buttonBorderColor_transparent, 
+      $gradient-text: $buttonTextColor_transparent, 
+      $border-width:$border-width_transparent, 
+      $child-name: "button__text",
+      $normal-width: $normal-size-width,
+      $vertical-padding: $normal-size-vertical-padding,
+      $bradius:$border-radius,
+      $transparent-color: $buttonBackgroundColor_transparent){
 		background-image: $gradient-color;
 		color: $gradient-text;
 		padding-left: $border-width;
