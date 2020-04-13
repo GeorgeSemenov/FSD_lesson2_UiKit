@@ -1,4 +1,14 @@
 .button_transparent_with-border {
+  /*Приведи тут переменные в порядок, выглядит неправильно, да и цвета нужно будет поменять*/
+  @include button_transparent_with-border(
+    $gradient-color: $buttonBorderColor_transparent, 
+    $gradient-text: $buttonTextColor_transparent, 
+    $border-width:$border-width_transparent, 
+    $child-name: "button__text",
+    $normal-width: $normal-size-width,
+    $vertical-padding: $normal-size-vertical-padding,
+    $bradius:$border-radius,
+    $transparent-color: $buttonBackgroundColor_transparent);
   background-image: $buttonBorderColor_transparent;
   color: $buttonTextColor_transparent;
   padding-left: $border-width_transparent;

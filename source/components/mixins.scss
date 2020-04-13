@@ -140,3 +140,49 @@
   @include lesserCommonFontStyle;
   font-weight: bold;
 }
+
+/*mixins for buttons with gradient borders(with rounded shape) you can see example in like-button*/
+	/*this mixin make*/
+	@mixin button_size_normal($normal-size-width,$border-radius, $child-name, $normal-size-vertical-padding) {
+		width: $normal-size-width;
+		border-radius: $border-radius;
+		
+		#{$child-name} {
+			display: inline-block;
+			padding-top: $normal-size-vertical-padding;
+			padding-bottom: $normal-size-vertical-padding;
+		}
+	}
+	@mixin button_transparent_with-border ($gradient-color: $buttonBorderColor_transparent, 
+										   $gradient-text: $buttonTextColor_transparent, 
+										   $border-width:$border-width_transparent, 
+										   $child-name: "button__text",
+										   $normal-width: $normal-size-width,
+										   $vertical-padding: $normal-size-vertical-padding,
+										   $bradius:$border-radius,
+										   $transparent-color: $buttonBackgroundColor_transparent){
+		background-image: $gradient-color;
+		color: $gradient-text;
+		padding-left: $border-width;
+		padding-top: $border-width;
+		padding-bottom: $border-width;
+		
+		#{$child-name}{
+			width: $normal-width - $border-width*2;
+			padding-top: $vertical-padding - $border-width;
+			padding-bottom: $vertical-padding - $border-width;
+			display: flex;
+			border-radius: $bradius;
+			background-color: $transparent-color;
+			justify-content: center;
+			align-items: center;
+		}
+		
+		&:hover{
+			opacity: 0.75;
+		}
+
+		&:active{
+			opacity: 0.5;
+		}
+	}

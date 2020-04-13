@@ -10,7 +10,6 @@ $border-width_transparent: 2px;
   @include unselectable;
 
   /*стили формы*/
-  border-radius: 22px;
   cursor: pointer;
 }
 @import '_size_normal/button_size_normal';
