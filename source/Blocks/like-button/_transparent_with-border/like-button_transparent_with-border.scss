@@ -3,9 +3,13 @@
     $likeButtonBorderColor_transparent, 
     $likeButtonTextColor_transparent, 
     $likeButtonBorderWidth_transparent_withBorder, 
-    ".like-button__count",
+    ".like-button__wrapper",
     $likeButtonNormalSizeWidth,
     $likeButtonNormalSizeVerticalPadding,
     $likeButtonBorderRadius,
     $likeButtonBackgroundColor_transparent);
+  
+  .like-button__wrapper{
+    color: $likeButtonBackgroundColor_transparent;
+  }
 }

@@ -1,1 +1,11 @@
-.like-button_pressed {}
+.like-button_pressed {
+  @include button_transparent_with-border(
+    $gradient-green, 
+    $likeButtonTextColor_transparent, 
+    $likeButtonBorderWidth_transparent_withBorder, 
+    ".like-button__wrapper",
+    $likeButtonNormalSizeWidth,
+    $likeButtonNormalSizeVerticalPadding,
+    $likeButtonBorderRadius,
+    $likeButtonBackgroundColor_transparent);
+}
