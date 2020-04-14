@@ -78,6 +78,7 @@
 /*#############################################*/
 /*---------------------------------------------*/
 
+/*Header styles*/
 @mixin commonHeaderStyle{
   font-family: Montserrat;
   font-style: normal;
@@ -103,33 +104,30 @@
   font-weight: normal;
 }
 
-@mixin commonFontStyle{
+/*faded font*/
+@mixin commonFontStyle{/*used as start point for fading*/
   font-family: Montserrat;
+  font-style:normal;
   font-size: 14px;
   line-height: 24px;
 }
 
 @mixin regularFontStyle{
   @include commonFontStyle;
- // position: relative;
- // bottom: 3px;
   color: rgba(31,32,65,0.75);
 }
 
 @mixin slightfadedFontStyle{
   @include commonFontStyle;
-  position: relative;
-  bottom: 3px;
   color: rgba(31,32,65,0.5);
 }
 
 @mixin fadedFontStyle{
   @include commonFontStyle;
-  position: relative;
-  bottom: 3px;
   color: rgba(31,32,65,0.25);
 }
 
+/*common fonts*/
 @mixin lesserCommonFontStyle{
   font-family: Montserrat;
   font-style:normal;
@@ -139,13 +137,6 @@
 @mixin lesserBoldCommonFontStyle{
   @include lesserCommonFontStyle;
   font-weight: bold;
-}
-
-@mixin lesserCommonFontStyle{
-  font-family: Montserrat;
-  font-style:normal;
-  font-size: 12px;
-  line-height: 15px;
 }
 
 @mixin smallCommonFontStyle{
