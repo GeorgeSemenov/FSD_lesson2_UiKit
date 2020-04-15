@@ -1,4 +1,8 @@
 .like-button_transparent_with-border {
+  @include button_size_normal(
+    $likeButtonNormalSizeWidth,
+    $likeButtonBorderRadius)
+
   @include button_transparent_with-border(
     $likeButtonBorderColor_transparent, 
     $likeButtonTextColor_transparent, 
@@ -10,6 +14,8 @@
     $likeButtonBackgroundColor_transparent);
   
   .like-button__wrapper{
+    display: inline-block;
     color: $likeButtonBackgroundColor_transparent;
   }
+
 }

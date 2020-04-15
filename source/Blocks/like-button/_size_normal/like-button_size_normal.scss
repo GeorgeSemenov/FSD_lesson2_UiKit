@@ -1,7 +1,2 @@
 .like-button_size_normal {
-  @include button_size_normal(
-    $likeButtonNormalSizeWidth,
-    $likeButtonBorderRadius,
-    ".like-button__wrapper",
-    $likeButtonNormalSizeVerticalPadding)
 }
