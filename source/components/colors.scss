@@ -8,6 +8,7 @@ $purple: #BC9CFF;
 
 $gradient-green:linear-gradient(180deg,#6FCF97 0%, #66D2EA 100%);
 $gradient-purple: linear-gradient(180deg,#BC9CFF 0%, #8BA4F9 100%);
+$gradient-gray-only:  linear-gradient($gray-lighter 100%, $gray-lighter 100%);
 
 /*variables with sense*/
 $rangeSliderDisplayedNumbersColor: $gray;
@@ -25,8 +26,10 @@ $buttonBackgroundColor_transparent: $white;
 $linkColor:$purple;
 $linkColor-active:$gray;
 
-$likeButtonBackroundImage: $gradient-purple;
-$likeButtonTextColor_colored_purple: $white;
-$likeButtonTextColor_transparent: $purple;
-$likeButtonBorderColor_transparent: $gradient-purple;
+$likeButtonTextColor_transparent-with-border:$gray-lighter;
+$likeButtonTextColor_transparent-with-border_pressed: $purple;
+$likeButtonBorderColor_transparent: $gradient-gray-only;
+$likeButtonBorderColor_transparent-with-border_pressed:$gradient-purple;
 $likeButtonBackgroundColor_transparent: $white;
+$likeButtonImageStroke: $gray-lighter;
+$likeButtonImageStroke_pressed: $purple;
