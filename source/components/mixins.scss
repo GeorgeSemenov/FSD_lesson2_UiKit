@@ -146,13 +146,6 @@
   line-height: 12px;
 }
 /*mixins for buttons with gradient borders(with rounded shape) you can see example in like-button*/
-	/*this mixin make*/
-	@mixin button_size_normal(
-      $normal-size-width,
-      $border-radius) {
-		width: $normal-size-width;
-		border-radius: $border-radius;
-	}
 	@mixin button_transparent_with-border (
       $gradient-color: $buttonBorderColor_transparent, 
       $gradient-text: $buttonTextColor_transparent, 

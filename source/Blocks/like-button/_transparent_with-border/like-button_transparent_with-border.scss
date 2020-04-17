@@ -1,7 +1,6 @@
 .like-button_transparent_with-border {
-  @include button_size_normal(
-    $likeButtonNormalSizeWidth,
-    $likeButtonBorderRadius)
+  width:$likeButtonNormalSizeWidth;
+  border-radius: $likeButtonBorderRadius;
 
   @include button_transparent_with-border(
     $likeButtonBorderColor_transparent, 
