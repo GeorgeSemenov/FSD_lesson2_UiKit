@@ -13,18 +13,18 @@
 	display: none;
 
 	&:first-child,
-    &:last-child {
-      padding: 0 16px;
-      margin: 0 12px 6px;
-    }
+  &:last-child {
+    padding: 0 16px;
+    margin: 0 12px 6px;
+  }
 
-    &:last-child,/*без этого не работает nex и prev*/
-    &:nth-child(2),
-    &:nth-last-child(2) {
-      display: inline-block;
-    }
+  &:last-child,/*делаем видимым next первую числовую ячейку и последнюю числовую ячейку*/
+  &:nth-child(2),
+  &:nth-last-child(2) {
+    display: inline-block;
+  }
     
-    &:hover {
+  &:hover {
     background-color: #000;
     color: #fff;
   }

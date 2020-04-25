@@ -1,25 +1,26 @@
+@mixin dots{ /*Стили для троеточия*/
+  content: '...';
+  color: #fff;
+  font-size: 32px;
+  margin-left: -6px;
+}
 .pagination_theme_basic {
 	@for $i from 1 through 80 {
   .pagination__content[actpage="#{$i}"] {
-    // 3 before
+    /*Нахождение ячейки после которой будет стоять ПЕРВОЕ троеточие (№этой ячейки равен actpage - 2 при условии если это не prev и не первая цифровая ячейка) т.е. троеточие будет всегда на две ячейки опережать выбранную(активную) ячейку, вначале оно отключенно*/
     .pagination__pagination-item:nth-child(#{$i - 2}):not(:first-child):not(:nth-child(2)) {
+      /*стили ячейки после которой будет идти ПЕРВОЕ троеточие она будет невидимой, хотя ширина у неё будет*/
       display: inline-block;
       pointer-events: none;
       color: transparent;
       border-color: transparent;
       width: 50px;
       &:after {
-        content: '...';
-        color: #fff;
-        font-size: 32px;
-        margin-left: -6px;
+        @include dots;
       }
     }
-    // 2 before
-    .pagination__pagination-item:nth-child(#{$i - 1}):not(:first-child) {
-      display: inline-block;
-    }
-    // before
+    /*Следующий код нужен, чтобы отображались две ячейки перед активной ячейкой, если они не prev, напоминаю тебе что actpage или i на единицу меньше чем порядковый номер элемента*/
+    .pagination__pagination-item:nth-child(#{$i - 1}):not(:first-child),
     .pagination__pagination-item:nth-child(#{$i}):not(:first-child) {
       display: inline-block;
     }
@@ -30,18 +31,16 @@
       display: inline-block;
 
       +.pagination__pagination-item:last-child {
+        /*Если активная ячейка является последней цифровой ячейкой(т.е. сразу после неё идёт next == последний элемент), тогда next нужно скрыть*/
         display: none !important;
       }
     }
-    // next
-    .pagination__pagination-item:nth-child(#{$i + 2}):not(:last-child) {
-      display: inline-block;
-    }
-    // 2 next
+    // делаем видимыми следующие два элемента после активного, если они не являются next
+    .pagination__pagination-item:nth-child(#{$i + 2}):not(:last-child),
     .pagination__pagination-item:nth-child(#{$i + 3}):not(:last-child) {
       display: inline-block;
     }
-    // 3 next
+    /*ищем ячейку после которой поставим ВТОРОЕ двоеточие, для этого берётся третий элемент после активного, и проверяется не является ли он последним (next) или предпоследним(19) если true тогда задаём стили и троеточие actpage == i и actpage на единицу меньше порядкового номера элемента*/
     .pagination__pagination-item:nth-child(#{$i + 4}):not(:last-child):not(:nth-last-child(2)) {
       display: inline-block;
       pointer-events: none;
@@ -49,10 +48,7 @@
       border-color: transparent;
       width: 50px;
       &:after {
-        content: '...';
-        color: #fff;
-        font-size: 32px;
-        margin-left: -6px;
+        @include dots;
       }
     }
   }

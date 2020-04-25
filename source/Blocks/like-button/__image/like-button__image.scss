@@ -1,10 +1,8 @@
 .like-button__image {
-  position: absolute;
-  left: 3px;
-  top: 5px;
   width: 10px;
   height: 8px;
   fill: none;
+  margin-right: 7px;
 
   path{
     stroke:$likeButtonImageStroke;
