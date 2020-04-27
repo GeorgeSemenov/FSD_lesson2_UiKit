@@ -1,15 +1,11 @@
 .pagination__pagination-item {
+  @include commonHeaderStyle;
   text-decoration: none;
-  text-transform: uppercase;
-  height: 38px;/*Высота и ширина пагинации*/
-	min-width: 38px;
-	border-radius: 38px;
-	border: 2px solid #fff;
-	line-height: 38px;
-	padding: 0;
-	color: #fff;
-	font-weight: 700;
-	letter-spacing: .03em;
+  height: 40px;/*Высота и ширина пагинации*/
+	width: 40px;
+	border-radius: 22px;
+	padding-top: 13px;
+	color: $paginationItemColor;
 	display: none;
 
 	&:first-child,
@@ -25,7 +21,7 @@
   }
     
   &:hover {
-    background-color: #000;
+    background-image: $paginationActiveItemBackgroundColorHover;
     color: #fff;
   }
 }

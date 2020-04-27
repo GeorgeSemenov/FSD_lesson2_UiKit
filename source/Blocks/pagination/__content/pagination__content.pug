@@ -1,7 +1,10 @@
 mixin pagination__content(modifier)
-  .pagination__content&attributes(attributes)
-    +pagination__pagination-item({currentPaginationItemNumber: -1})
+  .pagination__content(actpage=1)&attributes(attributes)
+    +pagination__pagination-item({currentPaginationItemNumber: -1,
+    itemValue: "prev"})
     - for (var i = 1; i <= (modifier.numberOfItems); ++i)
-      +pagination__pagination-item({currentPaginationItemNumber: i})
+      +pagination__pagination-item({currentPaginationItemNumber: i,
+    itemValue: i})
       - currentNumber = i;
-    +pagination__pagination-item({currentPaginationItemNumber: "+1"})
+    +pagination__pagination-item({currentPaginationItemNumber: "+1",
+    itemValue: "next"})

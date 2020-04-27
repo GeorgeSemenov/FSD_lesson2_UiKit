@@ -1,4 +1,4 @@
-window.onload = function(){
+ $(window).on('load', function () {
   var paginationPage = parseInt($('.pagination__content').attr('actpage'), 10);
   $('.pagination__pagination-item').on('click', function(){
     var go = $(this).attr('href').replace('#!', '');
@@ -11,4 +11,4 @@ window.onload = function(){
     }
     $('.pagination__content').attr('actpage', paginationPage);
   });
-};
+});
