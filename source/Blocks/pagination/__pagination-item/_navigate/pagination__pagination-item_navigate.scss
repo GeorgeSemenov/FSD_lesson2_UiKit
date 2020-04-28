@@ -1,0 +1,15 @@
+.pagination__pagination-item_navigate {
+  background-image: $paginationNavigationActiveBackgroundColor;
+  position: relative;
+  top: 20px;  
+    &::after{
+    position: absolute;
+    content: '';
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+    background-repeat: no-repeat;
+    background-position: center;
+    @include centered;
+  }
+}

@@ -1,3 +1,4 @@
 .pagination__header {
   @include boldCommonHeaderStyle;
+  margin-bottom: -5px;
 }
