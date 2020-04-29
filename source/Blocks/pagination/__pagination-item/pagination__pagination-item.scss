@@ -8,12 +8,6 @@
 	color: $paginationItemColor;
 	display: none;
 
-	&:first-child,
-  &:last-child {
-    padding: 0 16px;
-    margin: 0 12px 6px;
-  }
-
   &:last-child,/*делаем видимым next первую числовую ячейку и последнюю числовую ячейку*/
   &:nth-child(2),
   &:nth-last-child(2) {
