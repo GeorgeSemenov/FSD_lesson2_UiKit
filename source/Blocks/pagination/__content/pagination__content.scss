@@ -1,6 +1,5 @@
 .pagination__content {
   position: relative;
-  text-align: center;
 
   &:not([actpage="1"]) .pagination__pagination-item:nth-child(1) {
   /*Делает prev видимым если actpage != 1*/

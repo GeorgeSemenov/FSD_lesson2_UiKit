@@ -1,7 +1,7 @@
 .pagination__pagination-item_navigate {
   background-image: $paginationNavigationActiveBackgroundColor;
   position: relative;
-  top: 20px;  
+  top: 15px;  
     &::after{
     position: absolute;
     content: '';
@@ -11,5 +11,9 @@
     background-repeat: no-repeat;
     background-position: center;
     @include centered;
+  }
+
+  @include media-breakpoint-down(md) {
+    top: 9px;
   }
 }
