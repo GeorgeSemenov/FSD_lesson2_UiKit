@@ -3,8 +3,6 @@ include __display-calculations/pagination__display-calculations.pug
 include __content/pagination__content.pug
 include __header/pagination__header.pug
 mixin pagination(modifier)
-  if modifier.numberOfItems == undefined
-    - modifier.numberOfItems = 15;
 
   .pagination&attributes(attributes)
     +pagination__header(modifier)

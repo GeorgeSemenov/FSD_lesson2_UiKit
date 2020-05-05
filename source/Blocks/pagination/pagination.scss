@@ -1,11 +1,4 @@
 .pagination {
-  position: absolute;
-  top: 155px;
-  left: 30%;
-  & + & {
-    top: 50px;
-  }
-  display: block;
 }
 @import '__header/pagination__header';
 @import '__content/pagination__content';
