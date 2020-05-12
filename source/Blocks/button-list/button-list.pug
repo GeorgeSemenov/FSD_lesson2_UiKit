@@ -1,12 +1,10 @@
 include __rows-wrapper/button-list__rows-wrapper.pug
-include __header/button-list__header.pug
 include ../button/button.pug
 include __row/button-list__row.pug
+include ../optional-inp-drop-title-and-desc-wrapper/optional-inp-drop-title-and-desc-wrapper.pug
+
 mixin button-list(modifier)
   .button-list&attributes(attributes)
-    +button-list__header(modifier)
-    .button-list__rows-wrapper
-      +button-list__row(modifier.elementsArr[0])
-      +button-list__row(modifier.elementsArr[1])
-      +button-list__row(modifier.elementsArr[2])
-      +button-list__row(modifier.elementsArr[3])
+    +optional-inp-drop-title-and-desc-wrapper(modifier)
+    +button-list__rows-wrapper(modifier)
+      

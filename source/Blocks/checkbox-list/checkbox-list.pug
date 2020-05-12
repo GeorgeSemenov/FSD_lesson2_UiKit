@@ -4,9 +4,8 @@ include __label/checkbox-list__label.pug
 include __label-wrapper/checkbox-list__label-wrapper.pug
 include __item/checkbox-list__item.pug
 include __menu/checkbox-list__menu.pug
-include __header/checkbox-list__header.pug
-include __header-wrapper/checkbox-list__header-wrapper.pug
 include ../../Blocks/checkbox/checkbox.pug
+include ../optional-inp-drop-title-and-desc-wrapper/optional-inp-drop-title-and-desc-wrapper.pug
 mixin checkbox-list(modifier={header,checkboxListId,isChecked,menuItemsArray:[{text}]})
   .checkbox-list&attributes(attributes)
     
@@ -14,5 +13,5 @@ mixin checkbox-list(modifier={header,checkboxListId,isChecked,menuItemsArray:[{t
       - modifier.checkboxListId = "checkboxListIdDefaultValue";
     
 
-    +checkbox-list__header-wrapper(modifier)
+    +optional-inp-drop-title-and-desc-wrapper(modifier)
     +checkbox-list__menu(modifier)

@@ -1,2 +1,6 @@
 mixin button-list__rows-wrapper(modifier)
   .button-list__rows-wrapper&attributes(attributes)
+    +button-list__row(modifier.elementsArr[0])
+    +button-list__row(modifier.elementsArr[1])
+    +button-list__row(modifier.elementsArr[2])
+    +button-list__row(modifier.elementsArr[3])

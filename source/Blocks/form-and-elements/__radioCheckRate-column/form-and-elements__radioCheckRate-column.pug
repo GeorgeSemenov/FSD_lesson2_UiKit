@@ -1,6 +1,7 @@
 mixin form-and-elements__radioCheckRate-column(modifier)
   .form-and-elements__radioCheckRate-column&attributes(attributes)
-    +checkbox-list({header: "CHECKBOX BUTTONS", 
+    +checkbox-list({
+    title: "CHECKBOX BUTTONS", 
     menuItemsArray: [
         {text:"Можно курить"},
         {
@@ -14,7 +15,7 @@ mixin form-and-elements__radioCheckRate-column(modifier)
       ]
     })
     +radio-buttons-list({
-      header: "RADIO BUTTONS",
+      title: "RADIO BUTTONS",
       itemsArray: [
         {label : "Мужчина",  isChecked : true},
         {label : "Женщина" , isChecked : false}
@@ -22,7 +23,7 @@ mixin form-and-elements__radioCheckRate-column(modifier)
       radioListID: "FirstRadioList"
     })
     +togglers-list({
-      header: "TOGGLE",
+      title: "TOGGLE",
       togglersArray: [
         {
           label: "Получать спецпредложения",
@@ -34,5 +35,6 @@ mixin form-and-elements__radioCheckRate-column(modifier)
         }
       ]
     })
-    +like-button({count:2})(class=" like-button_transparent_with-border ")
-    +like-button({count:12})(class="like-button_pressed like-button_transparent_with-border ")
+    +like-button-list({
+      title:"LIKE BUTTON"
+    })
