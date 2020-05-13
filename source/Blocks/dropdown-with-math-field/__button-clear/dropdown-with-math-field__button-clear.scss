@@ -1,5 +1,7 @@
 .dropdown-with-math-field__button-clear {
-  font-family: "Montserrat";
-  cursor: pointer;
-  color: rgba(31,32,65,0.5);
+  @include boldCommonHeaderStyle();
+  color: $dropdownColorClearButton;
+  padding: 0;
+  background-color: transparent;
+  border-width: 0;
 }

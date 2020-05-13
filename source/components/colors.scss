@@ -13,6 +13,8 @@ $gradient-gray-blue-faded: linear-gradient(180deg, rgba(188,156,255,0.6) 0%, rgb
 $gradient-gray-only:  linear-gradient($gray-lighter 100%, $gray-lighter 100%);
 
 /*variables with sense*/
+$dropdownColorClearButton: $gray;
+
 $rangeSliderDisplayedNumbersColor: $gray;
 $rangeSliderBorderColor: $gray-lighter;
 $rangeSliderKnobBackground:$gradient-green;

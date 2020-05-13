@@ -1,5 +1,5 @@
 .color-and-type__tag-block {
-  margin-bottom: 49px;
+  margin-bottom: 46px;
 
   @include media-breakpoint-down(lg) {
     width: 100%;
@@ -8,3 +8,4 @@
     margin-top: 49px;
   }
 }
+@import '_with-extra-top/color-and-type__tag-block_with-extra-top';

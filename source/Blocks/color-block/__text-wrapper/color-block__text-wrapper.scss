@@ -1,9 +1,10 @@
 .color-block__text-wrapper {
-	display: inline-block;
-	position: absolute;
+	display: flex;
+  flex-direction:column;
 	height: 100%;
 	width: 70%;
 	padding-left: 40px;
+  padding-top: 7px;
 
   @include media-breakpoint-down(sm) {
     padding-left: 20px;
