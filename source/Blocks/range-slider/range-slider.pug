@@ -4,6 +4,12 @@ include __numbers-display-field/range-slider__numbers-display-field.pug
 include ../optional-inp-drop-title-and-desc-wrapper/optional-inp-drop-title-and-desc-wrapper.pug
 
 mixin range-slider(modifier)
+  //-Специально передаём пустую строку, чтобы при компиляции 
+  //-optional-inp-drop-title-and-desc-wrapper создал дополнительное поле description
+  //-Ты поймёшь, если заглянигт в optional-inp-drop-title-and-desc-wrapper.pug
+  if modifier.description == undefined
+    - modifier.description = " ";
+
   if modifier.rangeMin == undefined
     - modifier.rangeMin = 0;
 
@@ -16,9 +22,7 @@ mixin range-slider(modifier)
   if modifier.defaultValueMax == undefined
     - modifier.defaultValueMax = 10000;
 
-    //- - modifier ={header: "RANGE SLIDER",rangeMin: 0,rangeMax: 16500,defaultValueMin:5000,defaultValueMax:10000,identificator};
   .range-slider(id=modifier.identificator, data-identificator=modifier.identificator, data-range-min=modifier.rangeMin, data-range-max=modifier.rangeMax,data-default-value-min=modifier.defaultValueMin,data-default-value-max=modifier.defaultValueMax)&attributes(attributes)
 
     +optional-inp-drop-title-and-desc-wrapper(modifier)
     +range-slider__slider(modifier)
-    script(src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous")

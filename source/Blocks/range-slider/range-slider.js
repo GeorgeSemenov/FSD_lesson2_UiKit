@@ -1,32 +1,39 @@
 import '../../../node_modules/jquery/dist/jquery.min.js';
-let rangeSliderArray= $(".range-slider__slider");
 let rSlider = $(".range-slider__slider");
+let RSParent = rSlider.parent();
 let rubl = "₽" ;
-  $( function() {
-      let RSParent = rSlider.parent();
-      let numbersDisplayField = RSParent
-      .children('.range-slider__text-wrapper')
-      .children('.range-slider__numbers-display-field');
-      rSlider.slider({
-        range: true,
-        min: RSParent.data("rangeMin"),
-        max: RSParent.data("rangeMax"),
-        values: [ RSParent.data("defaultValueMin"), 
-        RSParent.data("defaultValueMax") ],
-        slide: function( event, ui ) {
-          numbersDisplayField.val(
-            separateThousandsBySpace(ui.values[ 0 ])
-            + rubl + " - " + 
-            separateThousandsBySpace(ui.values[ 1 ] ) 
-            + rubl);
-        }
-      });
-      numbersDisplayField.val( 
-        separateThousandsBySpace(rSlider.slider( "values", 0))
+let numbersDisplayField = $(".range-slider .optional-inp-drop-title-and-desc-wrapper__desc");
+
+$( function() {
+  //Инициализация всех слайдеров
+  rSlider.slider({
+    range: true,
+    min: RSParent.data("rangeMin"),
+    max: RSParent.data("rangeMax"),
+    values: [ RSParent.data("defaultValueMin"), 
+    RSParent.data("defaultValueMax") ],
+    slide: function( event, ui ) {//отображение значений во время движения слайдера
+      $(this).parent().children('.optional-inp-drop-title-and-desc-wrapper')
+             .children('.optional-inp-drop-title-and-desc-wrapper__desc').text(
+        separateThousandsBySpace(ui.values[ 0 ])
         + rubl + " - " + 
-        separateThousandsBySpace(rSlider.slider( "values", 1)) 
-        + rubl );
-    } );
+        separateThousandsBySpace(ui.values[ 1 ] ) 
+        + rubl);
+    }
+  });
+  //- Инициация цифровых значений положения бегунков при загрузке страницы
+  $( ".range-slider" ).each(function( index ) {
+    console.log("hello");
+    $(this).children('.optional-inp-drop-title-and-desc-wrapper')
+          .children('.optional-inp-drop-title-and-desc-wrapper__desc')
+          .text( 
+    separateThousandsBySpace($(this).children('.range-slider__slider').slider( "values", 0))
+    + rubl + " - " + 
+    separateThousandsBySpace($(this).children('.range-slider__slider').slider( "values", 1)) 
+    + rubl );
+  });
+            // .css({"border":"10px solid red"})
+});
 
 function separateThousandsBySpace(numb){
   let strNumb = String(numb);
@@ -43,10 +50,3 @@ function separateThousandsBySpace(numb){
   }
   return resultStr.join('');
 }
-$(document).ready(function(){
-  if(window.jQuery){
-    console.log("jQuery loaded")
-  }else{
-    console.log("jQuery not loaded")
-  }
-})
