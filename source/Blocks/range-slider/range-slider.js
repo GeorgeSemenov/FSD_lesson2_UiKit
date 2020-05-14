@@ -5,13 +5,14 @@ let rubl = "₽" ;
 let numbersDisplayField = $(".range-slider .optional-inp-drop-title-and-desc-wrapper__desc");
 
 $( function() {
-  //Инициализация всех слайдеров
-  rSlider.slider({
+  //Инициация слайдеров при загрузке страницы, а также вывод изображения значений бегунков, во время движения последних.
+  $( ".range-slider" ).each(function( index ) {
+    $(this).children('.range-slider__slider').slider({
     range: true,
-    min: RSParent.data("rangeMin"),
-    max: RSParent.data("rangeMax"),
-    values: [ RSParent.data("defaultValueMin"), 
-    RSParent.data("defaultValueMax") ],
+    min: $(this).data("rangeMin"),
+    max: $(this).data("rangeMax"),
+    values: [ $(this).data("defaultValueMin"), 
+    $(this).data("defaultValueMax") ],
     slide: function( event, ui ) {//отображение значений во время движения слайдера
       $(this).parent().children('.optional-inp-drop-title-and-desc-wrapper')
              .children('.optional-inp-drop-title-and-desc-wrapper__desc').text(
@@ -19,11 +20,9 @@ $( function() {
         + rubl + " - " + 
         separateThousandsBySpace(ui.values[ 1 ] ) 
         + rubl);
-    }
-  });
-  //- Инициация цифровых значений положения бегунков при загрузке страницы
-  $( ".range-slider" ).each(function( index ) {
-    console.log("hello");
+      }
+    });
+    //Инициация цифровых значений бегунков при начальной загрузке страницы
     $(this).children('.optional-inp-drop-title-and-desc-wrapper')
           .children('.optional-inp-drop-title-and-desc-wrapper__desc')
           .text( 
@@ -32,7 +31,6 @@ $( function() {
     separateThousandsBySpace($(this).children('.range-slider__slider').slider( "values", 1)) 
     + rubl );
   });
-            // .css({"border":"10px solid red"})
 });
 
 function separateThousandsBySpace(numb){
