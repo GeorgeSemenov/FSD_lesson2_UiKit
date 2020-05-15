@@ -1,8 +1,5 @@
 import '../../../node_modules/jquery/dist/jquery.min.js';
-let rSlider = $(".range-slider__slider");
-let RSParent = rSlider.parent();
 let rubl = "₽" ;
-let numbersDisplayField = $(".range-slider .optional-inp-drop-title-and-desc-wrapper__desc");
 
 $( function() {
   //Инициация слайдеров при загрузке страницы, а также вывод изображения значений бегунков, во время движения последних.
