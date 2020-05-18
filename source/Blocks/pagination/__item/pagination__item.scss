@@ -1,18 +1,21 @@
-.pagination__pagination-item {
+.pagination__item {
   text-align: center;
   @include commonHeaderStyle;
   text-decoration: none;
   height: 40px;/*Высота и ширина пагинации*/
 	width: 40px;
 	border-radius: 22px;
-	padding-top: 13px;
+	//padding-top: 13px;
 	color: $paginationItemColor;
 	display: none;
 
   &:last-child,/*делаем видимым next первую числовую ячейку и последнюю числовую ячейку*/
   &:nth-child(2),
   &:nth-last-child(2) {
-    display: inline-block;
+    // display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
     
   &:hover {

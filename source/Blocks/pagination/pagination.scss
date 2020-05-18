@@ -1,10 +1,9 @@
 .pagination {
 }
-@import '__header/pagination__header';
 @import '__content/pagination__content';
 @import '__display-calculations/pagination__display-calculations';
-@import '__pagination-item/pagination__pagination-item';
+@import '__item/pagination__item';
 @import '_theme_basic/pagination_theme_basic';
-@import '__pagination-item/_navigate/pagination__pagination-item_navigate';
-@import '__pagination-item/_navigate_right/pagination__pagination-item_navigate_right';
-@import '__pagination-item/_navigate_left/pagination__pagination-item_navigate_left';
+@import '__item/_navigate/pagination__item_navigate';
+@import '__item/_navigate_right/pagination__item_navigate_right';
+@import '__item/_navigate_left/pagination__item_navigate_left';

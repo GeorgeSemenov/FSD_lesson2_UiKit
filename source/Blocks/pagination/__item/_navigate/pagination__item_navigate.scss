@@ -1,7 +1,6 @@
-.pagination__pagination-item_navigate {
+.pagination__item_navigate {
   background-image: $paginationNavigationActiveBackgroundColor;
   position: relative;
-  top: 15px;  
     &::after{
     position: absolute;
     content: '';

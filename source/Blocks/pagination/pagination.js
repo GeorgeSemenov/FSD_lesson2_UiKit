@@ -1,6 +1,6 @@
  $(window).on('load', function () {
   /*функционал необходимый для работы самой пагинации, тут изменяется значение actpage*/
-  $('.pagination__pagination-item').on('click', function(){
+  $('.pagination__item').on('click', function(){
     var pagination__content = $(this).parent();
     var paginationPage = parseInt(pagination__content.attr('actpage'), 10);
     var go = $(this).attr('href').replace('#!', '');
