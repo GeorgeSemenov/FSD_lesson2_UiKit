@@ -18,4 +18,12 @@
 @import '_placeholder-color_dark/text-field_placeholder-color_dark';
 @import '_desc-position_without-bottom/text-field_desc-position_without-bottom';
 @import '__menu/text-field__menu';
-// @import '__menu/_show/text-field__menu_show';
+@import '__menu/_show/text-field__menu_show';
+@import '__item/text-field__item';
+@import '__item-text/text-field__item-text';
+@import '__item-math-field/text-field__item-math-field';
+@import '__math-operation/text-field__math-operation';
+@import '__math-operation/_disabled/text-field__math-operation_disabled';
+@import '__math-operation/_minus/text-field__math-operation_minus';
+@import '__math-operation/_plus/text-field__math-operation_plus';
+@import '__math-result/text-field__math-result';
