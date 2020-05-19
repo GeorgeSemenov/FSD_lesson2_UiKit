@@ -1,0 +1,9 @@
+mixin text-field__menu(modifier)
+  - var addedClass= "";
+  if modifier.isMenuShown
+    - addedClass= " text-field__menu_show"
+  ul.text-field__menu(class=addedClass)&attributes(attributes)
+    each itemObj in modifier.menuItemsObjArray
+      +text-field__item(itemObj)
+    if (modifier.isThereApplyButton || modifier.isThereClearButton)
+      +text-field__item-button-container(modifier.isThereApplyButton, modifier.isThereClearButton)

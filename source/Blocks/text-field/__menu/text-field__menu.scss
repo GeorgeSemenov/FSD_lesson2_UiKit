@@ -1,0 +1,20 @@
+//В input-for-toggler есть свойство отвечающее а max-height
+//и за transition
+.dropdown-with-math-field__menu {
+  position: absolute;
+  left: 0;
+  top: 43px;
+  opacity: 0;
+  font-weight: bold;
+  visibility: hidden;//Это свойство необходимо, иначе
+  //элементы в меню с cursor: pointer при случайном
+  //наведении на них будут изменять курсор.
+  z-index: 1;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid rgba(31,32,65, 0.25);
+  transition: all .25s ease;
+  padding-top: 5px;
+  padding-bottom: 2px;
+  border-radius: 4px;
+}

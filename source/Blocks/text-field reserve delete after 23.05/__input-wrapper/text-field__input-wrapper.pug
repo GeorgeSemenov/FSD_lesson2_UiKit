@@ -5,15 +5,12 @@ mixin text-field__input-wrapper(modifier)
     - additionalClass += modifier.inputType=="date-range" ?" text-field_text_lower-case": "";
     if (modifier.isNeededArrow)  
       +text-field__arrow()
-    if (modifier.isNeededToggler || (modifier.inputType == "dropdown") )  
+    if (modifier.isNeededToggler)  
       +text-field__toggler()
     //- Не смог найти способ передать данные внутри элемента # и {} не помогают
     if(modifier.inputType == "date" )
       +text-field__input(modifier)(class=additionalClass readonly)
     else if (modifier.inputType == "date-range")
       +text-field__input(modifier)(class=additionalClass readonly data-range="true" data-multiple-dates-separator=" - " data-view="days" data-date-format="dd M")
-    else if(modifier.inputType == "dropdown")
-      +text-field__input(modifier)(class=additionalClass value=modifier.totalResultText)
-      +text-field__menu(modifier)
     else
       +text-field__input(modifier)(class=additionalClass)

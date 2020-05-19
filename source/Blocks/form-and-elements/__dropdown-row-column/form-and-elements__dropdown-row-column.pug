@@ -1,9 +1,10 @@
 mixin form-and-elements__dropdown-row-column(modifier)
   .form-and-elements__dropdown-row-column&attributes(attributes)
-    +dropdown-with-math-field({
+    +text-field({
       title:"DROPDOWN",
       description:"DEFAULT",
-      totalResultName:"2 спальни, 2 кровати...",
+      inputType: "dropdown",
+      totalResultText:"2 спальни, 2 кровати...",
       menuItemsObjArray:[
         {text:"СПАЛЬНИ", count:2},
         {text:"КРОВАТИ", count:2},
