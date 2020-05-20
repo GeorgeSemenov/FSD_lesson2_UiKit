@@ -6,15 +6,15 @@ mixin form-and-elements__dropdown-row-column(modifier)
       inputType: "dropdown",
       totalResultText:"2 спальни, 2 кровати...",
       menuItemsObjArray:[
-        {text:"СПАЛЬНИ", count:2},
+        {text:"СПАЛЬНИ", count:0},
         {text:"КРОВАТИ", count:2},
         {text:"ВАННЫЕ КОМАНТЫ", count:0},
       ],
-      isMenuShown: false,
+      isMenuShown: true,
       isThereApplyButton: false,
       isThereClearButton: false
       })(class="dropdown-with-math-field_size_two-thirds")
-    +dropdown-with-math-field({title:"DROPDOWN",
+    //- +dropdown-with-math-field({title:"DROPDOWN",
       description: "EXPANDED",
       totalResultName: "2 спальни, 2 кровати...",
       menuItemsObjArray:[
