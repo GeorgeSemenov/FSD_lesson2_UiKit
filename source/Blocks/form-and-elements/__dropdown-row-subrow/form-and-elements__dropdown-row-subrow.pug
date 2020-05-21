@@ -1,6 +1,8 @@
 mixin form-and-elements__dropdown-row-subrow(modifier)
   .form-and-elements__dropdown-row-subrow&attributes(attributes)
-    +dropdown-with-math-field({title:"DROPDOWN",
+    +text-field({
+      title:"DROPDOWN",
+      inputType: "dropdown",
       totalResultName:"Сколько гостей",
       menuItemsObjArray:[
         {text:"ВЗРОСЛЫЕ", count:0},

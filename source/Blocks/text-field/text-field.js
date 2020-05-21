@@ -29,7 +29,6 @@ $(document).ready(function(){
   //Проверка, если при загрузке страницы у всех арифметических полей стоит ноль, то задизейблеваем минусы
   var resultsCollection = $(".text-field__math-result");
   resultsCollection.each(function(index, resultItem){
-    console.log('i see zero!');
     var minusItem = $(this).siblings(".text-field__math-operation_minus");
     if ( (+($(this).text()) == 0) && !minusItem.hasClass("text-field__math-operation_disabled"))
       minusItem.addClass("text-field__math-operation_disabled");
@@ -55,10 +54,25 @@ $(document).ready(function(){
     let mainO = returnMainObject($(this));
     //Если нет кнопки "применить" то вывод происходит мгновенно
     if (!mainO.isThereApplyButton){
-      mainO.totalResultField.text(convertObjectInResultString(mainO));
+      mainO.totalResultField.val(convertObjectInResultString(mainO));
     }
 
   });
+
+  //вывод результата в строку с кнопкой применить (без кнопки - очистить)
+  $(".text-field__button-apply").click(function(){
+    var dropdownMenu = $(this).parents(".text-field__menu");
+    var totalResultField = dropdownMenu.siblings(".text-field__total-result-and-toggler-wrapper")
+                                   .children(".text-field__total-result-field");
+    var dropdownItemsCollection = dropdownMenu.children('.text-field__item');
+    
+    resultObj = collectValuesAndKeysToResultObj(dropdownItemsCollection);
+
+    var dropdown = dropdownMenu.parents(".text-field");
+    isDropdownNumbersOnly = dropdown.hasClass("text-field_numbers-only");
+
+    totalResultField.text(convertObjectInResultString({resultObj: resultObj, isDropdownNumbersOnly: isDropdownNumbersOnly}));
+  })
 });
 
 
@@ -100,7 +114,7 @@ function convertObjectInResultString ({resultObj = {}, charachersInString = 9, i
     resultString=`${count} ${additionalWords}`;
   } else{ 
     let pairsArr = Object.entries(resultObj);
-    for (i = 0; i<pairsArr.length && !isDropdownNumbersOnly; i++){
+    for (let i = 0; i<pairsArr.length && !isDropdownNumbersOnly; i++){
       let pair = pairsArr[i];
       //Если пользователь ввёл значение отличное от нуля, то стоит вывести его в строку
       if(pair[1] > 0){
@@ -111,12 +125,11 @@ function convertObjectInResultString ({resultObj = {}, charachersInString = 9, i
       }
     }
   }
-
   return resultString;
 }
 
 function stringCutter (str , charachersInString = 9){
-  rightString = "";
+  let rightString = "";
 
   if (str.length >= charachersInString){
     rightString = str.slice(0,charachersInString);
@@ -128,7 +141,7 @@ function stringCutter (str , charachersInString = 9){
 }
 
 function collectValuesAndKeysToResultObj (collectionNode){
-  resultObj = {};
+  let resultObj = {};
   collectionNode.each(function(index, item){
       let key = $(this).children(".text-field__item-text").text();
       let value = +($(this).children(".text-field__item-math-field")
@@ -138,14 +151,14 @@ function collectValuesAndKeysToResultObj (collectionNode){
   return resultObj;
 }
 
+
 function returnMainObject (initialNode){
   let mainObject = {};
   mainObject.menu = initialNode.parents(".text-field__menu");
-  mainObject.totalResultField = mainObject.menu.siblings(".text-field__total-result-and-toggler-wrapper")
-                                 .children(".text-field__total-result-field");
-  mainObject.dropdownItemsCollection = mainObject.menu.children('.text-field__item');
+  mainObject.totalResultField = mainObject.menu.siblings(".text-field__input");
+  mainObject.items = mainObject.menu.children('.text-field__item');
   
-  mainObject.resultObj = collectValuesAndKeysToResultObj(mainObject.dropdownItemsCollection);
+  mainObject.resultObj = collectValuesAndKeysToResultObj(mainObject.items);
 
   mainObject.dropdown = mainObject.menu.parents(".text-field");
   mainObject.isDropdownNumbersOnly = mainObject.dropdown.hasClass("text-field_numbers-only");  

@@ -6,4 +6,4 @@ mixin text-field__menu(modifier)
     each itemObj in modifier.menuItemsObjArray
       +text-field__item(itemObj)
     if (modifier.isThereApplyButton || modifier.isThereClearButton)
-      +text-field__item-button-container(modifier.isThereApplyButton, modifier.isThereClearButton)
+      +text-field__button-container(modifier.isThereApplyButton, modifier.isThereClearButton)
