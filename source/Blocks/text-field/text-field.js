@@ -36,7 +36,7 @@ $(document).ready(function(){
 
   //арифметические операции
   $(".text-field__math-operation").click(function(){
-    var isDropdownNumbersOnly =false;
+    var isTextFieldNumbersOnly =false;
     var resultNode = $(this).siblings(".text-field__math-result");
     var count = +(resultNode.text());
     if ($(this).hasClass("text-field__math-operation_minus")){
@@ -61,18 +61,31 @@ $(document).ready(function(){
 
   //вывод результата в строку с кнопкой применить (без кнопки - очистить)
   $(".text-field__button-apply").click(function(){
-    var dropdownMenu = $(this).parents(".text-field__menu");
-    var totalResultField = dropdownMenu.siblings(".text-field__total-result-and-toggler-wrapper")
-                                   .children(".text-field__total-result-field");
-    var dropdownItemsCollection = dropdownMenu.children('.text-field__item');
-    
-    resultObj = collectValuesAndKeysToResultObj(dropdownItemsCollection);
+    var menu = $(this).parents(".text-field__menu");
+    var totalResultField = menu.siblings(".text-field__input");
+    var itemsCollection = menu.children('.text-field__item');
 
-    var dropdown = dropdownMenu.parents(".text-field");
-    isDropdownNumbersOnly = dropdown.hasClass("text-field_numbers-only");
+    let resultObj = collectValuesAndKeysToResultObj(itemsCollection);
 
-    totalResultField.text(convertObjectInResultString({resultObj: resultObj, isDropdownNumbersOnly: isDropdownNumbersOnly}));
+    let textField = menu.parents(".text-field");
+    let isTextFieldNumbersOnly = textField.hasClass("text-field_numbers-only");
+
+    totalResultField.val(convertObjectInResultString({resultObj: resultObj, isTextFieldNumbersOnly: isTextFieldNumbersOnly}));
   })
+
+  //При нажатии на кнопку очистить
+  $(".text-field__button-clear").click(function(){
+    let dropdownMenu = $(this).parents(".text-field__menu");
+    let dropdownItemsCollection = dropdownMenu.children('.text-field__item');
+    let totalResultField = dropdownMenu.siblings(".text-field__input");
+
+    dropdownItemsCollection.each(function(index, item){
+      $(this).children(".text-field__item-math-field")
+             .children(".text-field__math-result").text(0);
+      $(this).children(".text-field__item-math-field")
+              .children(".text-field__math-operation_minus")
+              .addClass("text-field__math-operation_disabled");
+    })
 });
 
 
@@ -81,9 +94,9 @@ $(document).ready(function(){
 
 
 
-function convertObjectInResultString ({resultObj = {}, charachersInString = 9, isDropdownNumbersOnly = false}){
+function convertObjectInResultString ({resultObj = {}, charachersInString = 9, isTextFieldNumbersOnly = false}){
   let resultString="";
-  if (isDropdownNumbersOnly){
+  if (isTextFieldNumbersOnly){
     let additionalWords;
     let count= 0 ;
     let values = Object.values(resultObj);
@@ -114,7 +127,7 @@ function convertObjectInResultString ({resultObj = {}, charachersInString = 9, i
     resultString=`${count} ${additionalWords}`;
   } else{ 
     let pairsArr = Object.entries(resultObj);
-    for (let i = 0; i<pairsArr.length && !isDropdownNumbersOnly; i++){
+    for (let i = 0; i<pairsArr.length && !isTextFieldNumbersOnly; i++){
       let pair = pairsArr[i];
       //Если пользователь ввёл значение отличное от нуля, то стоит вывести его в строку
       if(pair[1] > 0){
@@ -161,9 +174,9 @@ function returnMainObject (initialNode){
   mainObject.resultObj = collectValuesAndKeysToResultObj(mainObject.items);
 
   mainObject.dropdown = mainObject.menu.parents(".text-field");
-  mainObject.isDropdownNumbersOnly = mainObject.dropdown.hasClass("text-field_numbers-only");  
+  mainObject.isTextFieldNumbersOnly = mainObject.dropdown.hasClass("text-field_numbers-only");  
 
-  mainObject.isThereApplyButton=mainObject.menu.children('.text-field__item-button-container')
+  mainObject.isThereApplyButton=mainObject.menu.children('.text-field__button-container')
                                                        .children('.text-field__button-apply')
                                                        .hasClass('text-field__button-apply');
   return mainObject;

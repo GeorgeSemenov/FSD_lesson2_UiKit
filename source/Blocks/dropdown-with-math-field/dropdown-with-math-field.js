@@ -42,7 +42,7 @@ $(document).ready(function(){
 
   });
 
-  //вывод результата в строку с кнопкой применить (без кнопки - применить)
+  //вывод результата в строку с кнопкой применить (без кнопки - очистить)
   $(".dropdown-with-math-field__button-apply").click(function(){
     var dropdownMenu = $(this).parents(".dropdown-with-math-field__menu");
     var totalResultField = dropdownMenu.siblings(".dropdown-with-math-field__total-result-and-toggler-wrapper")

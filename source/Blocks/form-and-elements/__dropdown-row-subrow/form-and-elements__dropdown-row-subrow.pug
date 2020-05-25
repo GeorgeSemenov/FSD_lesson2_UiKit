@@ -9,10 +9,10 @@ mixin form-and-elements__dropdown-row-subrow(modifier)
         {text:"ДЕТИ", count:0},
         {text:"МЛАДЕНЦЫ", count:0},
       ],
-      isMenuShown: false,
+      isMenuShown: true,
       isThereApplyButton: true,
       isThereClearButton: false
-      })(class="dropdown-with-math-field_size_normal dropdown-with-math-field_numbers-only")
+      })(class="text-field_size_normal text-field_numbers-only")
     +dropdown-with-math-field({title:"DROPDOWN",
       totalResultName:"3 гостя",
       menuItemsObjArray:[
@@ -22,5 +22,5 @@ mixin form-and-elements__dropdown-row-subrow(modifier)
       ],
       isMenuShown: true,
       isThereApplyButton: true,
-      isThereClearButton: true
+      isThereClearButton: false
       })(class="dropdown-with-math-field_size_normal dropdown-with-math-field_numbers-only")
