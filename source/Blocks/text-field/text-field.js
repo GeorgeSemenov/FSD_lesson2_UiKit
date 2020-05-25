@@ -74,18 +74,18 @@ $(document).ready(function(){
   })
 
   //При нажатии на кнопку очистить
-  $(".text-field__button-clear").click(function(){
-    let dropdownMenu = $(this).parents(".text-field__menu");
-    let dropdownItemsCollection = dropdownMenu.children('.text-field__item');
-    let totalResultField = dropdownMenu.siblings(".text-field__input");
+  // $(".text-field__button-clear").click(function(){
+  //   let dropdownMenu = $(this).parents(".text-field__menu");
+  //   let dropdownItemsCollection = dropdownMenu.children('.text-field__item');
+  //   let totalResultField = dropdownMenu.siblings(".text-field__input");
 
-    dropdownItemsCollection.each(function(index, item){
-      $(this).children(".text-field__item-math-field")
-             .children(".text-field__math-result").text(0);
-      $(this).children(".text-field__item-math-field")
-              .children(".text-field__math-operation_minus")
-              .addClass("text-field__math-operation_disabled");
-    })
+  //   dropdownItemsCollection.each(function(index, item){
+  //     $(this).children(".text-field__item-math-field")
+  //            .children(".text-field__math-result").text(0);
+  //     $(this).children(".text-field__item-math-field")
+  //             .children(".text-field__math-operation_minus")
+  //             .addClass("text-field__math-operation_disabled");
+  //   })
 });
 
 
