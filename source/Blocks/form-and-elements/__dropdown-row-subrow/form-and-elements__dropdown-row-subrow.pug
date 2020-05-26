@@ -13,8 +13,9 @@ mixin form-and-elements__dropdown-row-subrow(modifier)
       isThereApplyButton: true,
       isThereClearButton: false
       })(class="text-field_size_normal text-field_numbers-only")
-    +dropdown-with-math-field({title:"DROPDOWN",
-      totalResultName:"3 гостя",
+    +text-field({
+      title:"DROPDOWN",
+      inputType: "dropdown",
       menuItemsObjArray:[
         {text:"ВЗРОСЛЫЕ", count:2},
         {text:"ДЕТИ", count:1},
@@ -23,4 +24,4 @@ mixin form-and-elements__dropdown-row-subrow(modifier)
       isMenuShown: true,
       isThereApplyButton: true,
       isThereClearButton: true
-      })(class="dropdown-with-math-field_size_normal dropdown-with-math-field_numbers-only")
+      })(class="text-field_size_normal text-field_numbers-only")

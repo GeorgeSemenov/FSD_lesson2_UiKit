@@ -34,6 +34,18 @@ $(document).ready(function(){
       minusItem.addClass("text-field__math-operation_disabled");
   })
 
+  //при загрузке страницы - происходит вывод изначальных значений в text-field__input 
+  $(".text-field__menu").each(function(index, resultItem){
+    let textInput = $(this).siblings(".text-field__input");
+      // console.log(textInput.data().initaialString);
+    let mainO= returnMainObject($(this).children('.text-field__item'));
+    if (textInput.data().initaialString){
+      mainO.totalResultField.val(textInput.data().initaialString);
+    } else{
+      mainO.totalResultField.val(convertObjectInResultString(mainO));
+    }
+  })
+
   //арифметические операции
   $(".text-field__math-operation").click(function(){
     var isTextFieldNumbersOnly =false;
@@ -73,11 +85,13 @@ $(document).ready(function(){
     totalResultField.val(convertObjectInResultString({resultObj: resultObj, isTextFieldNumbersOnly: isTextFieldNumbersOnly}));
   })
 
-  //При нажатии на кнопку очистить
+  // При нажатии на кнопку очистить, этот код нужен, если по каким-то причинам ты не можешь
+  // использовать button(type="reset")
   // $(".text-field__button-clear").click(function(){
   //   let dropdownMenu = $(this).parents(".text-field__menu");
   //   let dropdownItemsCollection = dropdownMenu.children('.text-field__item');
   //   let totalResultField = dropdownMenu.siblings(".text-field__input");
+  //   console.log("clear pressed");
 
   //   dropdownItemsCollection.each(function(index, item){
   //     $(this).children(".text-field__item-math-field")
@@ -86,6 +100,9 @@ $(document).ready(function(){
   //             .children(".text-field__math-operation_minus")
   //             .addClass("text-field__math-operation_disabled");
   //   })
+
+  //   totalResultField.text("");
+  // })
 });
 
 

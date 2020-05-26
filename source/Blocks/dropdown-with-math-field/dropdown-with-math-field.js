@@ -41,6 +41,7 @@ $(document).ready(function(){
     }
 
   });
+  
 
   //вывод результата в строку с кнопкой применить (без кнопки - очистить)
   $(".dropdown-with-math-field__button-apply").click(function(){

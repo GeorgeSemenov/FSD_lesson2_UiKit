@@ -1,5 +1,5 @@
 mixin text-field__input-wrapper(modifier)
-  .text-field__input-wrapper&attributes(attributes)
+  form.text-field__input-wrapper&attributes(attributes)
     - var additionalClass = "";
     - additionalClass += modifier.inputType.slice(0,4)=="date" ?" datepicker-here": "";
     - additionalClass += modifier.inputType=="date-range" ?" text-field_text_lower-case": "";
@@ -13,7 +13,7 @@ mixin text-field__input-wrapper(modifier)
     else if (modifier.inputType == "date-range")
       +text-field__input(modifier)(class=additionalClass readonly data-range="true" data-multiple-dates-separator=" - " data-view="days" data-date-format="dd M")
     else if(modifier.inputType == "dropdown")
-      +text-field__input(modifier)(class=additionalClass value=modifier.totalResultText)
+      +text-field__input(modifier)(class=additionalClass value=modifier.totalResultText  readonly)
       +text-field__menu(modifier)
     else
       +text-field__input(modifier)(class=additionalClass)
