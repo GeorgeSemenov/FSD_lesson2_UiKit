@@ -14,6 +14,6 @@ mixin text-field__input-wrapper(modifier)
       +text-field__input(modifier)(class=additionalClass readonly data-range="true" data-multiple-dates-separator=" - " data-view="days" data-date-format="dd M")
     else if(modifier.inputType == "dropdown")
       +text-field__input(modifier)(class=additionalClass value=modifier.totalResultText  readonly)
-      +text-field__menu(modifier)
+      +text-field__menu-wrapper(modifier)
     else
       +text-field__input(modifier)(class=additionalClass)

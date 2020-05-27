@@ -37,7 +37,6 @@ $(document).ready(function(){
   //при загрузке страницы - происходит вывод изначальных значений в text-field__input 
   $(".text-field__menu").each(function(index, resultItem){
     let textInput = $(this).siblings(".text-field__input");
-      // console.log(textInput.data().initaialString);
     let mainO= returnMainObject($(this).children('.text-field__item'));
     if (textInput.data().initaialString){
       mainO.totalResultField.val(textInput.data().initaialString);
@@ -73,36 +72,24 @@ $(document).ready(function(){
 
   //вывод результата в строку с кнопкой применить (без кнопки - очистить)
   $(".text-field__button-apply").click(function(){
-    var menu = $(this).parents(".text-field__menu");
-    var totalResultField = menu.siblings(".text-field__input");
-    var itemsCollection = menu.children('.text-field__item');
-
-    let resultObj = collectValuesAndKeysToResultObj(itemsCollection);
-
-    let textField = menu.parents(".text-field");
-    let isTextFieldNumbersOnly = textField.hasClass("text-field_numbers-only");
-
-    totalResultField.val(convertObjectInResultString({resultObj: resultObj, isTextFieldNumbersOnly: isTextFieldNumbersOnly}));
+    let mainO = returnMainObject($(this));
+    mainO.totalResultField.val(convertObjectInResultString({resultObj: mainO.resultObj, isTextFieldNumbersOnly: mainO.isTextFieldNumbersOnly}));
   })
 
   // При нажатии на кнопку очистить, этот код нужен, если по каким-то причинам ты не можешь
   // использовать button(type="reset")
-  // $(".text-field__button-clear").click(function(){
-  //   let dropdownMenu = $(this).parents(".text-field__menu");
-  //   let dropdownItemsCollection = dropdownMenu.children('.text-field__item');
-  //   let totalResultField = dropdownMenu.siblings(".text-field__input");
-  //   console.log("clear pressed");
+  $(".text-field__button-clear").click(function(){
+    let mainO = returnMainObject($(this));
 
-  //   dropdownItemsCollection.each(function(index, item){
-  //     $(this).children(".text-field__item-math-field")
-  //            .children(".text-field__math-result").text(0);
-  //     $(this).children(".text-field__item-math-field")
-  //             .children(".text-field__math-operation_minus")
-  //             .addClass("text-field__math-operation_disabled");
-  //   })
+    mainO.items.each(function(index, item){
+      $(this).children(".text-field__item-math-field")
+             .children(".text-field__math-result").text(0);
+      $(this).children(".text-field__item-math-field")
+             .children(".text-field__math-operation_minus")
+             .addClass("text-field__math-operation_disabled");
+    })
 
-  //   totalResultField.text("");
-  // })
+  })
 });
 
 
@@ -184,7 +171,9 @@ function collectValuesAndKeysToResultObj (collectionNode){
 
 function returnMainObject (initialNode){
   let mainObject = {};
-  mainObject.menu = initialNode.parents(".text-field__menu");
+  mainObject.mainBlock = initialNode.parents(".text-field");
+  mainObject.wrapper = initialNode.parents(".text-field__input-wrapper");
+  mainObject.menu = mainObject.wrapper.children(".text-field__menu");
   mainObject.totalResultField = mainObject.menu.siblings(".text-field__input");
   mainObject.items = mainObject.menu.children('.text-field__item');
   
@@ -193,7 +182,7 @@ function returnMainObject (initialNode){
   mainObject.dropdown = mainObject.menu.parents(".text-field");
   mainObject.isTextFieldNumbersOnly = mainObject.dropdown.hasClass("text-field_numbers-only");  
 
-  mainObject.isThereApplyButton=mainObject.menu.children('.text-field__button-container')
+  mainObject.isThereApplyButton=mainObject.wrapper.children('.text-field__button-container')
                                                        .children('.text-field__button-apply')
                                                        .hasClass('text-field__button-apply');
   return mainObject;

@@ -1,5 +1,5 @@
 mixin text-field__button-container(isThereApplyButton, isThereClearButton)
-  li.text-field__button-container&attributes(attributes)
+  .text-field__button-container&attributes(attributes)
     if isThereApplyButton
       +text-field__button-apply()
     if isThereClearButton
