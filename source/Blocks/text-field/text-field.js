@@ -21,9 +21,9 @@ $(document).ready(function(){
     
     /*вывод/сокрытие менюшки dropdown*/
     if($(this).siblings('.text-field__menu-wrapper')
-              .children('ul').hasClass('text-field__menu')){
+              .hasClass('text-field__menu-wrapper')){
       $(this).siblings('.text-field__menu-wrapper')
-              .children('ul').toggleClass("text-field__menu_show");
+             .toggleClass("text-field__menu-wrapper_show");
     }
 
   });

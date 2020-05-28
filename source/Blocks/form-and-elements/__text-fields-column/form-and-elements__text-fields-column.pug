@@ -12,8 +12,9 @@ mixin form-and-elements__text-fields-column(modifier)
         inputPlaceholder: "This is pretty awesome"
       } 
       )(class=' form-and-elements__text-field text-field_size_normal  text-field_desc-position_without-bottom')
-    +dropdown-with-math-field({
+    +text-field({
       title: "DROPDOWN",
+      inputType: "dropdown",
       description: "DEFAULT",
       totalResultName:"Сколько гостей",
       menuItemsObjArray: [
@@ -24,7 +25,7 @@ mixin form-and-elements__text-fields-column(modifier)
       isMenuShown:false,
       isThereApplyButton:false,
       isThereClearButton:false
-      })(class="form-and-elements__dropdown-with-math-field dropdown-with-math-field_size_normal dropdown-with-math-field_numbers-only")
+      })(class="form-and-elements__text-field text-field_size_normal text-field_numbers-only text-field_without-menu-wrapper")
     +text-field({
       title: "MASKED TEXT FIELD", 
       description: "DEFAULT",
@@ -38,10 +39,10 @@ mixin form-and-elements__text-fields-column(modifier)
       inputPlaceholder: "19 авг - 23 авг",
       isNeededToggler: true,
       inputType:"date-range"
-    })(class="form-and-elements__text-field_margin-top_37px text-field_size_two-thirds")
+    })(class="form-and-elements__text-field_margin-top_37px text-field_size_two-thirds form-and-elements_margin-top-43px")
     +text-field({
       title:"SUBSCRIPTION TEXT FIELD",
       inputPlaceholder: "Email",
       isNeededArrow: true,
       additionalClasses: " text-field_arrow_velvet-horisontal"
-    })(class="form-and-elements__text-field_margin-top_37px text-field_size_two-thirds")
+    })(class="form-and-elements__text-field_margin-top_37px text-field_size_two-thirds form-and-elements_margin-top-43px")
