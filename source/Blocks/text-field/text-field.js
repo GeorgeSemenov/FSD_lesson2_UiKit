@@ -18,10 +18,12 @@ $(document).ready(function(){
       }
     }
 
+    
     /*вывод/сокрытие менюшки dropdown*/
-    if($(this).siblings('ul').hasClass('text-field__menu')){
-      var thisMenu = $(this).siblings('.text-field__menu');
-      thisMenu.toggleClass("text-field__menu_show");
+    if($(this).siblings('.text-field__menu-wrapper')
+              .children('ul').hasClass('text-field__menu')){
+      $(this).siblings('.text-field__menu-wrapper')
+              .children('ul').toggleClass("text-field__menu_show");
     }
 
   });
@@ -36,12 +38,11 @@ $(document).ready(function(){
 
   //при загрузке страницы - происходит вывод изначальных значений в text-field__input 
   $(".text-field__menu").each(function(index, resultItem){
-    let textInput = $(this).siblings(".text-field__input");
     let mainO= returnMainObject($(this).children('.text-field__item'));
-    if (textInput.data().initaialString){
-      mainO.totalResultField.val(textInput.data().initaialString);
+    if (mainO.input.data().initaialString){
+      mainO.input.val(mainO.input.data().initaialString);
     } else{
-      mainO.totalResultField.val(convertObjectInResultString(mainO));
+      mainO.input.val(convertObjectInResultString(mainO));
     }
   })
 
@@ -65,7 +66,7 @@ $(document).ready(function(){
     let mainO = returnMainObject($(this));
     //Если нет кнопки "применить" то вывод происходит мгновенно
     if (!mainO.isThereApplyButton){
-      mainO.totalResultField.val(convertObjectInResultString(mainO));
+      mainO.input.val(convertObjectInResultString(mainO));
     }
 
   });
@@ -73,7 +74,7 @@ $(document).ready(function(){
   //вывод результата в строку с кнопкой применить (без кнопки - очистить)
   $(".text-field__button-apply").click(function(){
     let mainO = returnMainObject($(this));
-    mainO.totalResultField.val(convertObjectInResultString({resultObj: mainO.resultObj, isTextFieldNumbersOnly: mainO.isTextFieldNumbersOnly}));
+    mainO.input.val(convertObjectInResultString({resultObj: mainO.resultObj, isTextFieldNumbersOnly: mainO.isTextFieldNumbersOnly}));
   })
 
   // При нажатии на кнопку очистить, этот код нужен, если по каким-то причинам ты не можешь
@@ -172,9 +173,10 @@ function collectValuesAndKeysToResultObj (collectionNode){
 function returnMainObject (initialNode){
   let mainObject = {};
   mainObject.mainBlock = initialNode.parents(".text-field");
-  mainObject.wrapper = initialNode.parents(".text-field__input-wrapper");
-  mainObject.menu = mainObject.wrapper.children(".text-field__menu");
-  mainObject.totalResultField = mainObject.menu.siblings(".text-field__input");
+  mainObject.inputWrapper = initialNode.parents(".text-field__input-wrapper");
+  mainObject.menuWrapper = mainObject.inputWrapper.children(".text-field__menu-wrapper");
+  mainObject.menu = mainObject.menuWrapper.children(".text-field__menu");
+  mainObject.input = mainObject.inputWrapper.children(".text-field__input");
   mainObject.items = mainObject.menu.children('.text-field__item');
   
   mainObject.resultObj = collectValuesAndKeysToResultObj(mainObject.items);
@@ -182,7 +184,7 @@ function returnMainObject (initialNode){
   mainObject.dropdown = mainObject.menu.parents(".text-field");
   mainObject.isTextFieldNumbersOnly = mainObject.dropdown.hasClass("text-field_numbers-only");  
 
-  mainObject.isThereApplyButton=mainObject.wrapper.children('.text-field__button-container')
+  mainObject.isThereApplyButton=mainObject.menuWrapper.children('.text-field__button-container')
                                                        .children('.text-field__button-apply')
                                                        .hasClass('text-field__button-apply');
   return mainObject;
