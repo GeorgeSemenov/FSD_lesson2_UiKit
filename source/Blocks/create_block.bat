@@ -87,6 +87,40 @@ echo if  /I %%isThereElement%% == %%True%% ^(
 	echo ^)^>^>create_modificator.bat
 echo ^)
 )>create_elemeficator.bat
+rem создаём файл для элеменификатора для линукса
+(
+echo #!/bin/sh
+echo parentName=%fileName%
+echo PUG=%fileName%.pug
+echo styleSCSS=%fileName%.scss
+echo read -p "What would you create : " fileName
+echo mkdir ${fileName}
+echo isThereNeedPugFile=1
+echo zero=0
+echo TAB='  '
+echo # если нужен pug file то условный оператор всё обработает
+echo read -p "Do you need pug file? (1/0) : " isThereNeedPugFile
+echo if [ "$isThereNeedPugFile" -gt "$zero" ]; then 
+echo # подключаем инклуды в начало pug файла у нашего блока, для этого создаём новый файл в него записываем инклуд, затем добавляем содержимое нашего PUG файла и затем копируем содержимое нового файла в PUG с замещением а новый файл удаляем к чертям собачьим
+echo cat ^> newFile.pug ^<^< end1
+echo include ${fileName}/${parentName}${fileName}.pug
+echo end1
+echo cat ${PUG} ^>^> newFile.pug
+echo mv -f newFile.pug  ${PUG}
+echo cat ^> ${fileName}/${parentName}${fileName}.pug ^<^< end2
+echo mixin ${parentName}${fileName}^(modifier^)
+echo ${TAB}.${parentName}${fileName}^&attributes^(attributes^)
+echo end2
+echo fi
+echo # модернизируем scss файл родителя и создаём scss файл для элемента/модификатора
+echo cat ^>^> ${styleSCSS} ^<^< end3
+echo @import '${fileName}/${parentName}${fileName}';
+echo end3
+echo cd ${fileName}
+echo cat ^>^> ${parentName}${fileName}.scss ^<^< end4
+echo .${parentName}${fileName} {}
+echo end4
+)>create_elemeficator.sh
 cd ../../components
 (
 echo @import '../Blocks/%fileName%/%fileName%';
