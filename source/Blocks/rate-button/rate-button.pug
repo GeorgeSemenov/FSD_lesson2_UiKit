@@ -1,5 +1,9 @@
 include __star/rate-button__star.pug
 include __line/rate-button__line.pug
 mixin rate-button(modifier)
+  if modifier.starsfilled == undefined
+    modifier.starsfilled = 0;
+  - let jir=6;
   .rate-button&attributes(attributes)
-    +rate-button__line(modifier)
+    +rate-button__line(modifier)(data-initial-stars-filled=modifier.starsfilled)
+

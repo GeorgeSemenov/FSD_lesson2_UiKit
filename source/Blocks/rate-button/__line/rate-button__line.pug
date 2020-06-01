@@ -1,3 +1,5 @@
 mixin rate-button__line(modifier)
   .rate-button__line&attributes(attributes)
-    +rate-button__star(modifier)
+    - for (let i = 0; i < modifier.starsNumber; ++i) {
+      +rate-button__star(modifier)(data-number=(i+1))
+    - }
