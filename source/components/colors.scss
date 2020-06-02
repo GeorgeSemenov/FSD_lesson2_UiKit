@@ -12,6 +12,8 @@ $gradient-gray-blue: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
 $gradient-gray-blue-faded: linear-gradient(180deg, rgba(188,156,255,0.6) 0%, rgba(139,164,249,0.6) 100%);
 $gradient-gray-only:  linear-gradient($gray-lighter 100%, $gray-lighter 100%);
 
+$svg-gradient-purple: url('../../components/svg-purple-gradient.pug#purple-gradient');
+
 /*variables with sense*/
 $dropdownColorClearButton: $gray;
 
@@ -43,3 +45,4 @@ $paginationActiveItemBackgroundColorHover: $gradient-gray-blue-faded;
 $paginationActiveItemColor: $white;
 $paginationItemColor: $gray;
 $paginationNavigationActiveBackgroundColor: $gradient-green;
+
