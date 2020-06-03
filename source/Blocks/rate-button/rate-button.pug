@@ -5,8 +5,8 @@ include ../../components/svg-purple-gradient_faded.pug
 //- В файле что прописан выше находится градиентный цвет для 
 mixin rate-button(modifier)
   if modifier.starsfilled == undefined
-    modifier.starsfilled = 0;
-  - let jir=6;
-  .rate-button&attributes(attributes)
-    +rate-button__line(modifier)(data-initial-stars-filled=modifier.starsfilled)
+    - modifier.starsfilled = 2;
+
+  .rate-button&attributes(attributes)(data-initial-stars-filled=modifier.starsfilled)
+    +rate-button__line(modifier)
 
