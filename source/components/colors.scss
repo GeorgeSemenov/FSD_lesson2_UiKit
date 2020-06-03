@@ -12,7 +12,12 @@ $gradient-gray-blue: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
 $gradient-gray-blue-faded: linear-gradient(180deg, rgba(188,156,255,0.6) 0%, rgba(139,164,249,0.6) 100%);
 $gradient-gray-only:  linear-gradient($gray-lighter 100%, $gray-lighter 100%);
 
-$svg-gradient-purple: url('../../components/svg-purple-gradient.pug#purple-gradient');
+//Внимание, для работы градиентных цветов для svg требуется подключать pug файл с этим 
+//градиентом путь будет описан в комментарии ниже
+$svg-gradient-purple: url('#svg-purple-gradient');
+// include ../../components/svg-purple-gradient.pug
+$svg-gradient-purple_faded: url('#svg-purple-gradient_faded');
+// include ../../components/svg-purple-gradient_faded.pug
 
 /*variables with sense*/
 $dropdownColorClearButton: $gray;
@@ -46,3 +51,6 @@ $paginationActiveItemColor: $white;
 $paginationItemColor: $gray;
 $paginationNavigationActiveBackgroundColor: $gradient-green;
 
+$rateButtonStarFill: $svg-gradient-purple; // include ../../components/svg-purple-gradient.pug
+$rateButtonStarStroke: $svg-gradient-purple; // include ../../components/svg-purple-gradient.pug
+$rateButtonStarFill_faded: $svg-gradient-purple_faded; // include ../../components/svg-purple-gradient.pug
