@@ -1,0 +1,5 @@
+mixin checkbox-list__title-wrapper(modifier)
+  .checkbox-list__title-wrapper&attributes(attributes)
+    +optional-inp-drop-title-and-desc-wrapper(modifier)
+    if modifier.type == "expandable"
+      - modifier.checkboxListId = "checkboxListIdDefaultValue";

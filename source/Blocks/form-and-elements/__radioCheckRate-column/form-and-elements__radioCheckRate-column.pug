@@ -13,7 +13,7 @@ mixin form-and-elements__radioCheckRate-column(modifier)
           isChecked: true
         }
       ]
-    })
+    })(class=" form-and-elements__checkbox-list")
     +radio-buttons-list({
       title: "RADIO BUTTONS",
       itemsArray: [
@@ -21,7 +21,7 @@ mixin form-and-elements__radioCheckRate-column(modifier)
         {label : "Женщина" , isChecked : false}
       ],
       radioListID: "FirstRadioList"
-    })
+    })(class=" form-and-elements__radio-button-list")
     +togglers-list({
       title: "TOGGLE",
       togglersArray: [
@@ -34,10 +34,10 @@ mixin form-and-elements__radioCheckRate-column(modifier)
           isChecked: false
         }
       ]
-    })
+    })(class=" form-and-elements__togglers-list")
     +like-button-list({
       title:"LIKE BUTTON"
-    })
+    })(class=" form-and-elements__like-button-list")
     +rate-button-list({
       title:"RATE BUTTON"
-    })
+    })(class=" form-and-elements__rate-button-list")

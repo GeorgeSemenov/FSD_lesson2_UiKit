@@ -1,3 +1,4 @@
+include __title-wrapper/checkbox-list__title-wrapper.pug
 include __checkbox-container/checkbox-list__checkbox-container.pug
 include __item-wrapper/checkbox-list__item-wrapper.pug
 include __label/checkbox-list__label.pug
@@ -11,7 +12,9 @@ mixin checkbox-list(modifier={header,checkboxListId,isChecked,menuItemsArray:[{t
     
     if modifier.checkboxListId == undefined
       - modifier.checkboxListId = "checkboxListIdDefaultValue";
-    
 
-    +optional-inp-drop-title-and-desc-wrapper(modifier)
+    if modifier.type == undefined
+      - modifier.checkboxListId = "normal";
+
+    +checkbox-list__title-wrapper(modifier)
     +checkbox-list__menu(modifier)

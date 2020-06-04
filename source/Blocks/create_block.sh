@@ -32,7 +32,7 @@ read -p "What would you create : " fileName
 mkdir ${lcb}fileName${rcb}
 isThereNeedPugFile=1
 zero=0
-TAB=${TAB}
+TAB='  '
 # если нужен pug file то условный оператор всё обработает
 read -p "Do you need pug file? (1/0) : " isThereNeedPugFile
 if [ "${dollar}isThereNeedPugFile" -gt "${dollar}zero" ]; then 
