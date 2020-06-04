@@ -1,4 +1,4 @@
-import '../rate-button/rate-button.js';
+// import '../rate-button-list/rate-button-list.js';
 import '../dropdown-with-math-field/dropdown-with-math-field.js';
 import '../text-field/text-field.js';
 import '../checkbox/checkbox.js';
