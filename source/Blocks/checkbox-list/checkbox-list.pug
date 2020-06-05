@@ -14,6 +14,9 @@ mixin checkbox-list(modifier={header,checkboxListId,isChecked,menuItemsArray:[{t
     if modifier.checkboxListId == undefined
       - modifier.checkboxListId = "checkboxListIdDefaultValue";
 
+    if attributes.class == undefined
+      - attributes.class = "";
+
     //- объединяем modifier с аттрибутами, чтобы знать - нужно ли создавать тогглер? ведь в аттрибутах может быть модификатор, создающий тогглеp
     - Object.assign(modifier,attributes,modifier)
 

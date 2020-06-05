@@ -1,3 +1,4 @@
+import '../checkbox-list/checkbox-list.js';
 import '../rate-button-list/rate-button-list.js';
 import '../dropdown-with-math-field/dropdown-with-math-field.js';
 import '../text-field/text-field.js';

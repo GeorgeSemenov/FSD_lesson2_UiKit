@@ -6,14 +6,8 @@ $(document).ready(function(){
     }else{
       $(this).children("input").prop('checked', false)
     }
-    // if ($(this).children("input").prop('checked')){
-    //   $(this).toggleClass("checkbox_checked");
-    // }else{
-    //   $(this).toggleClass("checkbox_unchecked");
-    // }
   })
   $(".checkbox__inner-space").click(function(){
-    console.log("hello");
     var checkbox = $(this).parent();
 
     checkbox.toggleClass("checkbox_unchecked");
