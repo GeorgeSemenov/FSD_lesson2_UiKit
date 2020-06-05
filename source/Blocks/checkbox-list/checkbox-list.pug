@@ -7,14 +7,15 @@ include __item/checkbox-list__item.pug
 include __menu/checkbox-list__menu.pug
 include ../../Blocks/checkbox/checkbox.pug
 include ../optional-inp-drop-title-and-desc-wrapper/optional-inp-drop-title-and-desc-wrapper.pug
+include ../arrow-toggler/arrow-toggler.pug
 mixin checkbox-list(modifier={header,checkboxListId,isChecked,menuItemsArray:[{text}]})
   .checkbox-list&attributes(attributes)
     
     if modifier.checkboxListId == undefined
       - modifier.checkboxListId = "checkboxListIdDefaultValue";
 
-    if modifier.type == undefined
-      - modifier.checkboxListId = "normal";
+    //- объединяем modifier с аттрибутами, чтобы знать - нужно ли создавать тогглер? ведь в аттрибутах может быть модификатор, создающий тогглеp
+    - Object.assign(modifier,attributes,modifier)
 
     +checkbox-list__title-wrapper(modifier)
     +checkbox-list__menu(modifier)
