@@ -1,3 +1,5 @@
 mixin checkbox-list__label-wrapper(modifier)
   .checkbox-list__label-wrapper&attributes(attributes)
     +checkbox-list__label(modifier)
+    if modifier.class.includes("checkbox-list_rich")
+      +checkbox-list__description(modifier)
