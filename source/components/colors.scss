@@ -3,6 +3,7 @@ $white: #fff;
 
 $gray: rgba(31,32,65,0.5);
 $gray-lighter: rgba(31,32,65,0.25);
+$gray-darker: rgba(31, 32, 65, 0.75);
 
 $purple: #BC9CFF;
 
@@ -21,6 +22,8 @@ $svg-gradient-purple_faded: url('#svg-purple-gradient_faded');
 
 /*variables with sense*/
 $dropdownColorClearButton: $gray;
+
+$checkboxLabelColor_rich: $gray-darker;
 
 $rangeSliderDisplayedNumbersColor: $gray;
 $rangeSliderBorderColor: $gray-lighter;

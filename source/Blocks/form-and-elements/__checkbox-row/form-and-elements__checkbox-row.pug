@@ -2,25 +2,16 @@ mixin form-and-elements__checkbox-row(modifier)
   .form-and-elements__checkbox-row&attributes(attributes)
     +form-and-elements__checkbox-subcolumn(modifier)
     +checkbox-list({
-      title: "EXPANDABLE CHECKBOX LIST", 
-      checkboxListId: "expandable-checkbox",
+      title: "RICH CHECKBOX BUTTONS", 
+      checkboxListId: "checkbox-rich",
       menuItemsArray: [
-        {text:"Завтрак"},
         {
-          text:"Письменный стол", 
-          isChecked: true
+          text:"Широкий коридор",
+          description: "Ширина коридоров в номере не менее 91 см"  
         },
         {
-          text:"Стул для кормления",
-          isChecked: true
+          text:"Помощник для инвалидов",
+          description: "На 1 этаже вас встретит специалист и проводит до номера"  
         },
-        {
-          text:"кроватка",
-          isChecked: true
-        },
-        {text:"Телевизор"},
-        {text:"Шампунь"},
-        {text:"Телевизор"},
-        {text:"Шампунь"}
       ]
     })(class=" form-and-elements__checkbox-list checkbox-list_rich ")

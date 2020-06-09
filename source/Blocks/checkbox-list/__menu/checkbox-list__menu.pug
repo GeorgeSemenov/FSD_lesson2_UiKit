@@ -4,5 +4,8 @@ mixin checkbox-list__menu(modifier)
       +checkbox-list__item-wrapper(
         Object.assign({},
           modifier.menuItemsArray[i],
-          {checkboxId:`${modifier.checkboxListId}_item_#${i+1}`}
+          {
+            checkboxId:`${modifier.checkboxListId}_item_#${i+1}`,
+            class: modifier.class 
+          }
           ))
