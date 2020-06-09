@@ -1,1 +1,5 @@
-.checkbox-list__description {}
+.checkbox-list__description {
+  @include lesserCommonFontStyle;
+  display: block;
+  width: 101%;
+}

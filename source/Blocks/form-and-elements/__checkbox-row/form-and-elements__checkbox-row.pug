@@ -7,7 +7,7 @@ mixin form-and-elements__checkbox-row(modifier)
       menuItemsArray: [
         {
           text:"Широкий коридор",
-          description: "Ширина коридоров в номере не менее 91 см"  
+          description: "Ширина коридоров в номере </br>не менее 91 см"  
         },
         {
           text:"Помощник для инвалидов",
@@ -15,3 +15,12 @@ mixin form-and-elements__checkbox-row(modifier)
         },
       ]
     })(class=" form-and-elements__checkbox-list checkbox-list_rich ")
+    +checkbox-list({
+      title: "BULLET LIST", 
+      checkboxListId: "bullet-checkbox",
+      menuItemsArray: [
+        {text:"Нельзя с питомцами"},
+        {text:"Без вечеринок и мероприятий"},
+        {text:"Время прибытия - после 13.00,</br>а выезд до 12.00"}
+      ]
+    })(class=" form-and-elements__checkbox-list checkbox-list_with-bullets ") 
