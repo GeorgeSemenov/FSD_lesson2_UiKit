@@ -5,6 +5,7 @@
 
   @include media-breakpoint-up(lg){
     padding-right: 12px;
+    margin-bottom: 210px;
 
     &>div:last-child{
       position: relative;
@@ -14,6 +15,7 @@
   @include media-breakpoint-down(md){
     flex-direction: column;
     align-items: center;
+    margin-bottom: 180px;
 
     &>div:first-child{
       order: 9;

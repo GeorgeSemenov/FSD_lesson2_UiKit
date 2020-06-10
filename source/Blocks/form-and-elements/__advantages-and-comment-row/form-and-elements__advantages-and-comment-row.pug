@@ -1,3 +1,15 @@
 mixin form-and-elements__advantages-and-comment-row(modifier)
   .form-and-elements__advantages-and-comment-row&attributes(attributes)
-    
+    +form-and-elements__plusses-column([
+      {
+        name: "Комфорт",
+        description: "Шумопоглощающие стены",
+        img: "smile"
+      },
+      {
+        name: "Удобство",
+        description: "Окно в каждой из спален",
+        img: "home"
+      }
+    ])
+    +comment(modifier)
