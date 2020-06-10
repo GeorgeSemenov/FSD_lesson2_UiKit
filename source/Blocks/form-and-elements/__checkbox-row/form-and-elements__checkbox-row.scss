@@ -1,1 +1,11 @@
-.form-and-elements__checkbox-row {}
+.form-and-elements__checkbox-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  .form-and-elements__checkbox-list {
+    &+&{
+      margin-top: 45px;
+    }
+  }
+}
+
