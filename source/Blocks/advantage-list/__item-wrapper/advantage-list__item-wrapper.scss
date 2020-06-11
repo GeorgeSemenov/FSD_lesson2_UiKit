@@ -1,1 +1,6 @@
-.advantage-list__item-wrapper {}
+.advantage-list__item-wrapper {
+  border-bottom: 1px solid $advantageListItemWrapperDividersColor;
+  &:last-child{
+    border-bottom: none;
+  }
+}
