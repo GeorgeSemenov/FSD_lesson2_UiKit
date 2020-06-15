@@ -1,1 +1,4 @@
-.comment__name-date-wrapper {}
+.comment__name-date-wrapper {
+  @include commonFontStyle;
+  color: $commentAvatarTextColor;
+}

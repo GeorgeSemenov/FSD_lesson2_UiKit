@@ -12,4 +12,7 @@ mixin form-and-elements__advantages-and-comment-row(modifier)
         img: "home"
       }
     ])(class=" advantage-list_size_normal ")
-    +comment(modifier)
+    +comment({
+      name: "Мурад Сарафанов",
+      date: "5 дней назад"
+    })(class="form-and-elements__comment")
