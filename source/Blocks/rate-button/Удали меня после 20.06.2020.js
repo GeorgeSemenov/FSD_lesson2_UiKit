@@ -28,7 +28,6 @@ function toMarkStars(initialNode, classNameToRemove, classNameToAdd=classNameToR
   let nops = initialNode.data('number');// means number of pressed/mouseover star
   stars.each(function(index, resultItem){
     $(this).removeClass(classNameToRemove);
-    console.log("viewBox = " + $( this ).attr( "viewBox" ));
     if (index < nops){
        $(this).addClass(classNameToAdd);
     }
