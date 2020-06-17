@@ -3,6 +3,7 @@ mixin comment__image(modifier)
   - pic = imgPath + 'pic.jpg'
   - picFull = "../../components/img/pic.jpg"
   picture.comment__image&attributes(attributes)
-    source(type="image/webp" srcset=require("../../components/img/murad.webp"))
-    source(type="image/jpeg" srcset="../../components/img/murad.jpg")
-    img(src=require("../../components/img/murad.jpg") alt="изображение комментария аватара")
+    // source(type="image/webp" srcset=require("../../components/img/murad.webp"))
+    // source(type="image/jpeg" srcset="../../components/img/murad.jpg")
+    // img(src=require("../../components/img/murad.jpg") alt="изображение комментария аватара")
+    img(src=require(modifier.img) alt="изображение комментария аватара")

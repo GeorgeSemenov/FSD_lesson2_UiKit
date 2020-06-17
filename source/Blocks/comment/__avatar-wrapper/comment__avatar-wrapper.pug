@@ -1,4 +1,5 @@
 mixin comment__avatar-wrapper(modifier)
   .comment__avatar-wrapper&attributes(attributes)
+    - modifier.img= "./murad.jpg";
     +comment__image(modifier)
     +comment__name-date-wrapper(modifier)

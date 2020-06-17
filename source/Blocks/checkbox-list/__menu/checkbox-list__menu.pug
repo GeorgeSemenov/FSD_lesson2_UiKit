@@ -1,5 +1,5 @@
 mixin checkbox-list__menu(modifier)
-  .checkbox-list__menu&attributes(attributes)
+  ul.checkbox-list__menu&attributes(attributes)
     - for (var i=0; i< modifier.menuItemsArray.length; i++)
       +checkbox-list__item-wrapper(
         Object.assign({},

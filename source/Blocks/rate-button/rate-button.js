@@ -9,7 +9,10 @@ $(document).ready(function(){
 
   //Изменение значений окрашенных звёздочек при клике
   $(".rate-button__star").click(function(){
+    console.log("click - " + $(this).data('number'));
     toMarkStars($(this),'rate-button__star_filed');
+    $(this).first().css({"baorder": "2px solid red"});
+    toFadeFilled($(this).siblings('.rate-button__star:first'),"rate-button__star_filedFaded","");
   })
 
   //Изменение значений окрашенных звёздочек при наведении мышки
@@ -28,7 +31,6 @@ function toMarkStars(initialNode, classNameToRemove, classNameToAdd=classNameToR
   let nops = initialNode.data('number');// means number of pressed/mouseover star
   stars.each(function(index, resultItem){
     $(this).removeClass(classNameToRemove);
-    console.log("viewBox = " + $( this ).attr( "viewBox" ));
     if (index < nops){
        $(this).addClass(classNameToAdd);
     }
@@ -40,7 +42,6 @@ function toFadeFilled(initialNode, classNameToRemove="", classNameToAdd=""){
   let nops = initialNode.data('number');// means number of pressed/mouseover star
   stars.each(function(index, resultItem){
     if ( (index >= nops) && $(this).hasClass("rate-button__star_filed")){
-      console.log("condition is true");
       $(this).addClass(classNameToAdd);
       $(this).removeClass(classNameToRemove);
     }
