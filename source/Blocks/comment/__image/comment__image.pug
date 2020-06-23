@@ -1,12 +1,13 @@
 mixin comment__image(modifier)
-  // - const path = './murad.jpg'
-  // - imgPath = '../../components/img/' //-путь верный, но если указать в source эти пеоеменные то работать не будет, интересно почему?
-  // - pic = imgPath + 'pic.jpg'
-  // - picFull = "../../components/img/pic.jpg"
   picture.comment__image&attributes(attributes)
     source(type="image/webp" srcset=require("../../components/img/murad.webp"))
-    source(type="image/jpeg" srcset="../../components/img/murad.jpg")
     img(src=require("../../components/img/murad.jpg") alt="изображение комментария аватара")
-    // img(src=require(modifier.img) alt="изображение комментария аватара")
-    // img(src=require(path) alt="изображение комментария аватара")
-    // img(src=require("./murad.jpg") alt="изображение комментария аватара")
+  //- // - const path = './murad.jpg'
+  //- // - imgPath = '../../components/img/' //-путь верный, но если указать в source эти пеоеменные то работать не будет, интересно почему?
+  //- // - pic = imgPath + 'pic.jpg'
+  //- // - picFull = "../../components/img/pic.jpg"
+  //- picture.comment__image&attributes(attributes)
+  //- source(type="image/jpeg" srcset="../../components/img/murad.jpg")
+    //- img(src=require(modifier.img) alt="изображение комментария аватара")
+    //- img(src=require(path) alt="изображение комментария аватара")
+    //- img(src=require("./murad.jpg") alt="изображение комментария аватара")

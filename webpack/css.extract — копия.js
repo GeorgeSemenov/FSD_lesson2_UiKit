@@ -8,35 +8,11 @@ module.exports = function(){//Тут почему не нужен paths возм
 			rules: [//тут указываем массив настроек для лоадеров
 				{//Тут описываем настройки лоадера
 					test: /\.scss$/,
-					use: [
-						'style-loader', 
-						ExtractTextPlugin.loader, 
-						{
-							loader: 'css-loader',
-							options:{
-							sourceMap: true,
-						}
-						}, 
-						{
-							loader: 'sass-loader',
-							options:{
-								sourceMap: true,
-							}
-						}
-					],
+					use: ['style-loader', ExtractTextPlugin.loader, 'css-loader', 'sass-loader'],
 				},
 				{//Тут описываем настройки лоадера для css т.к. мы будем обрабатывать ещё и normalize.css поэтому простые .css файлы
 					test: /\.css$/,
-					use: [
-						'style-loader', 
-						ExtractTextPlugin.loader, 
-						{
-							loader: 'css-loader',
-							options:{
-								sourceMap: true,
-							}
-						}
-					],
+					use: ['style-loader', ExtractTextPlugin.loader, 'css-loader'],
 				},
 			],
 		},

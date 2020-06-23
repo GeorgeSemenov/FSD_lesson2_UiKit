@@ -1,10 +1,5 @@
 .form-and-elements__checkbox-subcolumn {
-  &>div:last-child{
+  .form-and-elements__checkbox-list + .form-and-elements__checkbox-list{
     margin-top: 45px;
   }
-  // .form-and-elements__checkbox-list {
-  //   &+&{
-  //     margin-top: 45px;
-  //   }
-  // }
 }
