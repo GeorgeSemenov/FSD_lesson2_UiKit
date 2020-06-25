@@ -7,9 +7,24 @@ module.exports = function(paths){//pathc - необходим, т.к. sass-loade
 					//include: paths, //ключ include принимает значение - массив путей или файловгде импортированные файлы будут трансформированны лоадером
 					use: [//тут указываем сами лоадеры, к которым относятся эти настройки
 						//Напомню - к файлам, которые подходят под regexp писаным в test: будут применены лоадеры начиная назшим и заканчивая высшим , или с права на лево.
-						'style-loader',//добавляет css стили в DOM дерево при помощи тега style
-						'css-loader',//добавляет css модули в град зависисмостей
-						'sass-loader'//компилирует scss в css
+						{//добавляет css стили в DOM дерево при помощи тега style и при этом ещё подгружает sourcemap
+							loader: 'style-loader',
+							options:{
+								sourceMap: true,
+							}
+						},
+						{//добавляет css модули в град зависисмостей
+							loader: 'css-loader',
+							options:{
+								sourceMap: true,
+							}
+						},
+						{//компилирует scss в css
+							loader: 'sass-loader',
+							options:{
+								sourceMap: true,
+							}
+						},
 					]
 				}
 			]
