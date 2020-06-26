@@ -1,4 +1,5 @@
 .comment__name-date-wrapper {
   @include commonFontStyle;
   color: $commentAvatarTextColor;
+  margin-left: 9px;
 }
