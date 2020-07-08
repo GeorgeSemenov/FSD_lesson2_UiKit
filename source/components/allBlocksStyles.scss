@@ -1,6 +1,26 @@
+/*Компоненты*/
+@import '../../../node_modules/air-datepicker/dist/css/datepicker.min.css';
+@import 'simplePagination/simplePagination';
+@import "UnCss";
+@import "~bootstrap/scss/bootstrap";
+
+/*самодельные стили*/
+@import "mixins";
+@import "colors";
+@import "global";
+
+/*Шрифты*/
+@import '../fonts/allFonts';
+
+/*Файлы блоков*/
+
+//Место для главной страницы
+
+/*Стили UIKit*/
+@import '../Blocks/color-and-type/color-and-type';
+@import '../Blocks/like-button-list/like-button-list';
 @import '../Blocks/brand-pic/brand-pic';
 @import '../Blocks/checkbox/checkbox';
-@import '../Blocks/color-and-type/color-and-type';
 @import '../Blocks/color-block/color-block';
 @import '../Blocks/optional-inp-drop-title-and-desc-wrapper/optional-inp-drop-title-and-desc-wrapper';
 @import '../Blocks/dropdown-with-math-field/dropdown-with-math-field';
@@ -12,12 +32,10 @@
 @import '../Blocks/toggler-with-label/toggler-with-label';
 @import '../Blocks/togglers-list/togglers-list';
 @import '../Blocks/like-button/like-button';
-@import '../../../node_modules/air-datepicker/dist/css/datepicker.min.css';
 @import '../Blocks/range-slider/range-slider';
 @import '../Blocks/button/button';
 @import '../Blocks/button-list/button-list';
 @import '../Blocks/pagination/pagination';
-@import 'simplePagination/simplePagination';@import '../Blocks/like-button-list/like-button-list';
 @import '../Blocks/header-UIKit/header-UIKit';
 @import '../Blocks/rate-button/rate-button';
 @import '../Blocks/rate-button-list/rate-button-list';
