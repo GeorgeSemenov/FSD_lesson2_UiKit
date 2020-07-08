@@ -1,17 +1,3 @@
-/*Компоненты*/
-@import "../../components/UnCss";
-@import "../../components/mixins";
-@import "../../components/colors";
-@import "~bootstrap/scss/bootstrap";
-
 /*Блоки*/
 @import "../../components/allBlocksStyles";
 
-
-/*Шрифты*/
-@import '../../fonts/allFonts';
-// @import '../../fonts/Quicksand/Quicksand';
-// @import '../../fonts/Montserrat/Montserrat';
-body{margin:0;}
-
-h1{font-family: Quicksand;}
