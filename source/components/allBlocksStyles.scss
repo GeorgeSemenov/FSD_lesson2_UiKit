@@ -1,16 +1,17 @@
 /*Компоненты*/
+@import "UnCss";/*т.к. он сбрасывает все стили*/
 @import '../../../node_modules/air-datepicker/dist/css/datepicker.min.css';
 @import 'simplePagination/simplePagination';
-@import "UnCss";
 @import "~bootstrap/scss/bootstrap";
+
+/*Шрифты*/ /*идут перед миксинами, т.к. фрифты могут быть использованны в миксинах*/
+@import '../fonts/allFonts';
 
 /*самодельные стили*/
 @import "mixins";
 @import "colors";
 @import "global";
 
-/*Шрифты*/
-@import '../fonts/allFonts';
 
 /*Файлы блоков*/
 
