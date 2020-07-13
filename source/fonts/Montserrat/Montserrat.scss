@@ -1,15 +1,21 @@
 //Пути нужно указывать относительно scss файла, который будет в pages, допустим index.scss
 @font-face {
   font-family: 'Montserrat';
-  src: url('../../fonts/Montserrat/Montserrat-Bold.eot');
-  src: local('☺'), url('../../fonts/Montserrat/Montserrat-Bold.woff') format('woff'), url('../../fonts/Montserrat/Montserrat-Bold.ttf') format('truetype'), url('../../fonts/Montserrat/Montserrat-Bold.svg') format('svg');
   font-weight: 700;
   font-style: normal;
+  src:  local('☺'), 
+        url('../../fonts/Montserrat/Montserrat-Bold.woff2') format('woff2'), 
+        url('../../fonts/Montserrat/Montserrat-Bold.woff') format('woff'), 
+        url('../../fonts/Montserrat/Montserrat-Bold.ttf') format('truetype'), 
+        url('../../fonts/Montserrat/Montserrat-Bold.svg') format('svg');
 }
 @font-face {
   font-family: 'Montserrat';
-  src: url('../../fonts/Montserrat/Montserrat-Regular.eot');
-  src: local('☺'), url('../../fonts/Montserrat/Montserrat-Regular.woff') format('woff'), url('../../fonts/Montserrat/Montserrat-Regular.ttf') format('truetype'), url('../../fonts/Montserrat/Montserrat-Regular.svg') format('svg');
   font-weight: 400;
   font-style: normal;
+  src:  local('☺'), 
+        url('../../fonts/Montserrat/Montserrat-Regular.woff2') format('woff2'), 
+        url('../../fonts/Montserrat/Montserrat-Regular.woff') format('woff'), 
+        url('../../fonts/Montserrat/Montserrat-Regular.ttf') format('truetype'), 
+        url('../../fonts/Montserrat/Montserrat-Regular.svg') format('svg');
 }
