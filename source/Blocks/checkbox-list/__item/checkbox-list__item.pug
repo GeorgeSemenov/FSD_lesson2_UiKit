@@ -1,5 +1,0 @@
-mixin checkbox-list__item(modifier)
-  .checkbox-list__item&attributes(attributes)
-    if !(modifier.class.includes("checkbox-list_with-bullets"))
-      +checkbox-list__checkbox-container(modifier)
-    +checkbox-list__label-wrapper(modifier)

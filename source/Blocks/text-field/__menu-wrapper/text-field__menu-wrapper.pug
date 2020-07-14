@@ -1,5 +1,0 @@
-mixin text-field__menu-wrapper(modifier)
-  .text-field__menu-wrapper&attributes(attributes)
-    +text-field__menu(modifier)
-    if (modifier.isThereApplyButton || modifier.isThereClearButton)
-      +text-field__button-container(modifier.isThereApplyButton, modifier.isThereClearButton)

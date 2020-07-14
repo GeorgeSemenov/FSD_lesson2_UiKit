@@ -1,9 +1,0 @@
-include __column-of-tag-blocks/color-and-type__column-of-tag-blocks.pug
-include __column-of-color-blocks/color-and-type__column-of-color-blocks.pug
-include ../brand-pic/brand-pic.pug
-mixin color-and-type(modifier)
-  .color-and-type&attributes(attributes).container-fluid
-    +header-UIKit(modifier)(class=" color-and-type__header-UIKit")
-    .row
-      +color-and-type__column-of-color-blocks()(class='col-12 col-lg')
-      +color-and-type__column-of-tag-blocks()(class='col-12 col-lg')

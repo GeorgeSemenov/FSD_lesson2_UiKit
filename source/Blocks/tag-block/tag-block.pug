@@ -1,6 +1,0 @@
-include __tag-description/tag-block__tag-description.pug
-include __tag-name/tag-block__tag-name.pug
-mixin tag-block( fontStyle=' tag-block_font-style_h1 ', tagName, descriptionText,descFontStyle, tagNameText)
-  .tag-block(class= fontStyle + ' tag-block_font-style ')&attributes(attributes)
-    +tag-block__tag-name(tagName,tagNameText)
-    +tag-block__tag-description(descriptionText,descFontStyle)

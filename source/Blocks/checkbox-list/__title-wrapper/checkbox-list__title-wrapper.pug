@@ -1,5 +1,0 @@
-mixin checkbox-list__title-wrapper(modifier)
-  .checkbox-list__title-wrapper&attributes(attributes)
-    +optional-inp-drop-title-and-desc-wrapper(modifier)
-    if modifier.class.includes("checkbox-list_expandable")
-      +arrow-toggler(modifier)(class=" checkbox-list__arrow-toggler ")

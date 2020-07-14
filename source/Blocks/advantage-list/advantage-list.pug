@@ -1,7 +1,0 @@
-include __item-wrapper/advantage-list__item-wrapper.pug
-include ../../Blocks/advantage/advantage.pug
-mixin advantage-list(modifier)
-  ul.advantage-list&attributes(attributes)
-    - for (var i=0; i< modifier.length; i++)
-      - var additionalClass= ( (i+1)%2==0)? "advantage-list__item_with-dividers" : ""
-      +advantage-list__item-wrapper(modifier[i])( class=additionalClass)

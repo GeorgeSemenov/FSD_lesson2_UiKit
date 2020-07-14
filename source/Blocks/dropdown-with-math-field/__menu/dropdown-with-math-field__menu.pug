@@ -1,9 +1,0 @@
-mixin dropdown-with-math-field__menu(modifier)
-  - var addedClass= "";
-  if modifier.isMenuShown
-    - addedClass= " dropdown-with-math-field__menu_show"
-  ul.dropdown-with-math-field__menu(class=addedClass)&attributes(attributes)
-    each itemObj in modifier.menuItemsObjArray
-      +dropdown-with-math-field__item(itemObj)
-    if (modifier.isThereApplyButton || modifier.isThereClearButton)
-      +dropdown-with-math-field__item-button-container(modifier.isThereApplyButton, modifier.isThereClearButton)
