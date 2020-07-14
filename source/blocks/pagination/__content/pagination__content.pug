@@ -1,0 +1,10 @@
+mixin pagination__content(modifier)
+  .pagination__content(actpage=1)&attributes(attributes)
+    +pagination__item({currentPaginationItemNumber: -1,
+    itemValue: ""})(class=" pagination__item_navigate pagination__item_navigate_left")
+    - for (var i = 1; i <= (modifier.numberOfItems); ++i)
+      +pagination__item({currentPaginationItemNumber: i,
+    itemValue: i})
+      - currentNumber = i;
+    +pagination__item({currentPaginationItemNumber: "+1",
+    itemValue: ""})(class=" pagination__item_navigate pagination__item_navigate_right")

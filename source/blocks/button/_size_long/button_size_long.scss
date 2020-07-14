@@ -1,0 +1,9 @@
+.button_size_long {
+  width: 320px;
+  padding-top: $normal-size-vertical-padding;
+  padding-bottom: $normal-size-vertical-padding;
+  border-radius: $border-radius;
+  @include media-breakpoint-down(md) {
+    width: 300px;
+  }
+}

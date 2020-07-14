@@ -1,0 +1,7 @@
+include __text-wrapper/color-block__text-wrapper.pug
+include __color-square/color-block__color-square.pug
+//-Очень важно чтобы в названиях класса в конце были пробелы, чтобы при конкатенации различных классов браузер видя между названиями классов растояни смог отличить один от другого
+mixin color-block(squareShape, squareBkgColor, colorName, colorDescription)
+  .color-block&attributes(attributes)
+    +color-block__color-square(squareShape, squareBkgColor)
+    +color-block__text-wrapper(textDecoration,colorName, colorDescription)

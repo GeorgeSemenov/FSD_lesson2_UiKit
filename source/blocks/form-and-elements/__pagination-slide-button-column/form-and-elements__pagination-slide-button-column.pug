@@ -1,0 +1,20 @@
+mixin form-and-elements__pagination-slide-button-column(modifier)
+  .form-and-elements__pagination-slide-button-column&attributes(attributes)
+    +range-slider({title: "RANGE SLIDER"})(class="range-slider_size_normal ")
+    +range-slider({
+      title: "RANGE SLIDER",
+      defaultValueMin:3000
+    })(class="range-slider_size_normal ")
+    +button-list({
+      title: "BUTTONS",
+      elementsArr:[
+        {additionalClasses: "button_colored_purple button_size_normal", text:"CLICK ME"},
+        {additionalClasses: "button_transparent_with-border button_size_normal", text:"CLICK ME"},
+        {additionalClasses: "button_transparent", text:"CLICK ME"},
+        {additionalClasses: "button_colored_purple button_size_long button_arrow-position_right button_has-arrow", text:"ПЕРЕЙТИ К ОПЛАТЕ"}
+      ]
+    })
+    +pagination({
+      title:"PAGINATION",
+      numberOfItems:15
+    })(class="pagination_theme_basic")

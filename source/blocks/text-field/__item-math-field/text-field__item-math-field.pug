@@ -1,0 +1,5 @@
+mixin text-field__item-math-field(itemCount)
+  .text-field__item-math-field&attributes(attributes)
+    +text-field__math-operation()(class="text-field__math-operation_minus")
+    +text-field__math-result(itemCount)
+    +text-field__math-operation()(class="text-field__math-operation_plus")

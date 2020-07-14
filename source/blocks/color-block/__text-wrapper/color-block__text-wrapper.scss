@@ -1,0 +1,13 @@
+.color-block__text-wrapper {
+	display: flex;
+  flex-direction:column;
+	height: 100%;
+	width: 70%;
+	padding-left: 40px;
+  padding-top: 7px;
+
+  @include media-breakpoint-down(sm) {
+    padding-left: 20px;
+  }
+}
+@import '_text-decoration/color-block__text-wrapper_text-decoration';

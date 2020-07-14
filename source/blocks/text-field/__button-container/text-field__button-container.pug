@@ -1,0 +1,6 @@
+mixin text-field__button-container(isThereApplyButton, isThereClearButton)
+  .text-field__button-container&attributes(attributes)
+    if isThereApplyButton
+      +text-field__button-apply()
+    if isThereClearButton
+      +text-field__button-clear()

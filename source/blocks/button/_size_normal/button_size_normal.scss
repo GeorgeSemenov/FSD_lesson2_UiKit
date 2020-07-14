@@ -1,0 +1,10 @@
+.button_size_normal {
+  width: $normal-size-width;
+  border-radius: $border-radius;
+
+  .button__text{
+    display: inline-block;
+    padding-top: $normal-size-vertical-padding;
+    padding-bottom: $normal-size-vertical-padding;
+  }
+}

@@ -1,0 +1,11 @@
+.like-button_thousands-of-them {
+  &.like-button_transparent_with-border{
+    width: $likeButtonNormalSizeWidth + 10px;
+    .like-button__wrapper{
+      width: ($likeButtonNormalSizeWidth + 10px) - $likeButtonBorderWidth_transparent_withBorder*2;
+    }
+    .like-button__count{
+      right: 5px;
+    }
+  }
+}

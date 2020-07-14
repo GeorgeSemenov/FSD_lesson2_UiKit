@@ -1,0 +1,5 @@
+.like-button-list__like-button {
+  & + &{
+    margin-left: 11px;
+  }
+}

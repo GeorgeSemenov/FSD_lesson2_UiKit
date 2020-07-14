@@ -1,0 +1,28 @@
+//-Это обычный ui slider https://jqueryui.com/slider/
+include __slider/range-slider__slider.pug
+include __numbers-display-field/range-slider__numbers-display-field.pug
+include ../optional-inp-drop-title-and-desc-wrapper/optional-inp-drop-title-and-desc-wrapper.pug
+
+mixin range-slider(modifier)
+  //-Специально передаём пустую строку, чтобы при компиляции 
+  //-optional-inp-drop-title-and-desc-wrapper создал дополнительное поле description
+  //-Ты поймёшь, если заглянигт в optional-inp-drop-title-and-desc-wrapper.pug
+  if modifier.description == undefined
+    - modifier.description = " ";
+
+  if modifier.rangeMin == undefined
+    - modifier.rangeMin = 0;
+
+  if modifier.rangeMax == undefined
+    - modifier.rangeMax = 16500;
+
+  if modifier.defaultValueMin == undefined
+    - modifier.defaultValueMin = 5000;
+
+  if modifier.defaultValueMax == undefined
+    - modifier.defaultValueMax = 10000;
+
+  .range-slider(id=modifier.identificator, data-identificator=modifier.identificator, data-range-min=modifier.rangeMin, data-range-max=modifier.rangeMax,data-default-value-min=modifier.defaultValueMin,data-default-value-max=modifier.defaultValueMax)&attributes(attributes)
+
+    +optional-inp-drop-title-and-desc-wrapper(modifier)
+    +range-slider__slider(modifier)

@@ -1,0 +1,3 @@
+mixin toggler-with-label__input(modifier)
+  - let jirobora = modifier.isChecked ? "checked" : undefined;
+  input.toggler-with-label__input&attributes(attributes)(type='checkbox' checked= (modifier.isChecked ? "checked" : undefined))

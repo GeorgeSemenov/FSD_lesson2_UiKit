@@ -1,0 +1,11 @@
+include ../../img/svg_img/smile.pug
+include ../../img/svg_img/home.pug
+include ../../img/svg_img/fire.pug
+include __description/advantage__description.pug
+include __name/advantage__name.pug
+include __text-wrapper/advantage__text-wrapper.pug
+include __image/advantage__image.pug
+mixin advantage(modifier)
+  .advantage&attributes(attributes)
+    +advantage__image(modifier)
+    +advantage__text-wrapper(modifier)

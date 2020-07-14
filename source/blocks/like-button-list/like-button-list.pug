@@ -1,0 +1,6 @@
+include __menu/like-button-list__menu.pug
+include ../optional-inp-drop-title-and-desc-wrapper/optional-inp-drop-title-and-desc-wrapper.pug
+mixin like-button-list(modifier)
+  .like-button-list&attributes(attributes)
+    +optional-inp-drop-title-and-desc-wrapper(modifier)
+    +like-button-list__menu(modifier)

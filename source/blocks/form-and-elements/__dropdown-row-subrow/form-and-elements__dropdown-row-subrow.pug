@@ -1,0 +1,27 @@
+mixin form-and-elements__dropdown-row-subrow(modifier)
+  .form-and-elements__dropdown-row-subrow&attributes(attributes)
+    +text-field({
+      title:"DROPDOWN",
+      inputType: "dropdown",
+      totalResultName:"Сколько гостей",
+      menuItemsObjArray:[
+        {text:"ВЗРОСЛЫЕ", count:0},
+        {text:"ДЕТИ", count:0},
+        {text:"МЛАДЕНЦЫ", count:0},
+      ],
+      isMenuShown: false,
+      isThereApplyButton: true,
+      isThereClearButton: false
+      })(class="text-field_size_normal text-field_numbers-only")
+    +text-field({
+      title:"DROPDOWN",
+      inputType: "dropdown",
+      menuItemsObjArray:[
+        {text:"ВЗРОСЛЫЕ", count:2},
+        {text:"ДЕТИ", count:1},
+        {text:"МЛАДЕНЦЫ", count:0},
+      ],
+      isMenuShown: true,
+      isThereApplyButton: true,
+      isThereClearButton: true
+      })(class="text-field_size_normal text-field_numbers-only")

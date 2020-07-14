@@ -1,0 +1,8 @@
+include __image/like-button__image.pug
+include __wrapper/like-button__wrapper.pug
+include __count/like-button__count.pug
+mixin like-button(modifier)
+  .like-button&attributes(attributes)
+    if modifier.count == undefined
+      -modifier.count=0
+    +like-button__wrapper(modifier)

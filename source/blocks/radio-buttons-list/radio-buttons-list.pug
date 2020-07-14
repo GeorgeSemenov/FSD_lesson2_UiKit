@@ -1,0 +1,10 @@
+include __input/radio-buttons-list__input.pug
+include __label/radio-buttons-list__label.pug
+include __option-item-wrapper/radio-buttons-list__option-item-wrapper.pug
+include __option-item/radio-buttons-list__option-item.pug
+include __options-list/radio-buttons-list__options-list.pug
+mixin radio-buttons-list(modifier={header,itemsArray:[{label, isChecked}]}, radioListID)
+  .radio-buttons-list&attributes(attributes)
+  
+    +optional-inp-drop-title-and-desc-wrapper(modifier)
+    +radio-buttons-list__options-list(modifier)

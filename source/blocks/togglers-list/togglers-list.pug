@@ -1,0 +1,8 @@
+include __item/togglers-list__item.pug
+include __menu/togglers-list__menu.pug
+include ../../Blocks/toggler-with-label/toggler-with-label.pug
+include ../optional-inp-drop-title-and-desc-wrapper/optional-inp-drop-title-and-desc-wrapper.pug
+mixin togglers-list(modifier)
+  .togglers-list&attributes(attributes)
+    +optional-inp-drop-title-and-desc-wrapper(modifier)
+    +togglers-list__menu(modifier)

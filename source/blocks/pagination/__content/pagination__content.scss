@@ -1,0 +1,10 @@
+.pagination__content {
+  position: relative;
+  display: flex;
+  margin-top: 13px;
+
+  &:not([actpage="1"]) .pagination__item:nth-child(1) {
+  /*Делает prev видимым если actpage != 1*/
+    display: inline-block;
+  }
+}

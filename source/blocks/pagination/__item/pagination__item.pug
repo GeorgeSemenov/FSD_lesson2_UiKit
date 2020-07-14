@@ -1,0 +1,3 @@
+mixin pagination__item(modifier)
+  -var hreference= "#!" + modifier.currentPaginationItemNumber
+  a.pagination__item(href=hreference)&attributes(attributes)!=modifier.itemValue

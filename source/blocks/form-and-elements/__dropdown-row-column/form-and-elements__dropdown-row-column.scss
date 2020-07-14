@@ -1,0 +1,9 @@
+.form-and-elements__dropdown-row-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &>div:last-child{
+    margin-top: 21px;
+  }
+}

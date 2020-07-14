@@ -1,0 +1,48 @@
+mixin form-and-elements__checkbox-subcolumn(modifier)
+  .form-and-elements__checkbox-subcolumn&attributes(attributes)
+    +checkbox-list({
+      title: "EXPANDABLE CHECKBOX LIST", 
+      checkboxListId: "expandable-checkbox",
+      menuItemsArray: [
+        {text:"Завтрак"},
+        {
+          text:"Письменный стол", 
+          isChecked: true
+        },
+        {
+          text:"Стул для кормления",
+          isChecked: true
+        },
+        {
+          text:"кроватка",
+          isChecked: true
+        },
+        {text:"Телевизор"},
+        {text:"Шампунь"},
+        {text:"Телевизор"},
+        {text:"Шампунь"}
+      ]
+    })(class=" form-and-elements__checkbox-list checkbox-list_expandable ")
+    +checkbox-list({
+      title: "EXPANDABLE CHECKBOX LIST", 
+      checkboxListId: "expandable-checkbox2",
+      menuItemsArray: [
+        {text:"Завтрак"},
+        {
+          text:"Письменный стол", 
+          isChecked: true
+        },
+        {
+          text:"Стул для кормления",
+          isChecked: true
+        },
+        {
+          text:"кроватка",
+          isChecked: true
+        },
+        {text:"Телевизор"},
+        {text:"Шампунь"},
+        {text:"Телевизор"},
+        {text:"Шампунь"}
+      ]
+    })(class=" form-and-elements__checkbox-list checkbox-list_expandable checkbox-list_expanded")

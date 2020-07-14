@@ -1,0 +1,8 @@
+.rate-button__star {
+  width: 20px;
+  stroke-width:5px;
+  fill: none;
+  cursor: pointer;
+  stroke: $rateButtonStarStroke;
+  // stroke: url('./svg-purple-gradient.pug#svg-purple-gradient')
+}

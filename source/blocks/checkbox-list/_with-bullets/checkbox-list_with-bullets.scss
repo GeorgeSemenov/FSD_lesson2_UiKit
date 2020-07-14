@@ -1,0 +1,22 @@
+.checkbox-list_with-bullets {
+  .checkbox-list__menu{
+    margin-top: 11px;
+  }
+  .checkbox-list__label-wrapper{
+    margin:0;
+  }
+  .checkbox-list__label{
+    display: flex;
+    line-height: 24px;
+    &::before{
+      margin-top: 7px;
+      margin-right: 11px;
+      display: block;
+      width: 10px;
+      height: 10px;
+      content: "";
+      border-radius: 100%;
+      background-color: $checkboxBulletBackgroundColor;      
+    }
+  }
+}

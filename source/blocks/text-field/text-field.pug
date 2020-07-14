@@ -1,0 +1,28 @@
+include __menu-wrapper/text-field__menu-wrapper.pug
+include __button-clear/text-field__button-clear.pug
+include __button-apply/text-field__button-apply.pug
+include __button-container/text-field__button-container.pug
+include __math-result/text-field__math-result.pug
+include __math-operation/text-field__math-operation.pug
+include __item-math-field/text-field__item-math-field.pug
+include __item-text/text-field__item-text.pug
+include __item/text-field__item.pug
+include __menu/text-field__menu.pug
+include __toggler/text-field__toggler.pug
+include __input/text-field__input.pug
+include __property/text-field__property.pug
+include __header/text-field__header.pug
+include __input-wrapper/text-field__input-wrapper.pug
+include ../optional-inp-drop-title-and-desc-wrapper/optional-inp-drop-title-and-desc-wrapper.pug
+include __arrow/text-field__arrow.pug
+mixin text-field(modifier={title, description, inputPlaceholder,isNeededArrow,isNeededToggler,inputType})
+  .text-field&attributes(attributes)
+    if modifier.title == undefined
+      - modifier.title = "defaultTitle";
+    if modifier.inputPlaceholder == undefined
+      - modifier.inputPlaceholder = "введите значения";
+    if modifier.inputType == undefined
+      - modifier.inputType = "text";
+      
+    +optional-inp-drop-title-and-desc-wrapper(modifier)(class= "text-field__optional-inp-drop-title-and-desc-wrapper optional-inp-drop-title-and-desc-wrapper_desc-position_slight-upper")
+    +text-field__input-wrapper(modifier)

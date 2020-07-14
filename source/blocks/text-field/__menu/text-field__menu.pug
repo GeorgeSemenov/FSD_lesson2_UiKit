@@ -1,0 +1,5 @@
+mixin text-field__menu(modifier)
+  ul.text-field__menu()&attributes(attributes)
+    each itemObj in modifier.menuItemsObjArray
+      +text-field__item(itemObj)
+    

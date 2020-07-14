@@ -1,0 +1,20 @@
+mixin form-and-elements__advantages-and-comment-row(modifier)
+  .form-and-elements__advantages-and-comment-row&attributes(attributes)
+    +advantage-list([
+      {
+        name: "Комфорт",
+        description: "Шумопоглощающие стены",
+        img: "smile"
+      },
+      {
+        name: "Удобство",
+        description: "Окно в каждой из спален",
+        img: "home"
+      }
+    ])(class=" advantage-list_size_normal ")
+    +comment({
+      name: "Мурад Сарафанов",
+      date: "5 дней назад",
+      count: 12,
+      text: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару&#8213 никто не жаловался из соседей."
+    })(class="form-and-elements__comment")

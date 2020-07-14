@@ -1,0 +1,13 @@
+.form-and-elements__dropdown-row {
+  display: flex;
+  margin-top: 250px;
+  flex-wrap: wrap;
+
+  @include media-breakpoint-up(xs){
+    justify-content: space-between;
+  }
+
+  @include media-breakpoint-down(lg){
+    justify-content: space-around;
+  }
+}

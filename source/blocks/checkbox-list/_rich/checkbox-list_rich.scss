@@ -1,0 +1,15 @@
+.checkbox-list_rich {
+  .checkbox-list__item-wrapper{
+    margin-bottom: 11px;
+  }
+
+  .checkbox-list__label{
+    font-family: Montserrat;
+    font-style:normal;
+    font-size: 14px;
+    line-height: 18px;
+    color: $checkboxLabelColor_rich;
+    font-weight: bold;
+    margin-bottom: 3px;
+  }
+}

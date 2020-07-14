@@ -1,0 +1,13 @@
+include __textarea/comment__textarea.pug
+include __like-button-wrapper/comment__like-button-wrapper.pug
+include __info-wrapper/comment__info-wrapper.pug
+include __date/comment__date.pug
+include __name/comment__name.pug
+include __name-date-wrapper/comment__name-date-wrapper.pug
+include __image/comment__image.pug
+include __avatar-wrapper/comment__avatar-wrapper.pug
+include ../like-button/like-button.pug
+mixin comment(modifier)
+  .comment&attributes(attributes)
+    +comment__avatar-wrapper(modifier)
+    +comment__info-wrapper(modifier)

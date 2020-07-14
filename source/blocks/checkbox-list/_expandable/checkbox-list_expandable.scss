@@ -1,0 +1,14 @@
+.checkbox-list_expandable {
+  &.checkbox-list{
+    position: relative;
+  }
+
+  .checkbox-list__menu{
+    top: 18px;
+    transition: 0.3s linear;
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    display: none;
+  }
+}

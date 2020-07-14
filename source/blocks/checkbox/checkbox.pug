@@ -1,0 +1,13 @@
+include __input/checkbox__input.pug
+include __inner-space/checkbox__inner-space.pug
+mixin checkbox(modifier={text, checkboxId, isChecked})
+
+  if modifier.isChecked == undefined
+    - modifier.isChecked = false;
+
+  -var checkedClassStatus = modifier.isChecked ? ' checkbox_checked ' : ' checkbox_unchecked '
+
+  .checkbox.checkbox_size_normal.checkbox_general-settings&attributes(attributes)(class = checkedClassStatus)
+    
+    +checkbox__input(modifier)
+    +checkbox__inner-space(modifier)

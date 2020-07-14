@@ -1,0 +1,43 @@
+mixin form-and-elements__radioCheckRate-column(modifier)
+  .form-and-elements__radioCheckRate-column&attributes(attributes)
+    +checkbox-list({
+    title: "CHECKBOX BUTTONS", 
+    menuItemsArray: [
+        {text:"Можно курить"},
+        {
+          text:"Можно с питомцами", 
+          isChecked: true
+        },
+        {
+          text:"Можно пригласить гостей<br/>(до 10 человек)",
+          isChecked: true
+        }
+      ]
+    })(class=" form-and-elements__checkbox-list")
+    +radio-buttons-list({
+      title: "RADIO BUTTONS",
+      itemsArray: [
+        {label : "Мужчина",  isChecked : true},
+        {label : "Женщина" , isChecked : false}
+      ],
+      radioListID: "FirstRadioList"
+    })(class=" form-and-elements__radio-button-list")
+    +togglers-list({
+      title: "TOGGLE",
+      togglersArray: [
+        {
+          label: "Получать спецпредложения",
+          isChecked: true
+        },
+        {
+          label: "Получать спецпредложения",
+          isChecked: false
+        }
+      ]
+    })(class=" form-and-elements__togglers-list")
+    +like-button-list({
+      title:"LIKE BUTTON"
+    })(class=" form-and-elements__like-button-list")
+    +rate-button-list({
+      title:"RATE BUTTON"
+    })(class=" form-and-elements__rate-button-list")

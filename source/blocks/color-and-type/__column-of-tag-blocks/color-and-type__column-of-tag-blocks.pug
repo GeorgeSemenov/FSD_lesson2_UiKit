@@ -1,0 +1,19 @@
+include ../../tag-block/tag-block.pug
+mixin color-and-type__column-of-tag-blocks(modifier)
+  .color-and-type__column-of-tag-blocks&attributes(attributes)
+    - var bre='<br />'
+    +tag-block()(class=' color-and-type__tag-block ')
+    +tag-block(
+        ' tag-block_font-style_h2 ',
+        'H2',
+        'Next one is the item title inside widgets')(class=' color-and-type__tag-block color-and-type__tag-block_with-extra-top ')
+    +tag-block(
+        ' tag-block_font-style_h3 ',
+        'H3',
+        'THIS IS A LABEL OR CTA TEXT')(class=' color-and-type__tag-block ')
+    +tag-block(
+        ' tag-block_font-style_body ',
+        'span',
+        'This is the body text which is used for most of the design, like paragraphs, lists, etc',
+        ' tag-block__tag-description_small-width ',
+        'Body')(class=' color-and-type__tag-block ')

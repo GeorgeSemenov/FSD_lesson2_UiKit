@@ -1,0 +1,18 @@
+.radio-buttons-list__input {
+  display: none;
+
+  &:not(:checked) + label:after{
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  &:checked + label:after{
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  &:not(:checked) + label{
+    color: rgba(32,32,65,0.5);
+  }
+  &:checked + label{
+    color: rgba(32,32,65,0.75);
+  }
+}

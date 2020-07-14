@@ -1,0 +1,48 @@
+mixin form-and-elements__text-fields-column(modifier)
+  .form-and-elements__text-fields-column&attributes(attributes)
+    +text-field({
+        title: "TEXT FIELD", 
+        description: "DEFAULT",
+        inputPlaceholder: "Email"
+      } 
+      )(class=' form-and-elements__text-field text-field_size_normal ')
+    +text-field({
+        title: "TEXT FIELD", 
+        description: "HOVER / FOCUS",
+        inputPlaceholder: "This is pretty awesome"
+      } 
+      )(class=' form-and-elements__text-field text-field_size_normal  text-field_desc-position_without-bottom')
+    +text-field({
+      title: "DROPDOWN",
+      inputType: "dropdown",
+      description: "DEFAULT",
+      totalResultName:"Сколько гостей",
+      menuItemsObjArray: [
+        {text:"СПАЛЬНИ", count:2},
+        {text:"КРОВАТИ", count:2},
+        {text:"ВАННЫЕ КОМАНТЫ", count:0},
+      ],
+      isMenuShown:false,
+      isThereApplyButton:false,
+      isThereClearButton:false
+      })(class="form-and-elements__text-field text-field_size_normal text-field_numbers-only")
+    +text-field({
+      title: "MASKED TEXT FIELD", 
+      description: "DEFAULT",
+      inputPlaceholder: "ДД.ММ.ГГГГ",
+      inputType: "date"
+      } 
+      )(class=' form-and-elements__text-field text-field_size_normal')
+    +form-and-elements__text-fields-column-sub-row()
+    +text-field({
+      title:"FILTER DATE DROPDOWN", 
+      inputPlaceholder: "19 авг - 23 авг",
+      isNeededToggler: true,
+      inputType:"date-range"
+    })(class="form-and-elements__text-field_margin-top_37px text-field_size_two-thirds form-and-elements_margin-top-43px")
+    +text-field({
+      title:"SUBSCRIPTION TEXT FIELD",
+      inputPlaceholder: "Email",
+      isNeededArrow: true,
+      additionalClasses: " text-field_arrow_velvet-horisontal"
+    })(class="form-and-elements__text-field_margin-top_37px text-field_size_two-thirds form-and-elements_margin-top-43px")

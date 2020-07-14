@@ -1,0 +1,7 @@
+.rate-button__star_faded {
+  fill:$rateButtonStarFill_faded;
+  
+  &.rate-button__star_filed{
+    fill:$rateButtonStarFill;
+  }
+}

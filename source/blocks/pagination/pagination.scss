@@ -1,0 +1,9 @@
+.pagination {
+}
+@import '__content/pagination__content';
+@import '__display-calculations/pagination__display-calculations';
+@import '__item/pagination__item';
+@import '_theme_basic/pagination_theme_basic';
+@import '__item/_navigate/pagination__item_navigate';
+@import '__item/_navigate_right/pagination__item_navigate_right';
+@import '__item/_navigate_left/pagination__item_navigate_left';

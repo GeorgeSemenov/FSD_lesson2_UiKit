@@ -1,0 +1,65 @@
+@mixin cell-with-dots {
+  // display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  pointer-events: none;
+  color: transparent;
+  border-color: transparent;
+  width: 40px;
+  &:after {
+    content: '...';
+    color: $paginationItemColor;
+    margin-left: -9px;
+  }
+}
+.pagination_theme_basic {
+  display: block;
+	@for $i from 1 through 80 {
+  .pagination__content[actpage="#{$i}"] {
+    /*Нахождение ячейки после которой будет стоять ПЕРВОЕ троеточие (№этой ячейки равен actpage - 2 при условии если это не prev и не первая цифровая ячейка) т.е. троеточие будет всегда на две ячейки опережать выбранную(активную) ячейку, вначале оно отключенно*/
+    .pagination__item:nth-child(#{$i - 2}):not(:first-child):not(:nth-child(2)) {
+      /*стили ячейки после которой будет идти ПЕРВОЕ троеточие она будет невидимой, хотя ширина у неё будет*/
+        @include cell-with-dots;
+    }
+    /*Следующий код нужен, чтобы отображались две ячейки перед активной ячейкой, если они не prev, напоминаю тебе что actpage или i на единицу меньше чем порядковый номер элемента*/
+    .pagination__item:nth-child(#{$i - 1}):not(:first-child),
+    .pagination__item:nth-child(#{$i}):not(:first-child) {
+      // display: inline-block;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    // active
+    .pagination__item:nth-child(#{$i + 1}) {
+      background-image: $paginationActiveItemBackgroundColor;
+      color: $paginationActiveItemColor;
+      // display: inline-block;
+      font-weight: bold;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      +.pagination__item:last-child {
+        /*Если активная ячейка является последней цифровой ячейкой(т.е. сразу после неё идёт next == последний элемент), тогда next нужно скрыть*/
+        display: none !important;
+      }
+    }
+    // делаем видимыми следующие два элемента после активного, если они не являются next
+    .pagination__item:nth-child(#{$i + 2}):not(:last-child),
+    .pagination__item:nth-child(#{$i + 3}):not(:last-child) {
+      // display: inline-block;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    /*ищем ячейку после которой поставим ВТОРОЕ двоеточие, для этого берётся третий элемент после активного, и проверяется не является ли он последним (next) или предпоследним(19) если true тогда задаём стили и троеточие actpage == i и actpage на единицу меньше порядкового номера элемента*/
+    .pagination__item:nth-child(#{$i + 4}):not(:last-child):not(:nth-last-child(2)) {
+      @include cell-with-dots;
+    }
+  }
+}
+
+}

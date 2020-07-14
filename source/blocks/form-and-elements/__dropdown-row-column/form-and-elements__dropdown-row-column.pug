@@ -1,0 +1,27 @@
+mixin form-and-elements__dropdown-row-column(modifier)
+  .form-and-elements__dropdown-row-column&attributes(attributes)
+    +text-field({
+      title:"DROPDOWN",
+      description:"DEFAULT",
+      inputType: "dropdown",
+      menuItemsObjArray:[
+        {text:"СПАЛЬНИ", count:2},
+        {text:"КРОВАТИ", count:2},
+        {text:"ВАННЫЕ КОМАНТЫ", count:0},
+      ],
+      isMenuShown: false,
+      isThereApplyButton: false,
+      isThereClearButton: false
+      })(class="text-field_size_two-thirds")
+    +text-field({title:"DROPDOWN",
+      description: "EXPANDED",
+      inputType: "dropdown",
+      menuItemsObjArray:[
+        {text:"СПАЛЬНИ", count:2},
+        {text:"КРОВАТИ", count:2},
+        {text:"ВАННЫЕ КОМАНТЫ", count:0},
+      ],
+      isMenuShown:true,
+      isThereApplyButton: false,
+      isThereClearButton: false
+      })(class="text-field_size_two-thirds")

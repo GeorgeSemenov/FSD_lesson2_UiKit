@@ -1,0 +1,26 @@
+mixin form-and-elements__checkbox-row(modifier)
+  .form-and-elements__checkbox-row&attributes(attributes)
+    +form-and-elements__checkbox-subcolumn(modifier)
+    +checkbox-list({
+      title: "RICH CHECKBOX BUTTONS", 
+      checkboxListId: "checkbox-rich",
+      menuItemsArray: [
+        {
+          text:"Широкий коридор",
+          description: "Ширина коридоров в номере </br>не менее 91 см"  
+        },
+        {
+          text:"Помощник для инвалидов",
+          description: "На 1 этаже вас встретит специалист и проводит до номера"  
+        },
+      ]
+    })(class=" form-and-elements__checkbox-list checkbox-list_rich ")
+    +checkbox-list({
+      title: "BULLET LIST", 
+      checkboxListId: "bullet-checkbox",
+      menuItemsArray: [
+        {text:"Нельзя с питомцами"},
+        {text:"Без вечеринок и мероприятий"},
+        {text:"Время прибытия &#8212; после 13.00,</br>а выезд до 12.00"}
+      ]
+    })(class=" form-and-elements__checkbox-list checkbox-list_with-bullets ") 

@@ -1,0 +1,5 @@
+.advantage__text-wrapper {
+  @include commonFontStyle;
+  color: $advantageTextColor;
+  margin-left: 15px;
+}
