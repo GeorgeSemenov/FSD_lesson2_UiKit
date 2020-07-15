@@ -1,0 +1,48 @@
+/*Компоненты*/
+@import '../vendor/UnCss';/*т.к. он сбрасывает все стили*/
+@import '../../../node_modules/air-datepicker/dist/css/datepicker.min.css';
+@import '../vendor/simplePagination/simplePagination';
+@import '~bootstrap/scss/bootstrap';
+
+/*Шрифты*/ /*идут перед миксинами, т.к. фрифты могут быть использованны в миксинах*/
+@import '../fonts/allFonts';
+
+/*самодельные стили*/
+@import 'mixins';
+@import 'colors';
+@import 'global';
+
+
+/*Файлы блоков*/
+
+//Место для главной страницы
+
+/*Стили UIKit*/
+@import '../Blocks/color-and-type/color-and-type';
+@import '../Blocks/like-button-list/like-button-list';
+@import '../Blocks/brand-pic/brand-pic';
+@import '../Blocks/checkbox/checkbox';
+@import '../Blocks/color-block/color-block';
+@import '../Blocks/optional-inp-drop-title-and-desc-wrapper/optional-inp-drop-title-and-desc-wrapper';
+@import '../Blocks/dropdown-with-math-field/dropdown-with-math-field';
+@import '../Blocks/tag-block/tag-block';
+@import '../Blocks/form-and-elements/form-and-elements';
+@import '../Blocks/text-field/text-field';
+@import '../Blocks/checkbox-list/checkbox-list';
+@import '../Blocks/radio-buttons-list/radio-buttons-list';
+@import '../Blocks/toggler-with-label/toggler-with-label';
+@import '../Blocks/togglers-list/togglers-list';
+@import '../Blocks/like-button/like-button';
+@import '../Blocks/range-slider/range-slider';
+@import '../Blocks/button/button';
+@import '../Blocks/button-list/button-list';
+@import '../Blocks/pagination/pagination';
+@import '../Blocks/header-UIKit/header-UIKit';
+@import '../Blocks/rate-button/rate-button';
+@import '../Blocks/rate-button-list/rate-button-list';
+@import '../Blocks/arrow-toggler/arrow-toggler';
+@import '../Blocks/comment/comment';
+@import '../Blocks/advantage/advantage';
+@import '../Blocks/advantage-list/advantage-list';
+@import '../Blocks/cards/cards';
+@import '../Blocks/card/card';
