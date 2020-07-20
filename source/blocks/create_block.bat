@@ -121,7 +121,7 @@ echo cat ^>^> ${parentName}${fileName}.scss ^<^< end4
 echo .${parentName}${fileName} {}
 echo end4
 )>create_elemeficator.sh
-cd ../../components
+cd ../../styles
 (
 echo @import '../Blocks/%fileName%/%fileName%';
 )>>allBlocksStyles.scss

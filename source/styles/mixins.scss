@@ -80,7 +80,7 @@
 
 /*Header styles*/
 @mixin commonHeaderStyle{
-  font-family: Montserrat;
+  font-family: 'montserrat' ,arial , sans-serif;
   font-style: normal;
   font-size: 12px;
   line-height: 15px;
@@ -106,7 +106,7 @@
 
 /*faded font*/
 @mixin commonFontStyle{/*used as start point for fading*/
-  font-family: Montserrat;
+  font-family: 'montserrat' ,arial , sans-serif;
   font-style:normal;
   font-size: 14px;
   line-height: 24px;
@@ -129,7 +129,7 @@
 
 /*common fonts*/
 @mixin lesserCommonFontStyle{
-  font-family: Montserrat;
+  font-family: 'montserrat' ,arial , sans-serif;
   font-style:normal;
   font-size: 12px;
   line-height: 15px;
@@ -140,7 +140,7 @@
 }
 
 @mixin smallCommonFontStyle{
-  font-family: Montserrat;
+  font-family: 'montserrat' ,arial , sans-serif;
   font-style:normal;
   font-size: 10px;
   line-height: 12px;

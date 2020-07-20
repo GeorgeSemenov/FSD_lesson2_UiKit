@@ -117,7 +117,7 @@ if  /I %isThereElement% == %True% (
 )
 endbat
 # Записываем только что созданный scss файл блока в список всех стилей 
-cd ../../components
+cd ../../styles
 cat >>allBlocksStyles.scss << end
 @import '../Blocks/${fileName}/${fileName}';
 end

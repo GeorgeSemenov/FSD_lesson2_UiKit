@@ -4,6 +4,8 @@ commit.sh
 prototype
 build
 maket
+*.sublime-project
+*.sublime-workspace
 
 # Created by https://www.toptal.com/developers/gitignore/api/sublimetext,windows,sass
 # Edit at https://www.toptal.com/developers/gitignore?templates=sublimetext,windows,sass

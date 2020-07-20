@@ -1,6 +1,6 @@
 //Пути нужно указывать относительно scss файла, который будет в pages, допустим index.scss
 @font-face {
-  font-family: 'Montserrat';
+  font-family: 'montserrat';
   font-weight: 700;
   font-style: normal;
   src:  local('☺'), 
@@ -8,7 +8,7 @@
         url('../../fonts/Montserrat/Montserrat-Bold.woff') format('woff');
 }
 @font-face {
-  font-family: 'Montserrat';
+  font-family: 'montserrat';
   font-weight: 400;
   font-style: normal;
   src:  local('☺'), 
