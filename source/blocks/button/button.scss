@@ -2,22 +2,24 @@ $normal-size-width: 99px;
 $normal-size-vertical-padding: 14.5px;
 $border-radius: 22px;
 $border-width_transparent: 2px;
-.button {
 
-  /*стили текста*/
+.button {
+  /* стили текста */
   @include boldCommonHeaderStyle;
+
   text-align: center;
+
   @include unselectable;
 
-  /*стили формы*/
+  /* стили формы */
   cursor: pointer;
 }
+
 @import '_size_normal/button_size_normal';
 @import '_colored_purple/button_colored_purple';
 @import '_transparent_with-border/button_transparent_with-border';
 @import '__text/button__text';
 @import '_size_long/button_size_long';
 @import '_has-arrow/button_has-arrow';
-
 @import '_arrow-position_right/button_arrow-position_right';
 @import '_transparent/button_transparent';

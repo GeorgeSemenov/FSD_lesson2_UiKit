@@ -1,4 +1,9 @@
 {
-  "extends": "stylelint-config-standard-scss"
-
+  "plugins": [
+    "stylelint-media-use-custom-media"
+  ],
+  "rules": {
+    "declaration-no-important": true,
+    "block-no-empty": true
+  }
 }
