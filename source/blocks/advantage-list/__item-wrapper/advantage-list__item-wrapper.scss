@@ -5,4 +5,8 @@
   &:last-child{
     border-bottom: none;
   }
+
+  &.advantage-list__item_with-dividers{
+    border-bottom: 1px solid $advantageListItemWrapperDividersColor;
+  }
 }

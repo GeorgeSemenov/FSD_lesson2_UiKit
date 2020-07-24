@@ -1,5 +1,4 @@
-
-https://georgesemenov.github.io/FSD_lesson2_UiKit/.
+https://georgesemenov.github.io/FSD_lesson2_UiKit/
 https://stackedit.io/app#
 
 # FSD  frontend education programm. The 2nd task
@@ -26,5 +25,6 @@ $ npm run start
 3. Сторонние модули
 - datepicker 
 - simplePagination
+
 ## Авторы
 *Семенов Георгий*

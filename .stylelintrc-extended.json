@@ -4,6 +4,7 @@
     "stylelint-media-use-custom-media"
   ],
   "rules": {
-    "declaration-no-important": true
+    "declaration-no-important": true,
+    "block-no-empty": true
   }
 }
