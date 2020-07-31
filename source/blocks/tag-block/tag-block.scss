@@ -1,7 +1,9 @@
-.tag-block{
-  position: relative;
+.tag-block {
   display: inline-block;
+  position: relative;
+  z-index: 1;
 }
+
 @import '__tag-name/tag-block__tag-name';
 @import '__tag-description/tag-block__tag-description';
 @import '_font-style/tag-block_font-style';

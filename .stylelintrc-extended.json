@@ -3,5 +3,7 @@
     "stylelint-config-standard-scss", 
     "./.stylelintrc"
   ],
-  "rules": {}
+  "rules": {
+    
+  }
 }

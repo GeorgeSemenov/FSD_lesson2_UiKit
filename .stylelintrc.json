@@ -1,3 +1,25 @@
 {
-  
+  "plugins": [
+    "stylelint-media-use-custom-media",
+    "stylelint-scss",
+    "stylelint-order"
+  ],
+  "rules": {
+    "declaration-no-important": true,
+    "block-no-empty": true,
+    "declaration-block-no-duplicate-properties": true,
+    "no-duplicate-at-import-rules" : true,
+    "order/order":[
+      "@import"
+    ],
+    "order/properties-order": [
+      "display",
+      "position",
+      "z-index",
+      "top",
+      "right",
+      "bottom",
+      "left"
+    ]
+  }
 }
