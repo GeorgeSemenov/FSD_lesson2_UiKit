@@ -3,7 +3,18 @@
     "stylelint-config-standard-scss", 
     "./.stylelintrc"
   ],
+  "plugins": [
+    "stylelint-order",
+  ],
   "rules": {
-    
+    "order/properties-order": [
+      "display",
+      "position",
+      "z-index",
+      "top",
+      "right",
+      "bottom",
+      "left"
+    ]
   }
 }
