@@ -123,5 +123,5 @@ echo end4
 )>create_elemeficator.sh
 cd ../../styles
 (
-echo @import '../Blocks/%fileName%/%fileName%';
+echo @import '../blocks/%fileName%/%fileName%';
 )>>allBlocksStyles.scss
