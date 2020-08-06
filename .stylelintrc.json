@@ -1,4 +1,7 @@
 {
+  "extends": [
+    "stylelint-config-prettier"
+  ],
   "plugins": [
     "stylelint-media-use-custom-media",
     "stylelint-scss",
