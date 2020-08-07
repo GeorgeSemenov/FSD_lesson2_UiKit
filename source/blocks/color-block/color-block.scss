@@ -1,7 +1,7 @@
 .color-block {
-	height: 70px;	
+  display: flex;	
 	position: relative;
-  display: flex;
+	height: 70px;
 }
 @import '__color-square/color-block__color-square';
 @import '__color-name/color-block__color-name';

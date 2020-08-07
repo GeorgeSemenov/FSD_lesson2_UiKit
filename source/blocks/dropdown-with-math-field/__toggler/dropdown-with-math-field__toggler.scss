@@ -7,12 +7,11 @@
   cursor: pointer;
 
   &::after{
+    position: absolute;
+    top: 15px;
+    right: 14px;
     font-family: 'icomoon';
     content:"\e900";
-    position: absolute;
-
-    right: 14px;
-    top: 15px;
     font-size: 9px;
     color: rgba(31,32,45, 0.75);
   }

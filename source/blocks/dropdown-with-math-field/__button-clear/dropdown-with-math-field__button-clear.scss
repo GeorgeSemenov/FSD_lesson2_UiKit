@@ -1,5 +1,6 @@
 .dropdown-with-math-field__button-clear {
   @include boldCommonHeaderStyle();
+
   color: $dropdownColorClearButton;
   padding: 0;
   background-color: transparent;

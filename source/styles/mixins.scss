@@ -5,18 +5,19 @@
   user-select: none;
 }
 @mixin rounded($r: 50%){
-    border-radius: $r;
     -moz-border-radius: $r;
     -webkit-border-radius: $r;
+    border-radius: $r;
 }
 
 @mixin transition($n: .5, $m: .1, $function: ease-out){
     //Первое число отвечает за длительность анимации, второе за время, которое потребуется для срабатывания анимации ( в данном случае если убрать курсор с круга, анимация сработает чере одну десятую секунды), к тому же этот транзишон отвечает за анимацию перехода от состояния hover к обычному состоянию
     $s:0s;
-    transition: ($s + $n) $function ($s + $m);//$s+$n - такая запись нужна, чтобы преобразовать просто число , в данном случае 0.5 в 0.5s . т.к. для transition нужны именно секунды. К несчастью запись $n : $s + $n - воспринимается  как рекурсивное переопределение переменной, поэтому приходиться не переопределять переменную.
+
     -moz-transition: ($s + $n) $function ($s + $m);
     -webkit-transition: ($s + $n) $function ($s + $m);
     -o-transition: ($s + $n) $function ($s + $m);
+    transition: ($s + $n) $function ($s + $m);//$s+$n - такая запись нужна, чтобы преобразовать просто число , в данном случае 0.5 в 0.5s . т.к. для transition нужны именно секунды. К несчастью запись $n : $s + $n - воспринимается  как рекурсивное переопределение переменной, поэтому приходиться не переопределять переменную.
 }
 
 @mixin square($side: 25px){
@@ -57,7 +58,7 @@
     &::-webkit-input-placeholder { color: $color; }
     &:-ms-input-placeholder { color: $color; }
     &::-ms-input-placeholder { color: $color; }
-    &::placeholder { color: $color; } 
+    &::placeholder { color: $color; }
 
     ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
       color: red;
@@ -74,11 +75,13 @@
 }
 
 
-/*---------------------------------------------*/
-/*#############################################*/
-/*---------------------------------------------*/
+/* --------------------------------------------- */
 
-/*Header styles*/
+/* ############################################# */
+
+/* --------------------------------------------- */
+
+/* Header styles */
 @mixin commonHeaderStyle{
   font-family: 'montserrat' ,arial , sans-serif;
   font-style: normal;
@@ -89,23 +92,20 @@
 
 @mixin boldCommonHeaderStyle{
   @include commonHeaderStyle;
+
   font-weight: bold;
 }
 
 @mixin headerStyle{
   @include commonHeaderStyle;
+
   color: #1F2041;
   font-weight: bold;
+
 }
 
-@mixin slightfadedHeaderStyle{
-  @include commonHeaderStyle;
-  color: rgba(31,32,65,0.5);
-  font-weight: normal;
-}
-
-/*faded font*/
-@mixin commonFontStyle{/*used as start point for fading*/
+/* faded font */
+@mixin commonFontStyle{/* used as start point for fading */
   font-family: 'montserrat' ,arial , sans-serif;
   font-style:normal;
   font-size: 14px;
@@ -114,20 +114,23 @@
 
 @mixin regularFontStyle{
   @include commonFontStyle;
+
   color: rgba(31,32,65,0.75);
 }
 
 @mixin slightfadedFontStyle{
   @include commonFontStyle;
+
   color: rgba(31,32,65,0.5);
 }
 
 @mixin fadedFontStyle{
   @include commonFontStyle;
+
   color: rgba(31,32,65,0.25);
 }
 
-/*common fonts*/
+/* common fonts */
 @mixin lesserCommonFontStyle{
   font-family: 'montserrat' ,arial , sans-serif;
   font-style:normal;
@@ -136,6 +139,7 @@
 }
 @mixin lesserBoldCommonFontStyle{
   @include lesserCommonFontStyle;
+
   font-weight: bold;
 }
 
@@ -145,11 +149,12 @@
   font-size: 10px;
   line-height: 12px;
 }
-/*mixins for buttons with gradient borders(with rounded shape) you can see example in like-button*/
+
+/* mixins for buttons with gradient borders(with rounded shape) you can see example in like-button */
 	@mixin button_transparent_with-border (
-      $gradient-color: $buttonBorderColor_transparent, 
-      $gradient-text: $buttonTextColor_transparent, 
-      $border-width:$border-width_transparent, 
+      $gradient-color: $buttonBorderColor_transparent,
+      $gradient-text: $buttonTextColor_transparent,
+      $border-width:$border-width_transparent,
       $child-name: "button__text",
       $normal-width: $normal-size-width,
       $vertical-padding: $normal-size-vertical-padding,
@@ -160,7 +165,7 @@
 		padding-left: $border-width;
 		padding-top: $border-width;
 		padding-bottom: $border-width;
-		
+
 		#{$child-name}{
 			width: $normal-width - $border-width*2;
 			padding-top: $vertical-padding - $border-width;
@@ -171,7 +176,7 @@
 			justify-content: center;
 			align-items: center;
 		}
-		
+
 		&:hover{
 			opacity: 0.75;
 		}

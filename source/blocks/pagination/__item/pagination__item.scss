@@ -1,8 +1,9 @@
 .pagination__item {
   text-align: center;
   @include commonHeaderStyle;
+
   text-decoration: none;
-  height: 40px;/*Высота и ширина пагинации*/
+  height: 40px;/* Высота и ширина пагинации */
 	width: 40px;
 	border-radius: 22px;
 	//padding-top: 13px;
@@ -25,7 +26,7 @@
 
   @include media-breakpoint-down(md) {
     font-size: 10px;
-    height: 25px;/*Высота и ширина пагинации*/
+    height: 25px;/* Высота и ширина пагинации */
     width: 25px;
     padding-top: 5px;
   }

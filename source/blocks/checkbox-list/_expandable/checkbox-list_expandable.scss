@@ -4,11 +4,11 @@
   }
 
   .checkbox-list__menu{
-    top: 18px;
-    transition: 0.3s linear;
+    display: none;
     position: absolute;
     z-index: 1;
+    top: 18px;
+    transition: 0.3s linear;
     opacity: 0;
-    display: none;
   }
 }

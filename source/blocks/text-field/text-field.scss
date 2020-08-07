@@ -1,8 +1,9 @@
 .text-field {
   font-family: 'montserrat' ,arial , sans-serif;
 }
-/*Для этого модуля нужно подключить стили airdatepicker но я 
-попробую подключить его в файл всех стилей*/
+
+/* Для этого модуля нужно подключить стили airdatepicker но я 
+попробую подключить его в файл всех стилей */
 //@import '../../node_modules/air-datepicker/dist/css/datepicker.min.css';
 @import '__arrow/text-field__arrow';
 @import '__input-wrapper/text-field__input-wrapper';

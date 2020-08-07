@@ -25,6 +25,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-expand_more:before {
+.icon-expand_more::before {
   content: "\e900";
 }

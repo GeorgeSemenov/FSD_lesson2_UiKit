@@ -1,11 +1,11 @@
 .radio-buttons-list__input {
   display: none;
 
-  &:not(:checked) + label:after{
+  &:not(:checked) + label::after{
     -webkit-transform: scale(0);
     transform: scale(0);
   }
-  &:checked + label:after{
+  &:checked + label::after{
     -webkit-transform: scale(1);
     transform: scale(1);
   }

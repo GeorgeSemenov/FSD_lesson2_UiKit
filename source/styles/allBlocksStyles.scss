@@ -1,23 +1,25 @@
-/*Компоненты*/
-@import '../vendor/UnCss';/*т.к. он сбрасывает все стили*/
+/* Компоненты */
+@import '../vendor/UnCss';/* т.к. он сбрасывает все стили */
 @import '../../../node_modules/air-datepicker/dist/css/datepicker.min.css';
 @import '../vendor/simplePagination/simplePagination';
 @import '~bootstrap/scss/bootstrap';
 
-/*Шрифты*/ /*идут перед миксинами, т.к. фрифты могут быть использованны в миксинах*/
+/* Шрифты */
+
+ /* идут перед миксинами, т.к. фрифты могут быть использованны в миксинах */
 @import '../fonts/allFonts';
 
-/*самодельные стили*/
+/* самодельные стили */
 @import 'mixins';
 @import 'colors';
 @import 'global';
 
 
-/*Файлы блоков*/
+/* Файлы блоков */
 
 //Место для главной страницы
 
-/*Стили UIKit*/
+/* Стили UIKit */
 @import '../blocks/color-and-type/color-and-type';
 @import '../blocks/like-button-list/like-button-list';
 @import '../blocks/brand-pic/brand-pic';

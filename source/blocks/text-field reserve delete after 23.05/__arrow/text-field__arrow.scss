@@ -1,12 +1,12 @@
 .text-field__arrow {
-  cursor: pointer;
   position: absolute;
+  top: 12px;
   right: 9px;
-  top: 12px;  
+  cursor: pointer;  
   background: linear-gradient(180deg,#BC9CFF 0%, #8BA4F9 100%);
-  -webkit-background-clip: text;//обрезает фон
+  -webkit-background-clip: text;
   //по границе текста(т.е. вырезает из фона слова)
-  -webkit-text-fill-color:transparent;//делает
+  -webkit-text-fill-color:transparent;
   //текст прозрачным
-  color: #A4A0FC;
+  color: #A4A0FC;//обрезает фон//делает
 }

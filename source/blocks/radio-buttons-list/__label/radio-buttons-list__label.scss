@@ -5,11 +5,11 @@
   line-height: 24px;
   padding-left: 30px;
 
-  &:before{
-    content:'';
+  &::before{
     position: absolute;
-    left: 0;
     top: 5px;
+    left: 0;
+    content:'';
     width: 20px;
     height: 20px;
     border: 1px solid #BC9CFF;
@@ -17,7 +17,7 @@
     background: #fff;
   }
 
-  &:after{
+  &::after{
     content: '';
     position: absolute;
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);

@@ -3,11 +3,11 @@ $likeButtonNormalSizeVerticalPadding: 5px;
 $likeButtonBorderRadius: 10px;
 $likeButtonBorderWidth_transparent_withBorder: 2px;
 .like-button {
-  /*text styles*/
+  /* text styles */
   @include smallCommonFontStyle;
   @include unselectable;
 
-  /*block style*/
+  /* block style */
   cursor: pointer;
 }
 @import '__count/like-button__count';

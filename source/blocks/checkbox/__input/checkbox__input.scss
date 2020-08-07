@@ -1,6 +1,6 @@
 .checkbox__input {
   visibility: hidden;
-  &:checked + label:after{
+  &:checked + label::after{
     opacity: 1;
     }
 }

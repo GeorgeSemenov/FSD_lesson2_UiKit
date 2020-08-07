@@ -2,9 +2,9 @@
   background-image: $paginationNavigationActiveBackgroundColor;
   position: relative;
     &::after{
+    display: inline-block;
     position: absolute;
     content: '';
-    display: inline-block;
     width: 44px;
     height: 44px;
     background-repeat: no-repeat;

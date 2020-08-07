@@ -1,4 +1,4 @@
-/*no sense variables*/
+/* no sense variables */
 $white: #fff;
 
 $gray-lightest: rgba(31,32,65,0.1);
@@ -14,14 +14,18 @@ $gradient-gray-blue: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
 $gradient-gray-blue-faded: linear-gradient(180deg, rgba(188,156,255,0.6) 0%, rgba(139,164,249,0.6) 100%);
 $gradient-gray-only:  linear-gradient($gray-lighter 100%, $gray-lighter 100%);
 
-//Внимание, для работы градиентных цветов для svg требуется подключать pug файл с этим 
+//Внимание, для работы градиентных цветов для svg требуется подключать pug файл с этим
 //градиентом путь будет описан в комментарии ниже
 $svg-gradient-purple: url('#svg-purple-gradient');
 // include ../../components/svg-purple-gradient.pug
 $svg-gradient-purple_faded: url('#svg-purple-gradient_faded');
 // include ../../components/svg-purple-gradient_faded.pug
 
-/*variables with sense*/
+/* variables with sense */
+$optionalTitle__desc_color_whiteGray: $gray;
+
+$tagBlockNameColor_gray: $gray-lighter;
+
 $dropdownColorClearButton: $gray;
 
 $checkboxLabelColor_rich: $gray-darker;

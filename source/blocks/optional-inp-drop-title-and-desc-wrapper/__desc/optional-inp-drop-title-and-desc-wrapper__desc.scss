@@ -1,6 +1,14 @@
-.optional-inp-drop-title-and-desc-wrapper__desc {
-  @include slightfadedHeaderStyle;
-  position: relative;
-  bottom: 0px;
-}
 @import '_color_white-gray/optional-inp-drop-title-and-desc-wrapper__desc_color_white-gray';
+.optional-inp-drop-title-and-desc-wrapper__desc {
+  @include commonHeaderStyle;
+
+  color: $tagBlockNameColor_gray;
+  font-weight: normal;
+  position: relative;
+  bottom: 0;
+  left: 0;
+
+  &.optional-inp-drop-title-and-desc-wrapper__desc_color_white-gray{
+    color: $optionalTitle__desc_color_whiteGray;
+  }
+}
