@@ -3,13 +3,15 @@ $transparent: transparent;
 
 $white: #fff;
 
-$gray-lightest: rgba(31,32,65,0.1);
+$gray-lightest: rgba(31,32,65,0.05);
+$gray-muchMorelightest: rgba(31,32,65,0.1);
 $gray-lighter: rgba(31,32,65,0.25);
 $gray: rgba(31,32,65,0.5);
 $gray-darker: rgba(31, 32, 65, 0.75);
 $gray-darkest: rgba(31,32,65,1);
 
 $purple: #BC9CFF;
+$green: #6FCF97;
 
 $gradient-green:linear-gradient(180deg,#6FCF97 0%, #66D2EA 100%);
 $gradient-purple: linear-gradient(180deg,#BC9CFF 0%, #8BA4F9 100%);
@@ -32,6 +34,9 @@ $colorBlock__colorSquare_BGColor_darkShade-75: $gray-darker;
 $colorBlock__colorSquare_BGColor_darkShade-50: $gray;
 $colorBlock__colorSquare_BGColor_darkShade-25: $gray-lighter;
 $colorBlock__colorSquare_BGColor_darkShade-5: $gray-lightest;
+$colorBlock__colorSquare_BGColor_green: $green;
+$colorBlock__colorSquare_BGColor_purple: $purple;
+$colorBlock__textWrapper_textDecorationColor: $gray-darkest;
 
 $checkboxList__labelWrapperColor: $gray;
 
@@ -83,7 +88,7 @@ $rateButtonStarFill_faded: $svg-gradient-purple_faded; // include ../../componen
 
 $advantageTextColor: $gray-darker;
 
-$advantageListItemWrapperDividersColor: $gray-lightest;
+$advantageListItemWrapperDividersColor: $gray-muchMorelightest;
 
 $commentAvatarTextColor: $gray-darker;
 $commentTextAreaColor: $gray-darker;

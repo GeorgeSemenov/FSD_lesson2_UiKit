@@ -1,10 +1,13 @@
-.color-block {
-  display: flex;	
-	position: relative;
-	height: 70px;
-}
 @import '__color-square/color-block__color-square';
 @import '__color-name/color-block__color-name';
 @import '__color-description/color-block__color-description';
 @import '__text-wrapper/color-block__text-wrapper';
+@import '__text-wrapper/_text-decoration/color-block__text-wrapper_text-decoration';
 @import '__color-name/_font-weight_bold/color-block__color-name_font-weight_bold';
+.color-block {
+  display: flex;
+  top: 0;
+  left: 0;
+	position: relative;
+	height: 70px;
+}

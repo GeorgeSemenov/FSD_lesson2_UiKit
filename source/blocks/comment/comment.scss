@@ -1,4 +1,3 @@
-.comment {}
 @import '__avatar-wrapper/comment__avatar-wrapper';
 @import '__image/comment__image';
 @import '__name-date-wrapper/comment__name-date-wrapper';
@@ -7,3 +6,11 @@
 @import '__info-wrapper/comment__info-wrapper';
 @import '__like-button-wrapper/comment__like-button-wrapper';
 @import '__textarea/comment__textarea';
+.comment {
+  /*
+    Этот файл является блоком стилей для всего блока элементов т.к. импоритрует
+    их в себя и дальше его можно передавать в страницу.
+    К томуже если понадобится в будщем добавить свойства для всего блока
+    то их можно будет вписать сюда
+  */
+}
