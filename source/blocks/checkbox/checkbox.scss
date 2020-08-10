@@ -1,4 +1,3 @@
-.checkbox {}
 @import '__inner-space/checkbox__inner-space';
 @import '__input/checkbox__input';
 @import '_size_normal/checkbox_size_normal';
@@ -6,3 +5,11 @@
 @import '_checked/checkbox_checked';
 @import '_unchecked/checkbox_unchecked';
 @import '_checked/checkbox_checked';
+.checkbox {
+  /*
+    Этот файл является блоком стилей для всего блока элементов т.к. импоритрует
+    их в себя и дальше его можно передавать в страницу.
+    К томуже если понадобится в будщем добавить свойства для всего блока
+    то их можно будет вписать сюда
+  */
+}

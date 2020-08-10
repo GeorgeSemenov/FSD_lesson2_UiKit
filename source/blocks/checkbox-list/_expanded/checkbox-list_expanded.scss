@@ -2,11 +2,4 @@
   .checkbox-list__arrow-toggler{
     transform: rotate(180deg);
   }
-
-  &.checkbox-list_expandable{
-    .checkbox-list__menu{
-      opacity: 1;
-      display: block;
-    }
-  }
 }

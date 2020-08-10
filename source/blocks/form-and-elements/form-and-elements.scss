@@ -1,4 +1,3 @@
-.form-and-elements {}
 @import '__brand-pic/form-and-elements__brand-pic';
 @import '__text-fields-column/form-and-elements__text-fields-column';
 @import '__toggle-button-column/form-and-elements__toggle-button-column';
@@ -14,7 +13,8 @@
 @import '__text-fields-column-sub-row/form-and-elements__text-fields-column-sub-row';
 @import '__radioCheckRate-column/form-and-elements__radioCheckRate-column';
 @import '_margin-top-43px/form-and-elements_margin-top-43px';
-@import '_margin-top-40px/form-and-elements_margin-top-40px';@import '__checkbox-list/form-and-elements__checkbox-list';
+@import '_margin-top-40px/form-and-elements_margin-top-40px';
+@import '__checkbox-list/form-and-elements__checkbox-list';
 @import '__radio-button-list/form-and-elements__radio-button-list';
 @import '__togglers-list/form-and-elements__togglers-list';
 @import '__like-button-list/form-and-elements__like-button-list';
@@ -24,3 +24,9 @@
 @import '__advantages-and-comment-row/form-and-elements__advantages-and-comment-row';
 @import '__advantage-list/form-and-elements__advantage-list';
 @import '__comment/form-and-elements__comment';
+.form-and-elements {
+  /*
+    этот блок нужен для объединения всех стилей элементов этого блока
+    и дальнейшей их передачи в блок стилей.
+  */
+}

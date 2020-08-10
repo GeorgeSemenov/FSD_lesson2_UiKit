@@ -1,10 +1,15 @@
-.color-and-type {
-}
-@import '__color-block/color-and-type__color-block';
-@import '__column-of-color-blocks/color-and-type__column-of-color-blocks';
 @import '__color-block/color-and-type__color-block';
 @import '__column-of-color-blocks/color-and-type__column-of-color-blocks';
 @import '__brand-pic/color-and-type__brand-pic';
 @import '__tag-block/color-and-type__tag-block';
+@import '__tag-block/_with-extra-top/color-and-type__tag-block_with-extra-top';
 @import '__column-of-tag-blocks/color-and-type__column-of-tag-blocks';
 @import '__header-UIKIt/color-and-type__header-UIKIt';
+.color-and-type {
+  /*
+    Этот файл является блоком стилей для всего блока элементов т.к. импоритрует
+    их в себя и дальше его можно передавать в страницу.
+    К томуже если понадобится в будщем добавить свойства для всего блока
+    то их можно будет вписать сюда
+  */
+}

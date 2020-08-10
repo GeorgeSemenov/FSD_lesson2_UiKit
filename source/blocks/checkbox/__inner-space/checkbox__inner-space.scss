@@ -6,7 +6,7 @@
   height: 18px;
   cursor: pointer;
   border-radius: 4px;
-  background-color: #FFF;
+  background-color: $checkbox__innerSpaceBGColor;
 
   &::after{
     position: absolute;
