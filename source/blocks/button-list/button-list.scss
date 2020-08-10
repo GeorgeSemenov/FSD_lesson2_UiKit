@@ -1,4 +1,9 @@
-.button-list {
-}
 @import '__row/button-list__row';
 @import '__rows-wrapper/button-list__rows-wrapper';
+.button-list {
+	/*
+		Этот блок нужен на случай если списку кнопок вдруг 
+			понадобятся свои стили, к томуже тут собираются 
+			стили всех элементов этого блока
+	*/
+}

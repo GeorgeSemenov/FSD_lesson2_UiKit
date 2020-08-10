@@ -12,6 +12,6 @@
     "block-no-empty": true,
     "declaration-block-no-duplicate-properties": true,
     "no-duplicate-at-import-rules" : true,
-    "sh-waqar/declaration-use-variable": [["/color/", { "ignoreValues": ["transparent", "inherit"] }]]
+    "sh-waqar/declaration-use-variable": [["/color/"]]
   }
 }

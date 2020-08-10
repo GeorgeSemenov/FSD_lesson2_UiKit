@@ -1,5 +1,3 @@
-.pagination {
-}
 @import '__content/pagination__content';
 @import '__display-calculations/pagination__display-calculations';
 @import '__item/pagination__item';
@@ -7,3 +5,11 @@
 @import '__item/_navigate/pagination__item_navigate';
 @import '__item/_navigate_right/pagination__item_navigate_right';
 @import '__item/_navigate_left/pagination__item_navigate_left';
+.pagination {
+	/*
+		этот блок - задел на будущее, если понядобится 
+		прописать дополнительные свойства для блока pagination,
+		к томуже тут про собираются свойства стилей
+		всех элементов этого блока
+	*/
+}
