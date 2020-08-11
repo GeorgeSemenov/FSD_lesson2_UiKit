@@ -1,8 +1,6 @@
 /* no sense variables */
 $transparent: transparent;
 
-$white: #fff;
-
 $gray-lightest: rgba(31,32,65,0.05);
 $gray-muchMorelightest: rgba(31,32,65,0.1);
 $gray-lighter: rgba(31,32,65,0.25);
@@ -11,7 +9,11 @@ $gray-darker: rgba(31, 32, 65, 0.75);
 $gray-darkest: rgba(31,32,65,1);
 
 $purple: #BC9CFF;
+$velvet: #A4A0FC;
 $green: #6FCF97;
+$white: #fff;
+$navyBlue: #214472;// Тёмно синий
+$pink: #bc9cff;
 
 $gradient-green:linear-gradient(180deg,#6FCF97 0%, #66D2EA 100%);
 $gradient-purple: linear-gradient(180deg,#BC9CFF 0%, #8BA4F9 100%);
@@ -61,6 +63,8 @@ $rangeSliderBorderColor: $gray-lighter;
 $rangeSliderKnobBackground:$gradient-green;
 $rangeSliderKnobBorder: $white;
 
+$uiWidgetHeader: $navyBlue;
+
 $buttonBackroundImage: $gradient-purple;
 $buttonTextColor_colored_purple: $white;
 $buttonTextColor_transparent: $purple;
@@ -95,3 +99,18 @@ $advantageListItemWrapperDividersColor: $gray-muchMorelightest;
 
 $commentAvatarTextColor: $gray-darker;
 $commentTextAreaColor: $gray-darker;
+
+$textField__buttonApplyColor: $pink;
+$textField__inputBGColor: $white;
+$textField__inputColor: $gray-darker;
+$text-field__input_dateColor: $gray-lighter;
+$textField__inputPlaceholderColor: $gray-lighter;
+$textField__input_darkColor: $gray-darker;
+$textField__inputPlaceholder_darkColor: $gray-darker;
+$textField__input_dateColor: $gray-lighter;
+$textField__mathOperationColor: $gray;
+$textField__menuWrapperBGColor: $white;
+$textField__menuWrapperBorderColor: $gray-lighter;
+$textField__propertyColor: $gray;
+$textField__arrowColor: $velvet;
+$textField__togglerColor: $gray-darker;

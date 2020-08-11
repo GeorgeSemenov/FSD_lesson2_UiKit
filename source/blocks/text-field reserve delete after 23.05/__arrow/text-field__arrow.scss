@@ -2,11 +2,11 @@
   position: absolute;
   top: 12px;
   right: 9px;
-  cursor: pointer;  
+  cursor: pointer;
   background: linear-gradient(180deg,#BC9CFF 0%, #8BA4F9 100%);
   -webkit-background-clip: text;
   //по границе текста(т.е. вырезает из фона слова)
-  -webkit-text-fill-color:transparent;
+  -webkit-text-fill-color:$transparent;
   //текст прозрачным
-  color: #A4A0FC;//обрезает фон//делает
+  color: $textField__arrowColor;//обрезает фон//делает
 }

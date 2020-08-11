@@ -1,6 +1,13 @@
-.rate-button {}
 @import '__line/rate-button__line';
 @import '__star/rate-button__star';
 @import '__star/_filed/rate-button__star_filed';
 @import '__star/_faded/rate-button__star_faded';
 @import '__star/_filedFaded/rate-button__star_filedFaded';
+.rate-button {
+  /*
+    Этот файл является блоком стилей для всего блока элементов т.к. импоритрует
+    их в себя и дальше его можно передавать в страницу.
+    К томуже если понадобится в будщем добавить свойства для всего блока
+    то их можно будет вписать сюда
+  */
+}

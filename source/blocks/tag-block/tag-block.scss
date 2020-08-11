@@ -1,9 +1,3 @@
-.tag-block {
-  display: inline-block;
-  position: relative;
-  z-index: 1;
-}
-
 @import '__tag-name/tag-block__tag-name';
 @import '__tag-description/tag-block__tag-description';
 @import '_font-style/tag-block_font-style';
@@ -11,3 +5,12 @@
 @import '_font-style_h2/tag-block_font-style_h2';
 @import '_font-style_h3/tag-block_font-style_h3';
 @import '_font-style_body/tag-block_font-style_body';
+@import '__tag-description/_font-style-bold/tag-block__tag-description_font-style-bold';
+@import '__tag-description/_small-width/tag-block__tag-description_small-width';
+@import '__tag-name/_font-color_gray/tag-block__tag-name_font-color_gray';
+.tag-block {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+}
+

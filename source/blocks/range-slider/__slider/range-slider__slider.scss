@@ -1,7 +1,7 @@
 $slider-line-border-width:1px;
 $slider-line-height:6px;
 .range-slider__slider {
-  background-color: transparent;
+  background-color: $transparent;
   height: $slider-line-height;/* Высота полоски слайдера */
   position: relative;/* Для того чтобы бегунки и полоска были на месте (они позиционированны абсолютно) */
   border: $slider-line-border-width solid $rangeSliderBorderColor;
@@ -11,7 +11,7 @@ $slider-line-height:6px;
 
   .ui-widget-header {/* цветная линия между бегунками */
     transform: translateX(6px);
-    background-color: #214472 !important;/* цвет полоски между бегунками полагаю important можно убрать */
+    background-color: $uiWidgetHeader ;/* цвет полоски между бегунками полагаю important можно убрать */
     position: absolute;
     height: $slider-line-height;/* высота такая же как и у самой полоски */
     top: -1px;

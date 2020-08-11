@@ -1,5 +1,11 @@
-.range-slider {
-}
 @import '__numbers-display-field/range-slider__numbers-display-field';
 @import '__slider/range-slider__slider';
 @import '_size_normal/range-slider_size_normal';
+.range-slider {
+  /*
+    Этот файл является блоком стилей для всего блока элементов т.к. импоритрует
+    их в себя и дальше его можно передавать в страницу.
+    К томуже если понадобится в будщем добавить свойства для всего блока
+    то их можно будет вписать сюда
+  */
+}
