@@ -2,6 +2,9 @@
   display: flex;
   position: relative;
   margin-top: 13px;
+  top: 0;
+  right:0;
+
 
   &:not([actpage="1"]) .pagination__item:nth-child(1) {
   /* Делает prev видимым если actpage != 1 */

@@ -2,6 +2,13 @@ $likeButtonNormalSizeWidth: 40px;
 $likeButtonNormalSizeVerticalPadding: 5px;
 $likeButtonBorderRadius: 10px;
 $likeButtonBorderWidth_transparent_withBorder: 2px;
+@import '__count/like-button__count';
+@import '_pressed/like-button_pressed';
+@import '_transparent_with-border/like-button_transparent_with-border';
+@import '__wrapper/like-button__wrapper';
+@import '__image/like-button__image';
+@import '_hundreds-of-them/like-button_hundreds-of-them';
+@import '_thousands-of-them/like-button_thousands-of-them';
 .like-button {
   /* text styles */
   @include smallCommonFontStyle;
@@ -10,10 +17,3 @@ $likeButtonBorderWidth_transparent_withBorder: 2px;
   /* block style */
   cursor: pointer;
 }
-@import '__count/like-button__count';
-@import '_pressed/like-button_pressed';
-@import '_transparent_with-border/like-button_transparent_with-border';
-@import '__wrapper/like-button__wrapper';
-@import '__image/like-button__image';
-@import '_hundreds-of-them/like-button_hundreds-of-them';
-@import '_thousands-of-them/like-button_thousands-of-them';

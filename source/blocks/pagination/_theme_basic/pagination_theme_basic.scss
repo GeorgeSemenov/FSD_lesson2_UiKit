@@ -4,8 +4,8 @@
   justify-content: center;
   align-items: center;
   pointer-events: none;
-  color: transparent;
-  border-color: transparent;
+  color: $transparent;
+  border-color: $transparent;
   width: 40px;
   &::after {
     content: '...';
@@ -43,7 +43,7 @@
 
       +.pagination__item:last-child {
         /* Если активная ячейка является последней цифровой ячейкой(т.е. сразу после неё идёт next == последний элемент), тогда next нужно скрыть */
-        display: none !important;
+        display: none;
       }
     }
     // делаем видимыми следующие два элемента после активного, если они не являются next

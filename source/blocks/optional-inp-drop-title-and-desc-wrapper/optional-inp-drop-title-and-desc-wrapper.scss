@@ -1,7 +1,12 @@
-.optional-inp-drop-title-and-desc-wrapper {
-
-}
 @import '__title/optional-inp-drop-title-and-desc-wrapper__title';
 @import '__desc/optional-inp-drop-title-and-desc-wrapper__desc';
 @import '_common-properties/optional-inp-drop-title-and-desc-wrapper_common-properties';
 @import '_desc-position_slight-upper/optional-inp-drop-title-and-desc-wrapper_desc-position_slight-upper';
+.optional-inp-drop-title-and-desc-wrapper {
+  /*
+    Этот файл является блоком стилей для всего блока элементов т.к. импоритрует
+    их в себя и дальше его можно передавать в страницу.
+    К томуже если понадобится в будщем добавить свойства для всего блока
+    то их можно будет вписать сюда
+  */
+}

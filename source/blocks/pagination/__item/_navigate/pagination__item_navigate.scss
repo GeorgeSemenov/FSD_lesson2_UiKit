@@ -4,6 +4,8 @@
     &::after{
     display: inline-block;
     position: absolute;
+    top: 0;
+    left: 0;
     content: '';
     width: 44px;
     height: 44px;
