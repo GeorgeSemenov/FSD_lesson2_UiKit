@@ -9,8 +9,8 @@
 
     &>div:last-child{
       position: relative;
-      right: 55px;
       top: 0;
+      right: 55px;
     }
   }
   @include media-breakpoint-down(md){

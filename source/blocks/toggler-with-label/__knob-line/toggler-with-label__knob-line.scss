@@ -6,10 +6,10 @@
   left: 0;
   border-radius: 10px;
   width: 100%;
-  background-color: #fff;
-  border: 1px solid rgba(31,32,65, 0.25);
+  background-color: $togglerWithLabel__knobLineBGColor;
+  border: 1px solid $togglerWithLabel__knobLineBorderColor;
 }
 
 .toggler-with-label__input:checked ~ .toggler-with-label__knob-line{
-  border: 1px solid #bc9cff;
+  border: 1px solid $togglerWithLabel__knobLineCheckedBorderColor;
 }

@@ -1,5 +1,6 @@
 /* no sense variables */
 $transparent: transparent;
+$inherit: inherit;
 
 $gray-lightest: rgba(31,32,65,0.05);
 $gray-muchMorelightest: rgba(31,32,65,0.1);
@@ -29,6 +30,7 @@ $svg-gradient-purple_faded: url('#svg-purple-gradient_faded');
 // include ../../components/svg-purple-gradient_faded.pug
 
 /* variables with sense */
+
 /* *********************************************************************** */
 
 $colorBlock__colorSquare_BGColor_darkShade-100: $gray-darkest;
@@ -103,7 +105,6 @@ $commentTextAreaColor: $gray-darker;
 $textField__buttonApplyColor: $pink;
 $textField__inputBGColor: $white;
 $textField__inputColor: $gray-darker;
-$text-field__input_dateColor: $gray-lighter;
 $textField__inputPlaceholderColor: $gray-lighter;
 $textField__input_darkColor: $gray-darker;
 $textField__inputPlaceholder_darkColor: $gray-darker;
@@ -114,3 +115,9 @@ $textField__menuWrapperBorderColor: $gray-lighter;
 $textField__propertyColor: $gray;
 $textField__arrowColor: $velvet;
 $textField__togglerColor: $gray-darker;
+$textField__mathOperationBorderColor: $gray;
+
+$togglerWithLabel__knobBeforeCheckedBG: $gradient-gray-blue;
+$togglerWithLabel__knobLineBGColor: $white;
+$togglerWithLabel__knobLineBorderColor: $gray-lighter;
+$togglerWithLabel__knobLineCheckedBorderColor: $pink;

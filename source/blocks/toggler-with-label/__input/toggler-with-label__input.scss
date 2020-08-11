@@ -1,8 +1,10 @@
 .toggler-with-label__input {
+  position: relative;
+  z-index: 3;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   opacity: 0;
   cursor: pointer;
-  position: relative;
-  z-index: 3;
 }

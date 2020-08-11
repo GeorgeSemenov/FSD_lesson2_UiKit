@@ -6,8 +6,8 @@
 @import '__color-name/_font-weight_bold/color-block__color-name_font-weight_bold';
 .color-block {
   display: flex;
+	position: relative;
   top: 0;
   left: 0;
-	position: relative;
 	height: 70px;
 }

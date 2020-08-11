@@ -1,4 +1,3 @@
-.toggler-with-label {}
 @import '__toggler-wrapper/toggler-with-label__toggler-wrapper';
 @import '__toggler/toggler-with-label__toggler';
 @import '__label-wrapper/toggler-with-label__label-wrapper';
@@ -7,3 +6,11 @@
 @import '__knob/toggler-with-label__knob';
 @import '__knob-line/toggler-with-label__knob-line';
 @import '_arrangement_row/toggler-with-label_arrangement_row';
+.toggler-with-label {
+  /*
+    Этот файл является блоком стилей для всего блока элементов т.к. импоритрует
+    их в себя и дальше его можно передавать в страницу.
+    К томуже если понадобится в будщем добавить свойства для всего блока
+    то их можно будет вписать сюда
+  */
+}

@@ -1,9 +1,0 @@
-.text-field_theme_date {
-  .text-field__input{
-    color: $text-field__input_dateColor;
-    text-transform: uppercase;
-
-    &::-webkit-inner-spin-button ,
-    &::-webkit-clear-button{display: none;}
-  }
-}
