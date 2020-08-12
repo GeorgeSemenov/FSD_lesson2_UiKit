@@ -153,7 +153,7 @@
 /* mixins for buttons with gradient borders(with rounded shape) you can see example in like-button */
 	@mixin button_transparent_with-border (
       $gradient-color: $buttonBorderColor_transparent,
-      $gradient-text: $buttonTextColor_transparent,
+      $gradient-text: $button_transparent--color,
       $border-width:$border-width_transparent,
       $child-name: "button__text",
       $normal-width: $normal-size-width,

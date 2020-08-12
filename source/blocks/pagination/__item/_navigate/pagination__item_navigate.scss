@@ -1,5 +1,5 @@
 .pagination__item_navigate {
-  background-image: $paginationNavigationActiveBackgroundColor;
+  background-image: $paginationNavigationActive--BGImage;
   position: relative;
     &::after{
     display: inline-block;

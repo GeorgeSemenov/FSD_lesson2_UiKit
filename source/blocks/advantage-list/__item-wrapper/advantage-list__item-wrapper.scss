@@ -1,5 +1,5 @@
 .advantage-list__item-wrapper {
-  border-bottom: 1px solid $advantageListItemWrapperDividersColor;
+  border-bottom: 1px solid $advantageListItemWrapper--borderBottomColor;
   padding: 20px 0;
   margin-bottom: 4px;
   &:last-child{
@@ -7,6 +7,6 @@
   }
 
   &.advantage-list__item_with-dividers{
-    border-bottom: 1px solid $advantageListItemWrapperDividersColor;
+    border-bottom: 1px solid $advantageListItemWrapper--borderBottomColor;
   }
 }

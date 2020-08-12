@@ -81,24 +81,24 @@ $likeButton_transparentWithBorder_pressed--BGImage:$gradient-purple;
 $likeButton_transparent--BGCollor: $white;
 $likeButtonImage--stroke: $gray-lighter;
 $likeButtonImage_pressed--fill: $purple;
-$likeButtonImage_pressed-stroke: $likeButtonImage_pressed--fill;
+$likeButtonImage_pressed--stroke: $likeButtonImage_pressed--fill;
 
-$paginationActiveItemBackgroundColor: $gradient-gray-blue;
-$paginationActiveItemBackgroundColorHover: $gradient-gray-blue-faded;
-$paginationActiveItemColor: $white;
-$paginationItemColor: $gray;
-$paginationNavigationActiveBackgroundColor: $gradient-green;
+$paginationActiveItem--BGImage: $gradient-gray-blue;
+$paginationActiveItemHover--BGImage: $gradient-gray-blue-faded;
+$paginationActiveItem--color: $white;
+$paginationItem--color: $gray;
+$paginationNavigationActive--BGImage: $gradient-green;
 
-$rateButtonStarFill: $svg-gradient-purple; // include ../../components/svg-purple-gradient.pug
-$rateButtonStarStroke: $svg-gradient-purple; // include ../../components/svg-purple-gradient.pug
-$rateButtonStarFill_faded: $svg-gradient-purple_faded; // include ../../components/svg-purple-gradient.pug
+$rateButtonStar--fill: $svg-gradient-purple; // include ../../components/svg-purple-gradient.pug
+$rateButtonStar--stroke: $svg-gradient-purple; // include ../../components/svg-purple-gradient.pug
+$rateButtonStar_faded--fill: $svg-gradient-purple_faded; // include ../../components/svg-purple-gradient.pug
 
-$advantageTextColor: $gray-darker;
+$advantageText--color: $gray-darker;
 
-$advantageListItemWrapperDividersColor: $gray-muchMorelightest;
+$advantageListItemWrapper--borderBottomColor: $gray-muchMorelightest;
 
-$commentAvatarTextColor: $gray-darker;
-$commentTextAreaColor: $gray-darker;
+$commentAvatar--color: $gray-darker;
+$commentTextArea--color: $gray-darker;
 
 $textField__buttonApplyColor: $pink;
 $textField__inputBGColor: $white;

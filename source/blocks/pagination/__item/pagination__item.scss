@@ -6,7 +6,7 @@
   height: 40px;/* Высота и ширина пагинации */
 	width: 40px;
 	border-radius: 22px;
-	color: $paginationItemColor;
+	color: $paginationItem--color;
 	display: none;
 
   &:last-child,/*делаем видимым next первую числовую ячейку и последнюю числовую ячейку*/
@@ -18,8 +18,8 @@
   }
 
   &:hover {
-    background-image: $paginationActiveItemBackgroundColorHover;
-    color: $paginationActiveItemColor;
+    background-image: $paginationActiveItemHover--BGImage;
+    color: $paginationActiveItem--color;
   }
 
   @include media-breakpoint-down(md) {

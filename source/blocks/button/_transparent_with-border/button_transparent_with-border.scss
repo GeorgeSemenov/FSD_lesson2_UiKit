@@ -1,7 +1,7 @@
 .button_transparent_with-border {
   @include button_transparent_with-border(
     $button_transparent--borderColor,
-    $buttonTextColor_transparent,
+    $button_transparent--color,
     $border-width_transparent,
     ".button__text",
     $normal-size-width,
