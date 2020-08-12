@@ -2,13 +2,13 @@
 .optional-inp-drop-title-and-desc-wrapper__desc {
   @include commonHeaderStyle;
 
-  color: $tagBlockNameColor_gray;
+  color: $tagBlockNameColor_gray--color;
   font-weight: normal;
   position: relative;
   bottom: 0;
   left: 0;
 
   &.optional-inp-drop-title-and-desc-wrapper__desc_color_white-gray{
-    color: $optionalTitle__desc_color_whiteGray;
+    color: $optionalTitle__desc_color_whiteGray--color;
   }
 }

@@ -1,11 +1,11 @@
 .button_transparent_with-border {
   @include button_transparent_with-border(
-    $buttonBorderColor_transparent, 
-    $buttonTextColor_transparent, 
-    $border-width_transparent, 
+    $button_transparent--borderColor,
+    $buttonTextColor_transparent,
+    $border-width_transparent,
     ".button__text",
     $normal-size-width,
     $normal-size-vertical-padding,
     $border-radius,
-    $buttonBackgroundColor_transparent);
+    $button_transparent--BGColor);
 }

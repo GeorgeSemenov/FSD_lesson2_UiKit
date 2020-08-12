@@ -1,7 +1,7 @@
 .text-field__button-clear {
   @include boldCommonHeaderStyle();
 
-  color: $dropdownColorClearButton;
+  color: $dropdownColorClearButton--color;
   padding: 0;
   background-color: $transparent;
   border-width: 0;

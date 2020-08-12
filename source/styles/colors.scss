@@ -33,57 +33,55 @@ $svg-gradient-purple_faded: url('#svg-purple-gradient_faded');
 
 /* *********************************************************************** */
 
-$colorBlock__colorSquare_BGColor_darkShade-100: $gray-darkest;
-$colorBlock__colorSquare_BGColor_darkShade-75: $gray-darker;
-$colorBlock__colorSquare_BGColor_darkShade-50: $gray;
-$colorBlock__colorSquare_BGColor_darkShade-25: $gray-lighter;
-$colorBlock__colorSquare_BGColor_darkShade-5: $gray-lightest;
-$colorBlock__colorSquare_BGColor_green: $green;
-$colorBlock__colorSquare_BGColor_purple: $purple;
-$colorBlock__textWrapper_textDecorationColor: $gray-darkest;
+$colorBlock__colorSquare_darkShade-100--BGColor: $gray-darkest;
+$colorBlock__colorSquare_darkShade-75--BGColor: $gray-darker;
+$colorBlock__colorSquare_darkShade-50--BGColor: $gray;
+$colorBlock__colorSquare_darkShade-25--BGColor: $gray-lighter;
+$colorBlock__colorSquare_darkShade-5--BGColor: $gray-lightest;
+$colorBlock__colorSquare_green--BGColor: $green;
+$colorBlock__colorSquare_purple--BGColor: $purple;
+$colorBlock__textWrapper_textDecoration--color: $gray-darkest;
 
-$checkboxList__labelWrapperColor: $gray;
+$checkboxList__labelWrapper--color: $gray;
 
-$checkbox_uncheckedBGColor: $gray-lighter;
-$checkbox_checkedBGColor: $purple;
-$checkbox__innerSpaceBGColor: $white;
+$checkbox_unchecked--BGColor: $gray-lighter;
+$checkbox_checked--BGColor: $purple;
+$checkbox__innerSpace--BGColor: $white;
 
-$radioButtonsList__inputCheckedColor: $gray-darker;
-$radioButtonsList__inputNotCheckedColor: $gray;
+$radioButtonsList__inputChecked--color: $gray-darker;
+$radioButtonsList__inputNotChecked--color: $gray;
 
-$optionalTitle__desc_color_whiteGray: $gray;
+$optionalTitle__desc_color_whiteGray--color: $gray;
 
-$tagBlockNameColor_gray: $gray-lighter;
+$tagBlockNameColor_gray--color: $gray-lighter;
 
-$dropdownColorClearButton: $gray;
+$dropdownColorClearButton--color: $gray;
 
-$checkboxLabelColor_rich: $gray-darker;
-$checkboxBulletBackgroundColor: $gray-lighter;
+$checkboxLabelColor_rich--color: $gray-darker;
+$checkboxBulletBackground--color: $gray-lighter;
 
-$rangeSliderDisplayedNumbersColor: $gray;
-$rangeSliderBorderColor: $gray-lighter;
-$rangeSliderKnobBackground:$gradient-green;
-$rangeSliderKnobBorder: $white;
+$rangeSliderDisplayedNumbers--color: $gray;
+$rangeSliderBorder--color: $gray-lighter;
+$rangeSliderKnob--background:$gradient-green;
+$rangeSliderKnob--border: $white;
 
-$uiWidgetHeader: $navyBlue;
+$uiWidgetHeader--BGColor: $navyBlue;
 
-$buttonBackroundImage: $gradient-purple;
-$buttonTextColor_colored_purple: $white;
-$buttonTextColor_transparent: $purple;
-$buttonTextColor_transparent--active: $gray;
-$buttonBorderColor_transparent: $gradient-purple;
-$buttonBackgroundColor_transparent: $white;
+$button--BGColor: $gradient-purple;
+$button_colored_purple--color: $white;
+$button_transparent--color: $purple;
+$button_transparentActive--color: $gray;
+$button_transparent--borderColor: $gradient-purple;
+$button_transparent--BGColor: $white;
 
-$linkColor:$purple;
-$linkColor-active:$gray;
-
-$likeButtonTextColor_transparent-with-border:$gray-lighter;
-$likeButtonTextColor_transparent-with-border_pressed: $purple;
-$likeButtonBorderColor_transparent: $gradient-gray-only;
-$likeButtonBorderColor_transparent-with-border_pressed:$gradient-purple;
-$likeButtonBackgroundColor_transparent: $white;
-$likeButtonImageStroke: $gray-lighter;
-$likeButtonImageStroke_pressed: $purple;
+$likeColor_transparentWithBorder--color: $gray-lighter;
+$likeButton_transparentWithBorder_pressed--color: $purple;
+$likeButton_transparent--borderColor: $gradient-gray-only;
+$likeButton_transparentWithBorder_pressed--BGImage:$gradient-purple;
+$likeButton_transparent--BGCollor: $white;
+$likeButtonImage--stroke: $gray-lighter;
+$likeButtonImage_pressed--fill: $purple;
+$likeButtonImage_pressed-stroke: $likeButtonImage_pressed--fill;
 
 $paginationActiveItemBackgroundColor: $gradient-gray-blue;
 $paginationActiveItemBackgroundColorHover: $gradient-gray-blue-faded;

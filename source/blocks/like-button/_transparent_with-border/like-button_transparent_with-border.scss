@@ -3,20 +3,20 @@
   border-radius: $likeButtonBorderRadius;
 
   @include button_transparent_with-border(
-    $likeButtonBorderColor_transparent, 
-    $likeButtonBackgroundColor_transparent, 
-    $likeButtonBorderWidth_transparent_withBorder, 
+    $likeButton_transparent--borderColor,
+    $likeButton_transparent--BGCollor,
+    $likeButtonBorderWidth_transparent_withBorder,
     ".like-button__wrapper",
     $likeButtonNormalSizeWidth,
     $likeButtonNormalSizeVerticalPadding,
     $likeButtonBorderRadius,
-    $likeButtonBackgroundColor_transparent);
-  
+    $likeButton_transparent--BGCollor);
+
   .like-button__wrapper{
     display: inline-block;
   }
 
   .like-button__count{
-    color: $likeButtonTextColor_transparent-with-border;
+    color: $likeColor_transparentWithBorder--color;
   }
 }

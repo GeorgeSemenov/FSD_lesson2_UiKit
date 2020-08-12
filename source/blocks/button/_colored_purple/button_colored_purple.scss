@@ -1,6 +1,6 @@
 .button_colored_purple {
-  background-image: $buttonBackroundImage;
-  color: $buttonTextColor_colored_purple;
+  background-image: $button--BGColor;
+  color: $button_colored_purple--color;
 
   &:hover{
     opacity: 0.75;

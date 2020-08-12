@@ -1,15 +1,15 @@
 .like-button_pressed {
   &.like-button_transparent_with-border{
-    background-image: $likeButtonBorderColor_transparent-with-border_pressed;
+    background-image: $likeButton_transparentWithBorder_pressed--BGImage;
 
     .like-button__count{
-      color: $likeButtonTextColor_transparent-with-border_pressed;
+      color: $likeButton_transparentWithBorder_pressed--color;
     }
     .like-button__image{
       path{
-        fill:$likeButtonImageStroke_pressed;
+        fill:$likeButtonImage_pressed--fill;
         fill-opacity: 1;
-        stroke:$likeButtonImageStroke_pressed;
+        stroke:$likeButtonImage_pressed-stroke;
         stroke-width: 1px;
       }
     }

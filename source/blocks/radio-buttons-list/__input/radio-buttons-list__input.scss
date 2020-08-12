@@ -10,9 +10,9 @@
     transform: scale(1);
   }
   &:not(:checked) + label{
-    color: $radioButtonsList__inputNotCheckedColor;
+    color: $radioButtonsList__inputNotChecked--color;
   }
   &:checked + label{
-    color: $radioButtonsList__inputCheckedColor;
+    color: $radioButtonsList__inputChecked--color;
   }
 }

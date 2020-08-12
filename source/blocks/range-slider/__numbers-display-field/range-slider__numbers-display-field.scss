@@ -5,6 +5,6 @@
   border: 0;
   @include lesserCommonFontStyle;
 
-  color: $rangeSliderDisplayedNumbersColor;
+  color: $rangeSliderDisplayedNumbers--color;
   width: 38%;
 }
