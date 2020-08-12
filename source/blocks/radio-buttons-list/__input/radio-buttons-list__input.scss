@@ -13,6 +13,6 @@
     color: $radioButtonsList__inputNotCheckedColor;
   }
   &:checked + label{
-    color: r$radioButtonsList__inputCheckedColor;
+    color: $radioButtonsList__inputCheckedColor;
   }
 }
