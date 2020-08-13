@@ -2,7 +2,7 @@
 
   .text-field__input{
     &::placeholder{
-      color: $textField__input_darkColor;
+      color: $textField__input_dark--color;
     }
   }
 }

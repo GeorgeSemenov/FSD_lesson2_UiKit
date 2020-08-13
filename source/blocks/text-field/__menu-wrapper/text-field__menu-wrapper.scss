@@ -9,8 +9,8 @@
   font-weight: bold;
   visibility: hidden;
   width: 100%;
-  background-color: $textField__menuWrapperBGColor;
-  border: 1px solid $textField__menuWrapperBorderColor;
+  background-color: $textField__menuWrapper--BGColor;
+  border: 1px solid $textField__menuWrapper--borderColor;
   transition: all .25s ease;
   padding-top: 5px;
   padding-bottom: 2px;

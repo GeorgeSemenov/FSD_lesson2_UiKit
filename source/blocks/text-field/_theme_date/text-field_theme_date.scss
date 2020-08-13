@@ -1,6 +1,6 @@
 .text-field_theme_date {
   .text-field__input{
-    color: $textField__input_dateColor;
+    color: $textField__input_date--color;
     text-transform: uppercase;
 
     &::-webkit-inner-spin-button ,
